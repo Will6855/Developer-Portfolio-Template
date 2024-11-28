@@ -1,0 +1,61 @@
+<section id="projects" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
+    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Projects</h2>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        {% for project in projects %}
+            <div class="card bg-base-200/50 hover:bg-base-200 transition-colors">
+                <!-- Project Image -->
+                <figure class="relative h-48">
+                    <img src="{{ asset('images/' ~ project.image) }}" alt="{{ project.title }}" class="w-full h-full object-cover">
+                </figure>
+
+                <div class="card-body">
+                    <!-- Header -->
+                    <h3 class="card-title">{{ project.title }}</h3>
+
+                    <!-- Description -->
+                    <p class="text-base-content/70">{{ project.description }}</p>
+
+                    <!-- Technologies -->
+                    <div class="card-actions justify-start mt-2">
+                        {% for tech in project.technologies %}
+                            <div class="badge badge-md gap-2 px-2 py-2 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors">
+                                {% if tech.icon is defined %}
+                                    <i class="{{ tech.icon }} mr-1"></i>
+                                {% else %}
+                                    <img src="{{ asset('images/' ~ tech.image) }}" alt="{{ tech.name }}" class="w-3 h-3 mr-1">
+                                {% endif %}
+                                {{ tech.name }}
+                            </div>
+                        {% endfor %}
+                    </div>
+
+                    <!-- Links -->
+                    <div class="card-actions justify-start mt-4">
+                        {% if project.github %}
+                            <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                                <i class="fa-brands fa-github"></i>
+                                <span>View Code</span>
+                            </a>
+                        {% endif %}
+                        {% if project.website %}
+                            <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                                <i class="fa-solid fa-globe"></i>
+                                <span>Visit Website</span>
+                            </a>
+                        {% endif %}
+                        {% if project.demo %}
+                            <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-sm gap-2 bg-primary text-primary-content hover:bg-primary/80 transition-colors">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span>Live Demo</span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</section>
