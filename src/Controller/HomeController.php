@@ -37,6 +37,7 @@ class HomeController extends AbstractController
                     [ 'icon' => 'fa-brands fa-html5', 'name' => 'HTML', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-css3-alt', 'name' => 'CSS', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-js', 'name' => 'JavaScript', 'display' => true ],
+                    [ 'image' => 'skills/typescript.svg', 'name' => 'TypeScript', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-php', 'name' => 'PHP', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-python', 'name' => 'Python', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-java', 'name' => 'Java', 'display' => true ],
@@ -51,9 +52,10 @@ class HomeController extends AbstractController
                 'color_hover' => 'red-800',
                 'items' => [
                     [ 'icon' => 'fa-brands fa-symfony', 'name' => 'Symfony', 'display' => true ],
-                    [ 'image' => 'flask.png', 'name' => 'Flask', 'display' => true ],
-                    [ 'image' => 'nextjs.png', 'name' => 'Next.js', 'display' => true ],
+                    [ 'image' => 'skills/flask.svg', 'name' => 'Flask', 'display' => true ],
+                    [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
+                    [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => false ],
                     [ 'icon' => 'fa-solid fa-leaf', 'name' => 'Twig', 'display' => true ]
                 ]
             ],
@@ -233,7 +235,9 @@ class HomeController extends AbstractController
                         $findTechByName('HTML'),
                         $findTechByName('CSS'),
                         $findTechByName('JavaScript'),
+                        $findTechByName('TypeScript'),
                         $findTechByName('Next.js'),
+                        $findTechByName('Tailwind CSS'),
                         $findTechByName('Node.js'),
                         $findTechByName('Git'),
                     ]
