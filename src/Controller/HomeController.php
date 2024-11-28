@@ -27,6 +27,11 @@ class HomeController extends AbstractController
     #[Route('/', name: 'home')]
     public function index(): Response
     {
+        // Calculate age
+        $birthDate = new \DateTime('2004-01-06');
+        $today = new \DateTime();
+        $age = $today->diff($birthDate)->y;
+
         $skills = [
             'Languages' => [
                 'icon' => 'fa-solid fa-code',
@@ -249,7 +254,8 @@ class HomeController extends AbstractController
             'skills' => $skills,
             'experiences' => $experiences,
             'educations' => $educations,
-            'projects' => $projects
+            'projects' => $projects,
+            'age' => $age
         ]);
     }
 

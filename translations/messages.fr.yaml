@@ -26,7 +26,7 @@ contact_form:
   privacy_consent: "J'accepte que mes données soient traitées conformément à la <a href='%privacy_url%' class='link link-primary' target='_blank'>politique de confidentialité</a>.*"
 
 about:
-  paragraph1: 'Technicien en informatique de 20 ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le développement web et d''applications. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions logicielles adaptées aux besoins des utilisateurs.'
+  paragraph1: 'Technicien en informatique de %age% ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le développement web et d''applications. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions logicielles adaptées aux besoins des utilisateurs.'
   paragraph2: 'Organisé, autonome, réactif et curieux, je maîtrise des langages et frameworks comme PHP/Symfony et Python/Flask, et je me concentre sur des solutions fiables et efficaces.'
 
 skills:

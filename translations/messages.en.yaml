@@ -90,7 +90,7 @@ contact_form:
   privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>.*"
 
 about:
-  paragraph1: '20-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in web and application development. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
+  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in web and application development. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
   paragraph2: 'Organized, autonomous, responsive, and curious, I am proficient in languages and frameworks such as PHP/Symfony and Python/Flask, and I focus on delivering reliable and efficient solutions.'
 
 footer:
