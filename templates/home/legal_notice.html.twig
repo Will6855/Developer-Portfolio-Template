@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="min-h-screen bg-base-100 relative">
+    <!-- Background elements -->
+    <div class="fixed inset-0 bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.05)_0%,transparent_50%)]"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.05)_0%,transparent_50%)]"></div>
+    
+    <!-- Grid pattern -->
+    <div class="fixed inset-0 opacity-30">
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px;"></div>
+    </div>
+
+    <div class="relative z-10">
+        <div class="container mx-auto px-4 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl font-bold mb-8">{{ 'footer.legal_notice'|trans }}</h1>
+                
+                <div class="space-y-6 text-base-content/80">
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">1. Éditeur du site</h2>
+                        <p>Ce site est édité par Guillaume PIARD</p>
+                        <p>Contact : gpiard27@gmail.com</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">2. Hébergement</h2>
+                        <p>Ce site est hébergé par :</p>
+                        <p>[Nom de l'hébergeur]</p>
+                        <p>[Adresse de l'hébergeur]</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">3. Propriété intellectuelle</h2>
+                        <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">4. Liens hypertextes</h2>
+                        <p>Le site peut contenir des liens hypertextes vers d'autres sites. Je ne suis pas responsable du contenu de ces sites externes.</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; Retour à l'accueil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

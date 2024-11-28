@@ -116,34 +116,56 @@
                 <div class="mt-8">
                     <!-- Contact Modal -->
                     <dialog id="contact_modal" class="modal modal-bottom sm:modal-middle">
-                        <div class="modal-box">
-                            <h3 class="font-bold text-lg mb-4">{{ 'contact_form.title'|trans }}</h3>
-                            <form id="contactForm" class="space-y-4" onsubmit="event.preventDefault(); submitContactForm();">
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">{{ 'contact_form.name'|trans }}</span>
-                                    </label>
-                                    <input type="text" id="contact-name" class="input input-bordered w-full" required />
+                        <div class="modal-box bg-base-200/80 backdrop-blur-lg border border-base-content/10">
+                            <div class="relative">
+                                <!-- Decorative elements -->
+                                <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary/10 rounded-full blur-2xl"></div>
+                                <div class="absolute -bottom-2 -right-2 w-20 h-20 bg-secondary/10 rounded-full blur-2xl"></div>
+                                
+                                <!-- Content -->
+                                <div class="relative">
+                                    <h3 class="font-bold text-2xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
+                                    <form id="contactForm" class="space-y-6" onsubmit="event.preventDefault(); submitContactForm();">
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.name'|trans }}</span>
+                                            </label>
+                                            <input type="text" id="contact-name" class="input bg-base-100/50 border-base-content/10 w-full focus:border-primary/50 transition-all duration-300" required />
+                                        </div>
+                                        <div class="form-control">
+                                            <label class="label">
+                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.email'|trans }}</span>
+                                            </label>
+                                            <input type="email" id="contact-email" class="input bg-base-100/50 border-base-content/10 w-full focus:border-primary/50 transition-all duration-300" required />
+                                        </div>
+                                        <div class="form-control">
+                                            <textarea id="contact-message" class="textarea textarea-bordered bg-base-200/50 backdrop-blur-sm" rows="4" placeholder="{{ 'contact_form.message'|trans }}"></textarea>
+                                        </div>
+                                        
+                                        <!-- Privacy Policy Consent -->
+                                        <div class="form-control mt-4">
+                                            <label class="label cursor-pointer justify-start gap-3">
+                                                <input type="checkbox" id="privacy-consent" class="checkbox checkbox-sm" required />
+                                                <span class="label-text text-sm">
+                                                    {{ 'contact_form.privacy_consent'|trans({'%privacy_url%': path('privacy_policy')})|raw }}
+                                                </span>
+                                            </label>
+                                        </div>
+
+                                        <div class="modal-action flex items-center justify-end gap-3 mt-8">
+                                            <button type="button" class="btn btn-ghost hover:bg-base-content/5" onclick="contact_modal.close()">
+                                                {{ 'contact_form.cancel'|trans }}
+                                            </button>
+                                            <button type="submit" class="btn bg-gradient-to-r from-primary to-secondary text-primary-content border-0 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300">
+                                                <i class="fa-solid fa-paper-plane mr-2"></i>
+                                                {{ 'contact_form.send'|trans }}
+                                            </button>
+                                        </div>
+                                    </form>
                                 </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">{{ 'contact_form.email'|trans }}</span>
-                                    </label>
-                                    <input type="email" id="contact-email" class="input input-bordered w-full" required />
-                                </div>
-                                <div class="form-control">
-                                    <label class="label">
-                                        <span class="label-text">{{ 'contact_form.message'|trans }}</span>
-                                    </label>
-                                    <textarea id="contact-message" class="textarea textarea-bordered h-24" required></textarea>
-                                </div>
-                                <div class="modal-action">
-                                    <button type="button" class="btn" onclick="contact_modal.close()">{{ 'contact_form.cancel'|trans }}</button>
-                                    <button type="submit" class="btn btn-primary">{{ 'contact_form.send'|trans }}</button>
-                                </div>
-                            </form>
+                            </div>
                         </div>
-                        <form method="dialog" class="modal-backdrop">
+                        <form method="dialog" class="modal-backdrop bg-base-200/50 backdrop-blur-sm">
                             <button>close</button>
                         </form>
                     </dialog>
@@ -153,15 +175,16 @@
                             const name = document.getElementById('contact-name').value;
                             const email = document.getElementById('contact-email').value;
                             const message = document.getElementById('contact-message').value;
+                            const privacyConsent = document.getElementById('privacy-consent').checked;
 
-                            if (!name || !email || !message) {
-                                alert('Please fill in all fields');
+                            if (!name || !email || !message || !privacyConsent) {
+                                alert('Please fill in all fields and accept the privacy policy');
                                 return;
                             }
 
                             // Here you can add your form submission logic
                             // For now, we'll just log to console and close the modal
-                            console.log('Form submitted:', { name, email, message });
+                            console.log('Form submitted:', { name, email, message, privacyConsent });
                             contact_modal.close();
                             
                             // Reset form
@@ -200,7 +223,21 @@
 
             <!-- Projects Section -->
             {% include 'components/_projects.html.twig' %}
+
+            <!-- Footer -->
+            <footer class="mt-16 pb-8">
+                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-base-content/50">
+                    <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors">
+                        {{ 'footer.legal_notice'|trans }}
+                    </a>
+                    <span class="hidden sm:inline">•</span>
+                    <a href="{{ path('privacy_policy') }}" class="hover:text-base-content transition-colors">
+                        {{ 'footer.privacy_policy'|trans }}
+                    </a>
+                </div>
+            </footer>
         </div>
     </div>
+    
 </div>
 {% endblock %}

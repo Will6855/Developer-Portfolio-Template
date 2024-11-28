@@ -1,0 +1,64 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+<div class="min-h-screen bg-base-100 relative">
+    <!-- Background elements -->
+    <div class="fixed inset-0 bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.05)_0%,transparent_50%)]"></div>
+    <div class="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.05)_0%,transparent_50%)]"></div>
+    
+    <!-- Grid pattern -->
+    <div class="fixed inset-0 opacity-30">
+        <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px;"></div>
+    </div>
+
+    <div class="relative z-10">
+        <div class="container mx-auto px-4 py-12">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-3xl font-bold mb-8">{{ 'footer.privacy_policy'|trans }}</h1>
+                
+                <div class="space-y-6 text-base-content/80">
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">1. Collecte des données</h2>
+                        <p>Les données personnelles collectées sur ce site se limitent aux informations que vous fournissez volontairement via le formulaire de contact :</p>
+                        <ul class="list-disc ml-6 mt-2">
+                            <li>Nom</li>
+                            <li>Adresse email</li>
+                            <li>Message</li>
+                        </ul>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">2. Utilisation des données</h2>
+                        <p>Les informations que vous nous transmettez sont utilisées uniquement pour répondre à vos messages et ne sont en aucun cas transmises à des tiers.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">3. Conservation des données</h2>
+                        <p>Les données personnelles sont conservées pendant la durée nécessaire à la gestion de la relation avec vous.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">4. Vos droits</h2>
+                        <p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement européen n°2016/679/UE du 27 avril 2016, vous bénéficiez d'un droit d'accès, de rectification, de portabilité et d'effacement de vos données.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">5. Cookies</h2>
+                        <p>Ce site n'utilise pas de cookies de tracking ou de publicité. Seuls les cookies nécessaires au fonctionnement du site peuvent être utilisés.</p>
+                    </section>
+
+                    <section>
+                        <h2 class="text-xl font-semibold mb-4">6. Contact</h2>
+                        <p>Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, vous pouvez me contacter à l'adresse : gpiard27@gmail.com</p>
+                    </section>
+                </div>
+
+                <div class="mt-8 text-center">
+                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; Retour à l'accueil</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

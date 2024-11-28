@@ -21,10 +21,10 @@ class HomeController extends AbstractController
     public function switchLocale(Request $request, string $locale): Response
     {
         $request->getSession()->set('_locale', $locale);
-        return $this->redirect($request->headers->get('referer', $this->generateUrl('app_home')));
+        return $this->redirect($request->headers->get('referer', $this->generateUrl('home')));
     }
 
-    #[Route('/', name: 'app_home')]
+    #[Route('/', name: 'home')]
     public function index(): Response
     {
         $skills = [
@@ -251,5 +251,17 @@ class HomeController extends AbstractController
             'educations' => $educations,
             'projects' => $projects
         ]);
+    }
+
+    #[Route('/legal-notice', name: 'legal_notice')]
+    public function legalNotice(): Response
+    {
+        return $this->render('home/legal_notice.html.twig');
+    }
+
+    #[Route('/privacy-policy', name: 'privacy_policy')]
+    public function privacyPolicy(): Response
+    {
+        return $this->render('home/privacy_policy.html.twig');
     }
 }
