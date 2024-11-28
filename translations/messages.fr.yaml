@@ -25,8 +25,8 @@ contact_form:
   cancel: 'Annuler'
 
 about:
-  paragraph1: 'Professionnel de l''informatique titulaire d''un BTS SIO spécialisé dans le développement web et applicatif. Avec de solides compétences en programmation et diverses expériences en développement, j''excelle dans la conception, le déploiement et la maintenance de solutions adaptées aux besoins des utilisateurs.'
-  paragraph2: 'Passionné par les nouvelles technologies et la résolution de problèmes techniques, je maîtrise différents langages et frameworks, particulièrement PHP / Symfony et Python / Flask, avec un accent sur la livraison de solutions fiables et performantes.'
+  paragraph1: 'Technicien en informatique de 20 ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le développement web et d''applications. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions logicielles adaptées aux besoins des utilisateurs.'
+  paragraph2: 'Organisé, autonome, réactif et curieux, je maîtrise des langages et frameworks comme PHP/Symfony et Python/Flask, et je me concentre sur des solutions fiables et efficaces.'
 
 skills:
   categories:
