@@ -1,0 +1,546 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<div class="min-h-screen bg-base-100">
+    <div class="flex flex-col lg:flex-row">
+        <!-- Left Sidebar -->
+        <div class="w-full lg:w-2/5 p-6 lg:p-8 lg:pl-20 lg:fixed lg:h-screen overflow-y-auto animate-fade-in-left flex items-center">
+            <div class="w-full">
+                <header>
+                    <div class="mb-6 relative w-36 h-36 lg:w-48 lg:h-48 mx-auto lg:mx-0">
+                        <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600" class="w-full h-full">
+                            <defs>
+                                <!-- <path id="blob" d="M570,205C596,115,396,33,303,32C210,30,40,108,14,197C-13,287,51,568,144,569C237,570,543,294,570,205C596,115,396,33,303,32" /> -->
+                                <path id="blob">
+                                    <animate
+                                        attributeName="d"
+                                        dur="7s"
+                                        repeatCount="indefinite"
+                                        calcMode="linear"
+                                        keySplines="0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1; 0.4 0 0.2 1"
+                                        values="M 570 205 C 596 115 396 33 303 32 C 210 30 40 108 14 197 C -13 287 51 568 144 569 C 237 570 543 294 570 205;
+                                               M 589 201 C 590 105 386 -3 289 9 C 192 21 10 175 9 271 C 8 367 188 599 284 588 C 381 576 589 297 589 201;
+                                               M 583 203 C 560 111 347 -12 257 11 C 166 35 16 253 39 345 C 62 437 304 585 394 562 C 485 538 606 294 583 203;
+                                               M 564 267 C 596 173 386 22 297 16 C 208 10 64 135 32 229 C 0 322 15 573 104 579 C 193 586 531 361 564 267;
+                                               M 570 205 C 596 115 396 33 303 32 C 210 30 40 108 14 197 C -13 287 51 568 144 569 C 237 570 543 294 570 205"
+                                    />
+                                </path>
+                            </defs>
+                            <clipPath id="blob-mask">
+                                <use href="#blob"/>
+                            </clipPath>
+                            <image 
+                                clip-path="url(#blob-mask)"
+                                href="{{ asset('images/profile-image.jpg') }}"
+                                width="100%"
+                                height="100%"
+                                preserveAspectRatio="xMidYMid slice"
+                            />
+                        </svg>
+                    </div>
+                    <div class="text-center lg:text-left">
+                        <h1 class="text-3xl lg:text-4xl font-bold mb-2">Guillaume PIARD</h1>
+                        <div class="flex flex-col gap-2">
+                            <div class="flex items-center gap-4">
+                                <h2 class="text-lg lg:text-xl text-gray-300">Full-Stack Developer</h2>
+                                <div class="flex items-center gap-2 py-1 px-2.5 bg-success/10 text-success rounded-full">
+                                    <span class="relative flex h-2 w-2">
+                                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
+                                        <span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
+                                    </span>
+                                    <span class="text-xs font-medium">Open to Job Offers</span>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-1 text-gray-400 justify-center lg:justify-start">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <span>Evreux, France 🇫🇷</span>
+                            </div>
+                            <p class="text-gray-300 text-sm mt-1">Crafting Digital Solutions That Drive Real Business Impact</p>
+                        </div>
+                    </div>
+
+                    <!-- Resume Download and Social Links -->
+                    <div class="mt-6 flex items-center gap-4 flex-col lg:flex-row">
+                        <div class="group flex-1 w-full">
+                            <a href="#" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                                <span class="relative flex items-center gap-2 text-sm font-medium">
+                                    <i class="fa-solid fa-file-arrow-down"></i>
+                                    View Full Resume
+                                </span>
+                            </a>
+                        </div>
+                        <div class="flex gap-4 mt-4 lg:mt-0">
+                            <a href="https://github.com/Will6855" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                                <i class="fa-brands fa-github fa-xl"></i>
+                            </a>
+                            <a href="mailto:gpiard27@gmail.com" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                                <i class="fa-solid fa-envelope fa-xl"></i>
+                            </a>
+                            <a href="https://linkedin.com/in/piard-guillaume" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                                <i class="fa-brands fa-linkedin fa-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="mt-6 space-y-3">
+                        <div class="grid gap-3">
+                            <div class="p-4 rounded-xl bg-gradient-to-br from-primary/5 to-base-300/50 backdrop-blur-sm border border-base-content/5">
+                                <h2 class="text-base font-bold mb-1">Open to Job Opportunities</h2>
+                                <p class="text-base-content/70 mb-3 text-sm">Currently seeking full-time positions</p>
+                                <div class="flex justify-center">
+                                    <button 
+                                        onclick="contact_modal.showModal()" 
+                                        class="w-full px-4 py-2 bg-primary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm">
+                                        <i class="fa-solid fa-briefcase"></i>
+                                        Let's Connect
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="mt-8">
+                    <!-- Contact Modal -->
+                    <dialog id="contact_modal" class="modal modal-bottom sm:modal-middle">
+                        <div class="modal-box">
+                            <h3 class="font-bold text-lg mb-4">Get in Touch</h3>
+                            <form id="contactForm" class="space-y-4" onsubmit="event.preventDefault(); submitContactForm();">
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Name</span>
+                                    </label>
+                                    <input type="text" id="contact-name" class="input input-bordered w-full" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Email</span>
+                                    </label>
+                                    <input type="email" id="contact-email" class="input input-bordered w-full" required />
+                                </div>
+                                <div class="form-control">
+                                    <label class="label">
+                                        <span class="label-text">Message</span>
+                                    </label>
+                                    <textarea id="contact-message" class="textarea textarea-bordered h-24" required></textarea>
+                                </div>
+                                <div class="modal-action">
+                                    <button type="button" class="btn" onclick="contact_modal.close()">Cancel</button>
+                                    <button type="submit" class="btn btn-primary">Send Message</button>
+                                </div>
+                            </form>
+                        </div>
+                        <form method="dialog" class="modal-backdrop">
+                            <button>close</button>
+                        </form>
+                    </dialog>
+
+                    <script>
+                        function submitContactForm() {
+                            const name = document.getElementById('contact-name').value;
+                            const email = document.getElementById('contact-email').value;
+                            const message = document.getElementById('contact-message').value;
+
+                            if (!name || !email || !message) {
+                                alert('Please fill in all fields');
+                                return;
+                            }
+
+                            // Here you can add your form submission logic
+                            // For now, we'll just log to console and close the modal
+                            console.log('Form submitted:', { name, email, message });
+                            contact_modal.close();
+                            
+                            // Reset form
+                            document.getElementById('contactForm').reset();
+                        }
+                    </script>
+
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="w-full lg:w-3/5 lg:ml-auto p-6 lg:p-12 mt-6 lg:mt-0 animate-fade-in">
+            <!-- About Section -->
+            <section id="about" class="max-w-3xl mx-auto lg:mx-0">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">About Me</h2>
+                <div class="space-y-6 text-base-content/80 text-lg">
+                    <p>
+                        IT Professional with a 2-year Technical Degree (BTS SIO) specialized in web and application development. With strong programming skills and various development experiences, I excel at designing, deploying, and maintaining solutions tailored to user needs.
+                    </p>
+                    <p>
+                        Passionate about new technologies and technical problem-solving, I'm proficient in various languages and frameworks, particularly PHP / Symfony and Python / Flask, with a focus on delivering reliable and high-performance solutions.
+                    </p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section id="skills" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6">Skills</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-base-200/50 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold mb-3 text-base-content/70 flex items-center gap-2">
+                            <i class="fa-solid fa-code text-primary"></i>Languages
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-html5 mr-1"></i>HTML</div>
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-css3-alt mr-1"></i>CSS</div>
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-js mr-1"></i>JavaScript</div>
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-php mr-1"></i>PHP</div>
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-python mr-1"></i>Python</div>
+                            <div class="badge badge-sm px-2 py-2 bg-blue-500/20 text-blue-400 hover:bg-blue-800 transition-colors"><i class="fa-brands fa-java mr-1"></i>Java</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-base-200/50 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold mb-3 text-base-content/70 flex items-center gap-2">
+                            <i class="fa-solid fa-layer-group text-primary"></i>Frameworks
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-sm px-2 py-2 bg-red-500/20 text-red-400 hover:bg-red-800 transition-colors"><i class="fa-brands fa-symfony mr-1"></i>Symfony</div>
+                            <div class="badge badge-sm px-2 py-2 bg-red-500/20 text-red-400 hover:bg-red-800 transition-colors"><img src="{{ asset('images/flask.png') }}" alt="Flask" class="w-3 h-3 mr-1">Flask</div>
+                            <div class="badge badge-sm px-2 py-2 bg-red-500/20 text-red-400 hover:bg-red-800 transition-colors"><img src="{{ asset('images/nextjs.png') }}" alt="Next.js" class="w-3 h-3 mr-1">Next.js</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-base-200/50 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold mb-3 text-base-content/70 flex items-center gap-2">
+                            <i class="fa-solid fa-server text-primary"></i>Backend
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-sm px-2 py-2 bg-green-500/20 text-green-400 hover:bg-green-800 transition-colors"><i class="fa-brands fa-node mr-1"></i>Node.js</div>
+                            <div class="badge badge-sm px-2 py-2 bg-green-500/20 text-green-400 hover:bg-green-800 transition-colors"><i class="fa-solid fa-database mr-1"></i>MySQL</div>
+                            <div class="badge badge-sm px-2 py-2 bg-green-500/20 text-green-400 hover:bg-green-800 transition-colors"><i class="fa-solid fa-server mr-1"></i>REST APIs</div>
+                        </div>
+                    </div>
+
+                    <div class="bg-base-200/50 rounded-xl p-4">
+                        <h3 class="text-lg font-semibold mb-3 text-base-content/70 flex items-center gap-2">
+                            <i class="fa-solid fa-list-check text-primary"></i>Practices
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <div class="badge badge-sm px-2 py-2 bg-yellow-500/20 text-yellow-400 hover:bg-yellow-800 transition-colors"><i class="fa-solid fa-arrows-spin mr-1"></i>Agile</div>
+                            <div class="badge badge-sm px-2 py-2 bg-yellow-500/20 text-yellow-400 hover:bg-yellow-800 transition-colors"><i class="fa-brands fa-git-alt mr-1"></i>Git</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Experience Section -->
+            <section id="experience" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Experience</h2>
+                <div class="relative space-y-8">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-base-300"></div>
+
+                    <!-- Experience Item 1 -->
+                    <div class="relative pl-8">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-0 top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
+                        
+                        <!-- Content -->
+                        <div class="space-y-4">
+                            <!-- Header -->
+                            <div class="flex items-start gap-4">
+                                <div class="shrink-0 w-12 h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
+                                    <img src="{{ asset('images/companies/company-a.png') }}" alt="Company A Logo" class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                                        <h3 class="text-xl font-bold">Full-Stack Developer</h3>
+                                        <span class="text-base-content/70">at</span>
+                                        <span class="font-semibold">Company A</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-4 text-sm text-base-content/70 mt-1">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Paris, France</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <span>Jan 2023 - Present</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="space-y-2 text-base-content/70">
+                                <p>Led the development of a modern web application using Symfony and React, improving user engagement by 40%.</p>
+                                <p>Implemented responsive design principles and optimized performance, reducing load times by 60%.</p>
+                                <p>Collaborated with a team of 5 developers using Agile methodologies.</p>
+                            </div>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2">
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-php text-[#777BB4]"></i>
+                                    PHP
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-symfony"></i>
+                                    Symfony
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-solid fa-database text-[#4479A1]"></i>
+                                    MySQL
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-git-alt text-[#F05032]"></i>
+                                    Git
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Experience Item 2 -->
+                    <div class="relative pl-8">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-0 top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
+                        
+                        <!-- Content -->
+                        <div class="space-y-4">
+                            <!-- Header -->
+                            <div class="flex items-start gap-4">
+                                <div class="shrink-0 w-12 h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
+                                    <img src="{{ asset('images/companies/company-b.png') }}" alt="Company B Logo" class="w-full h-full object-contain">
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                                        <h3 class="text-xl font-bold">Backend Developer</h3>
+                                        <span class="text-base-content/70">at</span>
+                                        <span class="font-semibold">Company B</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-4 text-sm text-base-content/70 mt-1">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Lyon, France</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <span>Jun 2022 - Dec 2022</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="space-y-2 text-base-content/70">
+                                <p>Developed and maintained RESTful APIs serving over 10,000 daily users.</p>
+                                <p>Implemented caching strategies that reduced database load by 30%.</p>
+                                <p>Wrote comprehensive API documentation and unit tests.</p>
+                            </div>
+
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-2">
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-python text-[#3776AB]"></i>
+                                    Python
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-js text-[#F7DF1E]"></i>
+                                    JavaScript
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-solid fa-database text-[#4479A1]"></i>
+                                    MySQL
+                                </div>
+                                <div class="badge badge-md gap-2 px-3 py-3 bg-blue-500/30 text-blue-500 hover:bg-blue-800 transition-colors">
+                                    <i class="fa-brands fa-git-alt text-[#F05032]"></i>
+                                    Git
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Education Section -->
+            <section id="education" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Education</h2>
+                <div class="relative space-y-8">
+                    <!-- Vertical Line -->
+                    <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-base-300"></div>
+
+                    <!-- Education Item 1 -->
+                    <div class="relative pl-8">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-0 top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
+                        
+                        <!-- Content -->
+                        <div class="space-y-4">
+                            <!-- Header -->
+                            <div class="flex items-start gap-4">
+                                <div class="shrink-0 w-12 h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
+                                    <i class="fa-solid fa-graduation-cap text-2xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                                        <h3 class="text-xl font-bold">BTS SIO SLAM</h3>
+                                        <span class="text-base-content/70">at</span>
+                                        <span class="font-semibold">Lycée Modeste Leroy</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-4 text-sm text-base-content/70 mt-1">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Évreux, France</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <span>2021 - 2023</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="space-y-2 text-base-content/70">
+                                <p>Higher National Diploma in IT Services to Organizations, specializing in Software Solutions and Business Applications.</p>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Software Solutions Development and Programming</li>
+                                    <li>Database Design and Management</li>
+                                    <li>Web Development and Mobile Applications</li>
+                                    <li>Network and System Administration</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education Item 2 -->
+                    <div class="relative pl-8">
+                        <!-- Timeline Dot -->
+                        <div class="absolute left-0 top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
+                        
+                        <!-- Content -->
+                        <div class="space-y-4">
+                            <!-- Header -->
+                            <div class="flex items-start gap-4">
+                                <div class="shrink-0 w-12 h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
+                                    <i class="fa-solid fa-graduation-cap text-2xl text-primary"></i>
+                                </div>
+                                <div>
+                                    <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                                        <h3 class="text-xl font-bold">Baccalauréat STI2D</h3>
+                                        <span class="text-base-content/70">at</span>
+                                        <span class="font-semibold">Lycée Modeste Leroy</span>
+                                    </div>
+                                    <div class="flex flex-wrap gap-4 text-sm text-base-content/70 mt-1">
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-solid fa-location-dot"></i>
+                                            <span>Évreux, France</span>
+                                        </div>
+                                        <div class="flex items-center gap-1">
+                                            <i class="fa-regular fa-calendar"></i>
+                                            <span>2018 - 2021</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Description -->
+                            <div class="space-y-2 text-base-content/70">
+                                <p>Technical High School Diploma in Sciences and Technologies of Industry and Sustainable Development.</p>
+                                <ul class="list-disc pl-4 space-y-1">
+                                    <li>Sciences and Technologies of Industry and Sustainable Development</li>
+                                    <li>Focus on Information Technology and Digital Systems</li>
+                                    <li>Project-based learning in technology and engineering</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section -->
+            <section id="projects" class="mt-12 lg:mt-16">
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Projects</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Project Card 1 -->
+                    <div class="group relative bg-base-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden">
+                            <img src="{{ asset('images/projects/project1.jpg') }}" alt="Project 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Name</h3>
+                            <p class="text-base-content/70 mb-4">Brief description of the project and its key features. What problems does it solve?</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">React</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">Node.js</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">MongoDB</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-content hover:bg-primary/80 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 2 -->
+                    <div class="group relative bg-base-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden">
+                            <img src="{{ asset('images/projects/project2.jpg') }}" alt="Project 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Name</h3>
+                            <p class="text-base-content/70 mb-4">Brief description of the project and its key features. What problems does it solve?</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">PHP</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">Symfony</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">MySQL</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-content hover:bg-primary/80 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project Card 3 -->
+                    <div class="group relative bg-base-200 rounded-xl overflow-hidden hover:shadow-xl transition-all duration-300">
+                        <div class="aspect-video w-full overflow-hidden">
+                            <img src="{{ asset('images/projects/project3.jpg') }}" alt="Project 3" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        </div>
+                        <div class="p-6">
+                            <h3 class="text-xl font-semibold mb-2">Project Name</h3>
+                            <p class="text-base-content/70 mb-4">Brief description of the project and its key features. What problems does it solve?</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">Next.js</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">Tailwind</span>
+                                <span class="badge badge-sm bg-primary/20 text-primary px-2 hover:bg-primary/80 transition-colors">Prisma</span>
+                            </div>
+                            <div class="flex gap-3">
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                                    <i class="fa-brands fa-github"></i>
+                                    <span>View Code</span>
+                                </a>
+                                <a href="#" class="flex items-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-content hover:bg-primary/80 transition-colors">
+                                    <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                    <span>Live Demo</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</div>
+{% endblock %}
