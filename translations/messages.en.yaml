@@ -72,10 +72,12 @@ skills:
 sidebar:
   job_title: 'Full-Stack Developer'
   status: 'Open to Job Offers'
-  location: 'Evreux, France'
+  location: 'Evreux, France 🇫🇷'
   tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
+  at_experience: 'at'
+  at_education: 'at'
   open_to_job: 'Open to Opportunities'
   open_to_job_description: 'Currently seeking full-time positions'
   lets_connect: 'Let''s Connect'

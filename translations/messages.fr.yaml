@@ -8,13 +8,15 @@ sections:
 sidebar:
   job_title: 'Développeur Full-Stack'
   status: 'Disponible pour Opportunités'
-  location: 'Evreux, France'
+  location: 'Evreux, France 🇫🇷'
   tagline: 'Conception de Solutions Numériques Innovantes à Fort Impact'
   resume: 'Consulter mon CV'
   contact_button: 'Me Contacter'
   open_to_job: 'Disponible pour Opportunités'
   open_to_job_description: 'En recherche active d''opportunités professionnelles'
   lets_connect: 'Prendre Contact'
+  at_experience: 'chez'
+  at_education: 'au'
 
 contact_form:
   title: 'Me Contacter'
