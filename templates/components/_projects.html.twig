@@ -1,23 +1,32 @@
 <section id="projects" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
     <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.projects'|trans }}</h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {% for project in projects %}
-            <div class="card rounded-xl bg-gradient-to-br from-primary/5 to-base-300/50 backdrop-blur-sm border border-base-content/5">
-                <!-- Project Image -->
-                <figure class="relative h-48">
-                    <img src="{{ asset('images/' ~ project.image) }}" alt="{{ project.title }}" class="w-full h-full object-cover">
-                </figure>
+            <div class="group relative flex flex-col h-full overflow-hidden rounded-2xl bg-gradient-to-br from-base-300/40 via-primary/5 to-base-300/40 backdrop-blur-xl border border-base-content/10 shadow-lg hover:shadow-xl transition-all duration-500">
+                <!-- Project Image with Overlay -->
+                <div class="relative h-48 overflow-hidden">
+                    <img src="{{ asset('images/' ~ project.image) }}" 
+                         alt="{{ project.title }}" 
+                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500">
+                    <div class="absolute inset-0 bg-gradient-to-t from-base-100/90 via-base-100/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+                </div>
 
-                <div class="card-body">
+                <!-- Content -->
+                <div class="flex flex-col flex-grow p-5">
                     <!-- Header -->
-                    <h3 class="card-title">{{ project.title }}</h3>
+                    <h3 class="text-xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                        {{ project.title }}
+                    </h3>
 
                     <!-- Description -->
-                    <p class="text-base-content/70">{{ project.description }}</p>
+                    <p class="text-base-content/80 text-sm leading-relaxed">{{ project.description }}</p>
+
+                    <!-- Spacer to push badges and links to bottom -->
+                    <div class="flex-grow"></div>
 
                     <!-- Technologies -->
-                    <div class="card-actions justify-start mt-2">
+                    <div class="flex flex-wrap gap-1.5 mt-4 mb-3">
                         {% for tech in project.technologies %}
                             <div class="badge badge-md gap-2 px-2 py-2 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors">
                                 {% if tech.icon is defined %}
@@ -31,26 +40,26 @@
                     </div>
 
                     <!-- Links -->
-                    <div class="card-actions justify-start mt-4">
+                    <div class="flex flex-wrap gap-2">
                         {% if project.github %}
                             <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" 
-                               class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                               class="btn btn-xs gap-1.5 bg-base-content/5 hover:bg-base-content/10 text-base-content border-0 transition-all duration-300">
                                 <i class="fa-brands fa-github"></i>
-                                <span>{{ 'projects.links.view_code'|trans }}</span>
+                                <span class="text-xs font-medium">{{ 'projects.links.view_code'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" 
-                               class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
+                               class="btn btn-xs gap-1.5 bg-primary/10 hover:bg-primary/20 text-primary border-0 transition-all duration-300">
                                 <i class="fa-solid fa-globe"></i>
-                                <span>{{ 'projects.links.visit_website'|trans }}</span>
+                                <span class="text-xs font-medium">{{ 'projects.links.visit_website'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.demo %}
                             <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" 
-                               class="btn btn-sm gap-2 bg-primary text-primary-content hover:bg-primary/80 transition-colors">
+                               class="btn btn-xs gap-1.5 bg-gradient-to-r from-primary to-secondary text-primary-content border-0 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                <span>{{ 'projects.links.live_demo'|trans }}</span>
+                                <span class="text-xs font-medium">{{ 'projects.links.live_demo'|trans }}</span>
                             </a>
                         {% endif %}
                     </div>

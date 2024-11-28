@@ -62,6 +62,13 @@ sections:
   education: 'Education'
   projects: 'Projects'
 
+skills:
+  categories:
+    languages: 'Languages'
+    frameworks: 'Frameworks'
+    backend: 'Backend'
+    practices: 'Practices'
+
 sidebar:
   job_title: 'Full-Stack Developer'
   status: 'Open to Job Offers'

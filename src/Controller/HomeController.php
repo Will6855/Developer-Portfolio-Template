@@ -116,6 +116,7 @@ class HomeController extends AbstractController
                     $findTechByName('Symfony'),
                     $findTechByName('Bootstrap'),
                     $findTechByName('Twig'),
+                    $findTechByName('MySQL'),
                     $findTechByName('Git'),
                 ]
             ],

@@ -28,6 +28,13 @@ about:
   paragraph1: 'Professionnel de l''informatique titulaire d''un BTS SIO spécialisé dans le développement web et applicatif. Avec de solides compétences en programmation et diverses expériences en développement, j''excelle dans la conception, le déploiement et la maintenance de solutions adaptées aux besoins des utilisateurs.'
   paragraph2: 'Passionné par les nouvelles technologies et la résolution de problèmes techniques, je maîtrise différents langages et frameworks, particulièrement PHP / Symfony et Python / Flask, avec un accent sur la livraison de solutions fiables et performantes.'
 
+skills:
+  categories:
+    languages: 'Langages'
+    frameworks: 'Frameworks'
+    backend: 'Backend'
+    practices: 'Pratiques'
+
 experiences:
   klimber_kids:
     title: 'Développeur Full-Stack'
