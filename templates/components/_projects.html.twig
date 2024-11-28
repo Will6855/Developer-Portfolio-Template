@@ -3,7 +3,7 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {% for project in projects %}
-            <div class="card bg-base-200/50 hover:bg-base-200 transition-colors">
+            <div class="card rounded-xl bg-gradient-to-br from-primary/5 to-base-300/50 backdrop-blur-sm border border-base-content/5">
                 <!-- Project Image -->
                 <figure class="relative h-48">
                     <img src="{{ asset('images/' ~ project.image) }}" alt="{{ project.title }}" class="w-full h-full object-cover">

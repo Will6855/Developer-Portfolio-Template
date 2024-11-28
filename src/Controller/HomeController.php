@@ -91,13 +91,13 @@ class HomeController extends AbstractController
                     '↳ Implementation of an Anti-Spam protection (Honeypot)'
                 ],
                 'technologies' => [
-                    $findTechByName('Symfony'),
-                    $findTechByName('Bootstrap'),
-                    $findTechByName('Twig'),
                     $findTechByName('PHP'),
                     $findTechByName('HTML'),
                     $findTechByName('CSS'),
                     $findTechByName('JavaScript'),
+                    $findTechByName('Symfony'),
+                    $findTechByName('Bootstrap'),
+                    $findTechByName('Twig'),
                     $findTechByName('Git'),
                 ]
             ],
@@ -134,8 +134,8 @@ class HomeController extends AbstractController
                         '↳ Utilization of a REST API (Microsoft Graph API)'
                     ],
                     'technologies' => [
-                        $findTechByName('Flask'),
                         $findTechByName('Python'),
+                        $findTechByName('Flask'),
                         $findTechByName('REST APIs'),
                     ]
                 ]
