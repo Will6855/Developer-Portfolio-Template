@@ -1,5 +1,5 @@
 <section id="projects" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
-    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Projects</h2>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.projects'|trans }}</h2>
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
         {% for project in projects %}
@@ -36,21 +36,21 @@
                             <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                                 <i class="fa-brands fa-github"></i>
-                                <span>View Code</span>
+                                <span>{{ 'projects.links.view_code'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-sm gap-2 bg-primary/10 text-primary hover:bg-primary/20 transition-colors">
                                 <i class="fa-solid fa-globe"></i>
-                                <span>Visit Website</span>
+                                <span>{{ 'projects.links.visit_website'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.demo %}
                             <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-sm gap-2 bg-primary text-primary-content hover:bg-primary/80 transition-colors">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                <span>Live Demo</span>
+                                <span>{{ 'projects.links.live_demo'|trans }}</span>
                             </a>
                         {% endif %}
                     </div>

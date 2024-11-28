@@ -1,5 +1,5 @@
 <section id="education" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
-    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">Education</h2>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.education'|trans }}</h2>
     <div class="relative space-y-8">
         <!-- Vertical Line -->
         <div class="absolute left-0 top-2 bottom-2 w-0.5 bg-base-300"></div>
@@ -13,8 +13,8 @@
                 <div class="space-y-4">
                     <!-- Header -->
                     <div class="flex items-start gap-4">
-                        <div class="shrink-0 w-12 h-12 rounded-xl bg-base-200/50 p-2 flex items-center justify-center">
-                            <img src="{{ asset('images/' ~ education.logo) }}" alt="{{ education.school }}" class="w-full h-full object-contain">
+                        <div class="shrink-0 w-12 h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
+                            <img src="{{ asset('images/' ~ education.logo) }}" alt="{{ education.school }} Logo" class="w-full h-full object-contain">
                         </div>
                         <div>
                             <div class="flex flex-wrap items-center gap-x-2 gap-y-1">

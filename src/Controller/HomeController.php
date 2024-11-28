@@ -5,9 +5,25 @@ namespace App\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\HttpFoundation\Request;
 
 class HomeController extends AbstractController
 {
+    private TranslatorInterface $translator;
+
+    public function __construct(TranslatorInterface $translator)
+    {
+        $this->translator = $translator;
+    }
+
+    #[Route('/switch-locale/{locale}', name: 'switch_locale')]
+    public function switchLocale(Request $request, string $locale): Response
+    {
+        $request->getSession()->set('_locale', $locale);
+        return $this->redirect($request->headers->get('referer', $this->generateUrl('app_home')));
+    }
+
     #[Route('/', name: 'app_home')]
     public function index(): Response
     {
@@ -81,14 +97,14 @@ class HomeController extends AbstractController
 
         $experiences = [
             [
-                'title' => 'Full-Stack Developer',
+                'title' => $this->translator->trans('experiences.klimber_kids.title'),
                 'company' => 'Klimber-Kids',
-                'location' => 'Guichainville, France',
-                'period' => 'Jul 2024 - Aug 2024',
+                'location' => $this->translator->trans('experiences.klimber_kids.location'),
+                'period' => $this->translator->trans('experiences.klimber_kids.period'),
                 'logo' => 'companies/klimber-kids.svg',
                 'description' => [
-                    '↳ Development of a showcase website (PHP / Symfony)',
-                    '↳ Implementation of an Anti-Spam protection (Honeypot)'
+                    $this->translator->trans('experiences.klimber_kids.description.1'),
+                    $this->translator->trans('experiences.klimber_kids.description.2')
                 ],
                 'technologies' => [
                     $findTechByName('PHP'),
@@ -102,19 +118,22 @@ class HomeController extends AbstractController
                 ]
             ],
             [
-                'title' => 'Full-Stack Developer (Internship)',
+                'title' => $this->translator->trans('experiences.cs_lane.title'),
                 'company' => 'CS-Lane',
-                'location' => 'Elbeuf, France',
-                'period' => 'Jan 2024 - Feb 2024',
+                'location' => $this->translator->trans('experiences.cs_lane.location'),
+                'period' => $this->translator->trans('experiences.cs_lane.period'),
                 'logo' => 'companies/cs-lane.png',
                 'description' => [
-                    '↳ Development of Android (Kotlin) & iOS (Swift) mobile applications',
-                    '↳ Implementation of a complete appointment system (PHP)',
-                    '↳ Creation of a REST API (PHP & MySQL)',
-                    '↳ Team project management (SCRUMBAN)'
+                    $this->translator->trans('experiences.cs_lane.description.1'),
+                    $this->translator->trans('experiences.cs_lane.description.2'),
+                    $this->translator->trans('experiences.cs_lane.description.3'),
+                    $this->translator->trans('experiences.cs_lane.description.4')
                 ],
                 'technologies' => [
                     $findTechByName('PHP'),
+                    $findTechByName('HTML'),
+                    $findTechByName('CSS'),
+                    $findTechByName('JavaScript'),
                     $findTechByName('Kotlin'),
                     $findTechByName('Swift'),
                     $findTechByName('MySQL'),
@@ -122,77 +141,103 @@ class HomeController extends AbstractController
                     $findTechByName('Agile'),
                     $findTechByName('Git')
                 ]
+            ],
+            [
+                'title' => $this->translator->trans('experiences.uimm.title'),
+                'company' => 'UIMM Eure Seine Estuaire',
+                'location' => $this->translator->trans('experiences.uimm.location'),
+                'period' => $this->translator->trans('experiences.uimm.period'),
+                'logo' => 'companies/uimm.png',
+                'description' => [
+                    $this->translator->trans('experiences.uimm.description.1'),
+                    $this->translator->trans('experiences.uimm.description.2')
                 ],
-                [
-                    'title' => 'Full-Stack Developer (Internship)',
-                    'company' => 'UIMM Eure Seine Estuaire',
-                    'location' => 'Evreux, France',
-                    'period' => 'May 2023 - Jun 2023',
-                    'logo' => 'companies/uimm.png',
-                    'description' => [
-                        '↳ Development of a Web App for the IT Department (Python / Flask)',
-                        '↳ Utilization of a REST API (Microsoft Graph API)'
-                    ],
-                    'technologies' => [
-                        $findTechByName('Python'),
-                        $findTechByName('Flask'),
-                        $findTechByName('REST APIs'),
-                    ]
+                'technologies' => [
+                    $findTechByName('Python'),
+                    $findTechByName('HTML'),
+                    $findTechByName('CSS'),
+                    $findTechByName('JavaScript'),
+                    $findTechByName('Flask'),
+                    $findTechByName('REST APIs'),
                 ]
+            ]
         ];
 
         $educations = [
             [
-                'degree' => 'BTS SIO (Information Systems and Services)',
+                'degree' => $this->translator->trans('education.bts.degree'),
                 'school' => 'Lycée Gustave Flaubert',
-                'location' => 'Rouen, France',
-                'period' => '2022 - 2024',
+                'location' => $this->translator->trans('education.bts.location'),
+                'period' => $this->translator->trans('education.bts.period'),
                 'logo' => 'schools/gustave-flaubert.png',
                 'description' => [
-                    '↳ SLAM Option (Software Solutions & Business Applications)',                    
+                    $this->translator->trans('education.bts.description.1'),
                 ]
             ],
             [
-                'degree' => 'General Baccalaureate',
+                'degree' => $this->translator->trans('education.bac.degree'),
                 'school' => 'Lycée Aristide Briand',
-                'location' => 'Evreux, France',
-                'period' => '2022',
+                'location' => $this->translator->trans('education.bac.location'),
+                'period' => $this->translator->trans('education.bac.period'),
                 'logo' => 'schools/aristide-briand.webp',
                 'description' => [
-                    '↳ Specialty in Mathematics and Contemporary English World',
+                    $this->translator->trans('education.bac.description.1'),
                 ]
             ]
         ];
 
         $projects = [
             [
-                'title' => 'New Portfolio v2',
-                'description' => 'My personal portfolio website built with Symfony, featuring a modern UI and showcasing my latest projects and experiences.',
-                'image' => 'projects/portfolio-v2.png',
-                'github' => 'https://github.com/yourusername/portfolio-v2',
-                'website' => 'https://yourwebsite.com',
+                'title' => $this->translator->trans('projects.klimber_kids.title'),
+                'description' => $this->translator->trans('projects.klimber_kids.description'),
+                'image' => 'projects/klimber-kids.png',
+                'github' => null,
+                'website' => 'https://klimber-kids.com',
                 'demo' => null,
                 'technologies' => [
-                    $findTechByName('Symfony'),
-                    $findTechByName('Twig'),
-                    $findTechByName('Bootstrap'),
-                    $findTechByName('PHP')
-                ]
-            ],
-            [
-                'title' => 'Klimber-Kids',
-                'description' => 'A web application for managing climbing courses and student progress, with features for tracking achievements and scheduling sessions.',
-                'image' => 'projects/klimber-kids.png',
-                'github' => 'https://github.com/yourusername/klimber-kids',
-                'website' => null,
-                'demo' => 'https://demo.klimber-kids.com',
-                'technologies' => [
+                    $findTechByName('PHP'),
+                    $findTechByName('HTML'),
+                    $findTechByName('CSS'),
+                    $findTechByName('JavaScript'),
                     $findTechByName('Symfony'),
                     $findTechByName('Bootstrap'),
                     $findTechByName('Twig'),
-                    $findTechByName('PHP')
+                    $findTechByName('MySQL'),
+                    $findTechByName('Git'),
                 ]
-            ]
+                ],
+                [
+                    'title' => $this->translator->trans('projects.dashboard-si.title'),
+                    'description' => $this->translator->trans('projects.dashboard-si.description'),
+                    'image' => 'projects/dashboard-si.png',
+                    'github' => 'https://github.com/Will6855/IT-Department-Dashboard',
+                    'website' => null,
+                    'demo' => '',
+                    'technologies' => [
+                        $findTechByName('Python'),
+                        $findTechByName('HTML'),
+                        $findTechByName('CSS'),
+                        $findTechByName('JavaScript'),
+                        $findTechByName('Flask'),
+                        $findTechByName('REST APIs'),
+                    ]
+                ],
+                [
+                    'title' => $this->translator->trans('projects.email-sender.title'),
+                    'description' => $this->translator->trans('projects.email-sender.description'),
+                    'image' => 'projects/email-sender.png',
+                    'github' => 'https://github.com/Will6855/HTML-Email-Sender',
+                    'website' => null,
+                    'demo' => '',
+                    'technologies' => [
+                        $findTechByName('HTML'),
+                        $findTechByName('CSS'),
+                        $findTechByName('JavaScript'),
+                        $findTechByName('Next.js'),
+                        $findTechByName('Node.js'),
+                        $findTechByName('Git'),
+                    ]
+                ],
         ];
 
         return $this->render('home/index.html.twig', [

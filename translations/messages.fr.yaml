@@ -1,0 +1,83 @@
+sections:
+  about: 'À Propos'
+  skills: 'Compétences'
+  experiences: 'Expériences'
+  education: 'Formation'
+  projects: 'Projets'
+
+sidebar:
+  job_title: 'Développeur Full-Stack'
+  status: 'Disponible pour Opportunités'
+  location: 'Evreux, France'
+  tagline: 'Conception de Solutions Numériques Innovantes à Fort Impact'
+  resume: 'Consulter mon CV'
+  contact_button: 'Me Contacter'
+  open_to_job: 'Disponible pour Opportunités'
+  open_to_job_description: 'En recherche active d''opportunités professionnelles'
+  lets_connect: 'Prendre Contact'
+
+contact_form:
+  title: 'Me Contacter'
+  name: 'Nom'
+  email: 'Email'
+  message: 'Message'
+  send: 'Envoyer'
+  cancel: 'Annuler'
+
+about:
+  paragraph1: 'Professionnel de l''informatique titulaire d''un BTS SIO spécialisé dans le développement web et applicatif. Avec de solides compétences en programmation et diverses expériences en développement, j''excelle dans la conception, le déploiement et la maintenance de solutions adaptées aux besoins des utilisateurs.'
+  paragraph2: 'Passionné par les nouvelles technologies et la résolution de problèmes techniques, je maîtrise différents langages et frameworks, particulièrement PHP / Symfony et Python / Flask, avec un accent sur la livraison de solutions fiables et performantes.'
+
+experiences:
+  klimber_kids:
+    title: 'Développeur Full-Stack'
+    location: 'Guichainville, France'
+    period: 'Juillet 2024 - Août 2024'
+    description:
+      1: '↳ Développement d''un site vitrine (PHP / Symfony)'
+      2: '↳ Implémentation d''une protection anti-spam (Honeypot)'
+  cs_lane:
+    title: 'Développeur Full-Stack (Stage)'
+    location: 'Elbeuf, France'
+    period: 'Janvier 2024 - Février 2024'
+    description:
+      1: '↳ Développement d''applications mobiles Android (Kotlin) et iOS (Swift)'
+      2: '↳ Implémentation d''un système complet de rendez-vous (PHP)'
+      3: '↳ Création d''une API REST (PHP & MySQL)'
+      4: '↳ Gestion de projet en équipe (SCRUMBAN)'
+  uimm:
+    title: 'Développeur Full-Stack (Stage)'
+    location: 'Evreux, France'
+    period: 'Mai 2023 - Juin 2023'
+    description:
+      1: '↳ Développement d''une application Web pour le service informatique (Python / Flask)'
+      2: '↳ Utilisation d''une API REST (Microsoft Graph API)'
+
+education:
+  bts:
+    degree: 'BTS Services Informatiques aux Organisations (SIO)'
+    location: 'Rouen, France'
+    period: '2022 - 2024'
+    description:
+      1: '↳ Option SLAM - Solutions Logicielles et Applications Métiers'
+  bac:
+    degree: 'Baccalauréat Général'
+    location: 'Evreux, France'
+    period: '2022'
+    description:
+      1: '↳ Spécialités Mathématiques et Anglais Monde Contemporain'
+
+projects:
+  links:
+    view_code: 'Code Source'
+    visit_website: 'Visiter le Site'
+    live_demo: 'Démo'
+  klimber_kids:
+    title: 'Klimber-Kids'
+    description: 'Plateforme web vitrine pour un fabricant de modules d''escalade, mettant en valeur leur gamme de produits et services avec une interface moderne et intuitive.'
+  dashboard-si:
+    title: 'Dashboard SI'
+    description: 'Solution de tableau de bord pour DSI intégrant l''API Microsoft Graph, offrant une gestion centralisée et un monitoring en temps réel des ressources informatiques.'
+  email-sender:
+    title: 'Email Sender'
+    description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'

@@ -1,0 +1,86 @@
+experiences:
+  klimber_kids:
+    title: 'Full-Stack Developer'
+    location: 'Guichainville, France'
+    period: 'Jul 2024 - Aug 2024'
+    description:
+      1: '↳ Development of a showcase website (PHP / Symfony)'
+      2: '↳ Implementation of an Anti-Spam protection (Honeypot)'
+  cs_lane:
+    title: 'Full-Stack Developer (Internship)'
+    location: 'Elbeuf, France'
+    period: 'Jan 2024 - Feb 2024'
+    description:
+      1: '↳ Development of Android (Kotlin) & iOS (Swift) mobile applications'
+      2: '↳ Implementation of a complete appointment system (PHP)'
+      3: '↳ Creation of a REST API (PHP & MySQL)'
+      4: '↳ Team project management (SCRUMBAN)'
+  uimm:
+    title: 'Full-Stack Developer (Internship)'
+    location: 'Evreux, France'
+    period: 'May 2023 - Jun 2023'
+    description:
+      1: '↳ Development of a Web App for the IT Department (Python / Flask)'
+      2: '↳ Utilization of a REST API (Microsoft Graph API)'
+
+education:
+  bts:
+    degree: 'BTS SIO (Information Systems and Services)'
+    location: 'Rouen, France'
+    period: '2022 - 2024'
+    description:
+      1: '↳ SLAM Option (Software Solutions & Business Applications)'
+  bac:
+    degree: 'General Baccalaureate'
+    location: 'Evreux, France'
+    period: '2022'
+    description:
+      1: '↳ Specialty in Mathematics and Contemporary English World'
+
+projects:
+  links:
+    view_code: 'View Code'
+    visit_website: 'Visit Website'
+    live_demo: 'Demo'
+  portfolio:
+    title: 'New Portfolio v2'
+    description: 'My personal portfolio website built with Symfony, featuring a modern UI and showcasing my latest projects and experiences.'
+  klimber_kids:
+    title: 'Klimber-Kids'
+    description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
+  dashboard-si:
+    title: 'Dashboard SI'
+    description: 'An IT Department dashboard solution integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
+  email-sender:
+    title: 'Email Sender'
+    description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
+
+sections:
+  about: 'About Me'
+  skills: 'Skills'
+  experiences: 'Experiences'
+  education: 'Education'
+  projects: 'Projects'
+
+sidebar:
+  job_title: 'Full-Stack Developer'
+  status: 'Open to Job Offers'
+  location: 'Evreux, France'
+  tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
+  resume: 'View Full Resume'
+  contact_button: 'Get in Touch'
+  open_to_job: 'Open to Opportunities'
+  open_to_job_description: 'Currently seeking full-time positions'
+  lets_connect: 'Let''s Connect'
+
+contact_form:
+  title: 'Get in Touch'
+  name: 'Name'
+  email: 'Email'
+  message: 'Message'
+  send: 'Send Message'
+  cancel: 'Cancel'
+
+about:
+  paragraph1: 'IT Professional with a 2-year Technical Degree (BTS SIO) specialized in web and application development. With strong programming skills and various development experiences, I excel at designing, deploying, and maintaining solutions tailored to user needs.'
+  paragraph2: 'Passionate about new technologies and technical problem-solving, I''m proficient in various languages and frameworks, particularly PHP / Symfony and Python / Flask, with a focus on delivering reliable and high-performance solutions.'
