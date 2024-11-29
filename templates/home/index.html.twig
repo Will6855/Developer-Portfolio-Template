@@ -50,7 +50,7 @@
                         <h1 class="text-3xl lg:text-4xl font-bold mb-2">Guillaume PIARD</h1>
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center gap-4 justify-center lg:justify-start">
-                                <h2 class="text-lg lg:text-xl text-gray-300">{{ 'sidebar.job_title'|trans }}</h2>
+                                <h2 class="text-lg lg:text-xl font-semibold text-gray-300">{{ 'sidebar.job_title'|trans }}</h2>
                                 <div class="flex items-center gap-2 py-1 px-2.5 bg-success/10 text-success rounded-full">
                                     <span class="relative flex h-2 w-2">
                                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
@@ -99,7 +99,7 @@
                                 <div class="flex justify-center">
                                     <button 
                                         onclick="contact_modal.showModal()" 
-                                        class="w-full px-4 py-2 bg-primary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm">
+                                        class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm">
                                         <i class="fa-solid fa-briefcase"></i>
                                         {{ 'sidebar.lets_connect'|trans }}
                                     </button>
@@ -120,7 +120,7 @@
                                 
                                 <!-- Content -->
                                 <div class="relative">
-                                    <h3 class="font-bold text-2xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
+                                    <h3 class="font-bold text-3xl mt-2 mb-4 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
                                     
                                     {% for message in app.flashes('success') %}
                                         <div class="alert alert-success mb-4">
@@ -171,7 +171,7 @@
                                         </div>
 
                                         <div class="modal-action">
-                                            <button type="submit" class="btn btn-primary">
+                                            <button type="submit" class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
                                                 <i class="fa-solid fa-paper-plane"></i>
                                                 {{ 'contact_form.send'|trans }}
                                             </button>
@@ -196,12 +196,12 @@
             <!-- About Section -->
             <section id="about" class="max-w-3xl mx-auto lg:mx-0">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.about'|trans }}</h2>
-                <div class="space-y-6 text-base-content/80 text-lg">
+                <div class="space-y-6 text-base-content/80 text-lg text-justify">
                     <p>
-                        {{ 'about.paragraph1'|trans({'%age%': age}) }}
+                        {{ 'about.paragraph1'|trans({'%age%': age})|raw }}
                     </p>
                     <p>
-                        {{ 'about.paragraph2'|trans }}
+                        {{ 'about.paragraph2'|trans|raw }}
                     </p>
                 </div>
             </section>
