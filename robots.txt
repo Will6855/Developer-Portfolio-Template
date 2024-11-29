@@ -2,6 +2,8 @@ User-agent: *
 Disallow: /
 
 Allow: /images/
+Allow: /css/
+Allow: /js/
 
 Allow: /$
 Allow: /legal-notice
