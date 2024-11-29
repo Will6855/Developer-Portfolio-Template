@@ -42,15 +42,12 @@ projects:
     view_code: 'View Code'
     visit_website: 'Visit Website'
     live_demo: 'Demo'
-  portfolio:
-    title: 'New Portfolio v2'
-    description: 'My personal portfolio website built with Symfony, featuring a modern UI and showcasing my latest projects and experiences.'
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
   dashboard-si:
     title: 'Dashboard SI'
-    description: 'An IT Department dashboard solution integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
+    description: 'An IT Department dashboard integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
   email-sender:
     title: 'Email Sender'
     description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
@@ -89,11 +86,11 @@ contact_form:
   message: 'Message'
   send: 'Send Message'
   cancel: 'Cancel'
-  privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>.*"
+  privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>."
 
 about:
   paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in web and application development. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
-  paragraph2: 'Organized, autonomous, responsive, and curious, I am proficient in languages and frameworks such as PHP/Symfony and Python/Flask, and I focus on delivering reliable and efficient solutions.'
+  paragraph2: 'Organized, autonomous, responsive, and curious, I focus on delivering reliable and efficient solutions.'
 
 footer:
   legal_notice: 'Legal Notice'
