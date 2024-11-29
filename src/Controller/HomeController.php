@@ -21,10 +21,15 @@ class HomeController extends AbstractController
         $this->translator = $translator;
     }
 
-    #[Route('/switch-locale/{locale}', name: 'switch_locale')]
+    #[Route('/switch-locale/{locale}', name: 'switch_locale', methods: ['POST', 'GET'])]
     public function switchLocale(Request $request, string $locale): Response
     {
         $request->getSession()->set('_locale', $locale);
+        
+        if ($request->isXmlHttpRequest()) {
+            return $this->json(['success' => true, 'locale' => $locale]);
+        }
+        
         return $this->redirect($request->headers->get('referer', $this->generateUrl('home')));
     }
 
