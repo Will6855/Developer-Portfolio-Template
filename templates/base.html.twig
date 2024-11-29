@@ -35,7 +35,8 @@
         
         <!-- Import custom styles -->
         {% block stylesheets %}
-            {{ encore_entry_link_tags('app') }} 
+            {{ encore_entry_link_tags('app') }}
+            <link rel="stylesheet" href="{{ asset('css/style.css') }}"> 
         {% endblock %}
 
         <!-- Tailwind Config -->

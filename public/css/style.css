@@ -1,0 +1,12 @@
+/* Scrollbar Styling */
+::-webkit-scrollbar {
+    width: 15px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(to right, transparent 5px, 0, #85858586 10px, 0, transparent 15px);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, transparent 5px, 0, #b0b0b086 10px, 0, transparent 15px);
+}

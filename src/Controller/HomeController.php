@@ -107,7 +107,7 @@ class HomeController extends AbstractController
                     [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => false ],
-                    [ 'icon' => 'fa-solid fa-leaf', 'name' => 'Twig', 'display' => true ]
+                    // [ 'icon' => 'fa-solid fa-leaf', 'name' => 'Twig', 'display' => true ]
                 ]
             ],
             'Backend' => [
@@ -166,7 +166,7 @@ class HomeController extends AbstractController
                     $findTechByName('JavaScript'),
                     $findTechByName('Symfony'),
                     $findTechByName('Bootstrap'),
-                    $findTechByName('Twig'),
+                    // $findTechByName('Twig'),
                     $findTechByName('MySQL'),
                     $findTechByName('Git'),
                 ]
@@ -255,7 +255,7 @@ class HomeController extends AbstractController
                     $findTechByName('JavaScript'),
                     $findTechByName('Symfony'),
                     $findTechByName('Bootstrap'),
-                    $findTechByName('Twig'),
+                    // $findTechByName('Twig'),
                     $findTechByName('MySQL'),
                     $findTechByName('Git'),
                 ]
