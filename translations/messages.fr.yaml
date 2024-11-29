@@ -95,6 +95,11 @@ projects:
 common:
   back_to_home: 'Retour à l''accueil'
 
+meta:
+  title: 'Guillaume PIARD | Portfolio'
+  description: 'Portfolio de Guillaume PIARD, développeur informatique. Découvrez mes projets innovants, mon approche créative, et comment je peux vous aider à concrétiser vos idées en solutions digitales uniques.'
+  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
+
 legal_notice:
   editor:
     title: 'Éditeur du site'

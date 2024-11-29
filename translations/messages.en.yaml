@@ -72,7 +72,7 @@ skills:
 sidebar:
   job_title: 'Full-Stack Developer'
   status: 'Open to Job Offers'
-  location: 'Evreux, France 🇫🇷'
+  location: 'Evreux, France '
   tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
@@ -145,3 +145,8 @@ privacy_policy:
 
 common:
   back_to_home: 'Back to Home'
+
+meta:
+  title: 'Guillaume PIARD | Portfolio'
+  description: 'Portfolio of Guillaume PIARD, software developer. Discover my innovative projects, creative approach, and how I can help you turn your ideas into unique digital solutions.'
+  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'

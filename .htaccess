@@ -1,0 +1,28 @@
+# Enable URL rewriting
+RewriteEngine On
+
+# Redirect to HTTPS if the connection is not secure
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Redirect www to non-www
+RewriteCond %{HTTP_HOST} ^www\.guillaume-piard\.fr$ [NC]
+RewriteRule ^(.*)$ https://guillaume-piard.fr/$1 [R=301,L]
+
+# Forward all requests to the public directory
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [QSA,L]
+
+# Deny access to sensitive files
+<FilesMatch "^\.env$|^\.env\.local\.php$|^\.env\.test$|^\.lock$|^\.git$|^\.htaccess$">
+    Require all denied
+</FilesMatch>
+
+# Deny access to certain file types
+<FilesMatch "\.(env|lock|git)$">
+    Require all denied
+</FilesMatch>
+
+# Deny access to specific directories by pattern
+RewriteRule ^(assets|bin|config|migrations|src|translations|var|vendor|web|.git)/ - [F,L]

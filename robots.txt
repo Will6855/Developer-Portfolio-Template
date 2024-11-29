@@ -1,0 +1,12 @@
+User-agent: *
+Disallow: /
+
+Allow: /images/
+
+Allow: /$
+Allow: /legal-notice
+Allow: /privacy-policy
+
+Allow: /sitemap.xml
+
+Sitemap: https://guillaume-piard.fr/sitemap.xml

@@ -1,7 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{% endblock %}
-
 {% block body %}
 <div class="min-h-screen bg-base-100 relative">
     <!-- Background elements -->
@@ -10,7 +8,7 @@
     <div class="fixed inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(236,72,153,0.05)_0%,transparent_50%)]"></div>
     
     <!-- Grid pattern -->
-    <div class="fixed inset-0 opacity-30">
+    <div class="fixed inset-0 opacity-40">
         <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px;"></div>
     </div>
 
@@ -187,28 +185,6 @@
                             <button>close</button>
                         </form>
                     </dialog>
-
-                    <script>
-                        function submitContactForm() {
-                            const name = document.getElementById('contact-name').value;
-                            const email = document.getElementById('contact-email').value;
-                            const message = document.getElementById('contact-message').value;
-                            const privacyConsent = document.getElementById('privacy-consent').checked;
-
-                            if (!name || !email || !message || !privacyConsent) {
-                                alert('Please fill in all fields and accept the privacy policy');
-                                return;
-                            }
-
-                            // Here you can add your form submission logic
-                            // For now, we'll just log to console and close the modal
-                            console.log('Form submitted:', { name, email, message, privacyConsent });
-                            contact_modal.close();
-                            
-                            // Reset form
-                            document.getElementById('contactForm').reset();
-                        }
-                    </script>
 
                 </div>
 
