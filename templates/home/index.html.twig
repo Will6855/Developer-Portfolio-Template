@@ -123,43 +123,63 @@
                                 <!-- Content -->
                                 <div class="relative">
                                     <h3 class="font-bold text-2xl mb-6 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
-                                    <form id="contactForm" class="space-y-6" onsubmit="event.preventDefault(); submitContactForm();">
+                                    
+                                    {% for message in app.flashes('success') %}
+                                        <div class="alert alert-success mb-4">
+                                            <i class="fa-solid fa-check"></i>
+                                            <span>{{ message }}</span>
+                                        </div>
+                                    {% endfor %}
+                                    
+                                    {% for message in app.flashes('error') %}
+                                        <div class="alert alert-error mb-4">
+                                            <i class="fa-solid fa-circle-exclamation"></i>
+                                            <span>{{ message }}</span>
+                                        </div>
+                                    {% endfor %}
+
+                                    {{ form_start(form, {'attr': {'class': 'space-y-6'}}) }}
                                         <div class="form-control">
                                             <label class="label">
                                                 <span class="label-text font-medium text-base-content/70">{{ 'contact_form.name'|trans }}</span>
                                             </label>
-                                            <input type="text" id="contact-name" class="input bg-base-100/50 border-base-content/10 w-full focus:border-primary/50 transition-all duration-300" required />
+                                            {{ form_widget(form.name) }}
+                                            {{ form_errors(form.name) }}
                                         </div>
                                         <div class="form-control">
                                             <label class="label">
                                                 <span class="label-text font-medium text-base-content/70">{{ 'contact_form.email'|trans }}</span>
                                             </label>
-                                            <input type="email" id="contact-email" class="input bg-base-100/50 border-base-content/10 w-full focus:border-primary/50 transition-all duration-300" required />
+                                            {{ form_widget(form.email) }}
+                                            {{ form_errors(form.email) }}
                                         </div>
                                         <div class="form-control">
-                                            <textarea id="contact-message" class="textarea textarea-bordered bg-base-200/50 backdrop-blur-sm" rows="4" placeholder="{{ 'contact_form.message'|trans }}"></textarea>
+                                            <label class="label">
+                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.message'|trans }}</span>
+                                            </label>
+                                            {{ form_widget(form.message) }}
+                                            {{ form_errors(form.message) }}
                                         </div>
                                         
                                         <!-- Privacy Policy Consent -->
-                                        <div class="form-control mt-4">
+                                        <div class="form-control">
                                             <label class="label cursor-pointer justify-start gap-3">
-                                                <input type="checkbox" id="privacy-consent" class="checkbox checkbox-sm" required />
+                                                {{ form_widget(form.consent) }}
                                                 <span class="label-text text-sm">
                                                     {{ 'contact_form.privacy_consent'|trans({'%privacy_url%': path('privacy_policy')})|raw }}
                                                 </span>
                                             </label>
+                                            {{ form_errors(form.consent) }}
                                         </div>
 
-                                        <div class="modal-action flex items-center justify-end gap-3 mt-8">
-                                            <button type="button" class="btn btn-ghost hover:bg-base-content/5" onclick="contact_modal.close()">
-                                                {{ 'contact_form.cancel'|trans }}
-                                            </button>
-                                            <button type="submit" class="btn bg-gradient-to-r from-primary to-secondary text-primary-content border-0 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 transition-all duration-300">
-                                                <i class="fa-solid fa-paper-plane mr-2"></i>
+                                        <div class="modal-action">
+                                            <button type="submit" class="btn btn-primary">
+                                                <i class="fa-solid fa-paper-plane"></i>
                                                 {{ 'contact_form.send'|trans }}
                                             </button>
+                                            <button type="button" class="btn" onclick="contact_modal.close()">{{ 'contact_form.cancel'|trans }}</button>
                                         </div>
-                                    </form>
+                                    {{ form_end(form) }}
                                 </div>
                             </div>
                         </div>
@@ -238,4 +258,15 @@
     </div>
     
 </div>
+{% endblock %}
+
+{% block javascripts %}
+{{ parent() }}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        {% if app.flashes('reopen-modal')|length > 0 %}
+            contact_modal.showModal();
+        {% endif %}
+    });
+</script>
 {% endblock %}

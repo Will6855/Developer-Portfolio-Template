@@ -19,43 +19,43 @@
                 
                 <div class="space-y-6 text-base-content/80">
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">1. Collecte des données</h2>
-                        <p>Les données personnelles collectées sur ce site se limitent aux informations que vous fournissez volontairement via le formulaire de contact :</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_collection.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.data_collection.description'|trans }}</p>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>Nom</li>
-                            <li>Adresse email</li>
-                            <li>Message</li>
+                            <li>{{ 'privacy_policy.data_collection.fields.name'|trans }}</li>
+                            <li>{{ 'privacy_policy.data_collection.fields.email'|trans }}</li>
+                            <li>{{ 'privacy_policy.data_collection.fields.message'|trans }}</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">2. Utilisation des données</h2>
-                        <p>Les informations que vous nous transmettez sont utilisées uniquement pour répondre à vos messages et ne sont en aucun cas transmises à des tiers.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_usage.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.data_usage.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">3. Conservation des données</h2>
-                        <p>Les données personnelles sont conservées pendant la durée nécessaire à la gestion de la relation avec vous.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_retention.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.data_retention.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">4. Vos droits</h2>
-                        <p>Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement européen n°2016/679/UE du 27 avril 2016, vous bénéficiez d'un droit d'accès, de rectification, de portabilité et d'effacement de vos données.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.your_rights.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.your_rights.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">5. Cookies</h2>
-                        <p>Ce site n'utilise pas de cookies de tracking ou de publicité. Seuls les cookies nécessaires au fonctionnement du site peuvent être utilisés.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.cookies.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.cookies.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">6. Contact</h2>
-                        <p>Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, vous pouvez me contacter à l'adresse : gpiard27@gmail.com</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.contact.title'|trans }}</h2>
+                        <p>{{ 'privacy_policy.contact.description'|trans }}</p>
                     </section>
                 </div>
 
                 <div class="mt-8 text-center">
-                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; Retour à l'accueil</a>
+                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; {{ 'common.back_to_home'|trans }}</a>
                 </div>
             </div>
         </div>

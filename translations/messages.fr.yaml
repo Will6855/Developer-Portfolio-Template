@@ -92,6 +92,53 @@ projects:
     title: 'Email Sender'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
 
+common:
+  back_to_home: 'Retour à l''accueil'
+
+legal_notice:
+  editor:
+    title: 'Éditeur du site'
+    edited_by: 'Ce site est édité par Guillaume PIARD'
+    contact: 'Contact'
+  hosting:
+    title: 'Hébergement'
+    hosted_by: 'Ce site est hébergé par'
+    company_info: 'SAS au capital de {capital}'
+    ape: 'Code APE'
+    vat: 'N° TVA'
+    address: 'Siège social : 2 rue Kellermann - 59100 Roubaix – France'
+    phone: 'Tel'
+  intellectual_property:
+    title: 'Propriété intellectuelle'
+    content: "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques."
+  links:
+    title: 'Liens hypertextes'
+    content: "Le site peut contenir des liens hypertextes vers d'autres sites. Je ne suis pas responsable du contenu de ces sites externes."
+
+privacy_policy:
+  data_collection:
+    title: 'Collecte des données'
+    description: 'Les données personnelles collectées sur ce site se limitent aux informations que vous fournissez volontairement via le formulaire de contact :'
+    fields:
+      name: 'Nom'
+      email: 'Adresse email'
+      message: 'Message'
+  data_usage:
+    title: 'Utilisation des données'
+    description: 'Les informations que vous nous transmettez sont utilisées uniquement pour répondre à vos messages et ne sont en aucun cas transmises à des tiers.'
+  data_retention:
+    title: 'Conservation des données'
+    description: 'Les données personnelles sont conservées pendant la durée nécessaire à la gestion de la relation avec vous.'
+  your_rights:
+    title: 'Vos droits'
+    description: 'Conformément à la loi « informatique et libertés » du 6 janvier 1978 modifiée et au Règlement européen n°2016/679/UE du 27 avril 2016, vous bénéficiez d''un droit d''accès, de rectification, de portabilité et d''effacement de vos données.'
+  cookies:
+    title: 'Cookies'
+    description: 'Ce site n''utilise pas de cookies de tracking ou de publicité. Seuls les cookies nécessaires au fonctionnement du site peuvent être utilisés.'
+  contact:
+    title: 'Contact'
+    description: 'Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, vous pouvez me contacter à l''adresse : gpiard27@gmail.com'
+
 footer:
   legal_notice: 'Mentions Légales'
   privacy_policy: 'Politique de Confidentialité'

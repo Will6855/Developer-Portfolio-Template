@@ -7,6 +7,10 @@ use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 use Symfony\Contracts\Translation\TranslatorInterface;
 use Symfony\Component\HttpFoundation\Request;
+use App\Form\ContactType;
+use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Email;
+use Symfony\Component\Mime\Address;
 
 class HomeController extends AbstractController
 {
@@ -25,8 +29,50 @@ class HomeController extends AbstractController
     }
 
     #[Route('/', name: 'home')]
-    public function index(): Response
+    public function index(Request $request, MailerInterface $mailer): Response
     {
+        // Contact form handling
+        $form = $this->createForm(ContactType::class);
+        $form->handleRequest($request);
+
+        if($form->isSubmitted() && $form->isValid()) {
+            try {
+                $contactFormData = $form->getData();
+                
+                $adminEmail = (new Email())
+                    ->from(new Address($contactFormData->getEmail()))
+                    ->to(new Address('contact@guillaume-piard.fr'))
+                    ->subject('Nouveau message de ' . $contactFormData->getEmail())
+                    ->html(
+                        '<p><strong>Nom:</strong> ' . htmlspecialchars($contactFormData->getName()) . '</p>' .
+                        '<p><strong>Email:</strong> ' . htmlspecialchars($contactFormData->getEmail()) . '</p>' .
+                        '<p><strong>Message:</strong><br>' . nl2br(htmlspecialchars($contactFormData->getMessage())) . '</p>'
+                    );
+                $mailer->send($adminEmail);
+
+                $userEmail = (new Email())
+                    ->from(new Address('contact@guillaume-piard.fr', 'Guillaume PIARD'))
+                    ->to(new Address($contactFormData->getEmail()))
+                    ->subject('Message reçu')
+                    ->html(
+                        '<p><strong>Nom:</strong> ' . htmlspecialchars($contactFormData->getName()) . '</p>' .
+                        '<p><strong>Email:</strong> ' . htmlspecialchars($contactFormData->getEmail()) . '</p>' .
+                        '<p><strong>Message:</strong><br>' . nl2br(htmlspecialchars($contactFormData->getMessage())) . '</p>' .
+                        '<br>' .
+                        '<p>Merci pour votre message et de votre intérêt, je reviens vers vous dans les meilleurs délais. </p>' .
+                        '<p>Cordialement,</p>' .
+                        '<p>Guillaume PIARD</p>');
+                $mailer->send($userEmail);
+
+                $this->addFlash('success', 'Votre message a bien été envoyé');
+                $this->addFlash('reopen-modal', true);
+                return $this->redirectToRoute('home');
+            } catch (\Exception $e) {
+                $this->addFlash('error', 'Une erreur est survenue lors de l\'envoi du message');
+                $this->addFlash('reopen-modal', true);
+            }
+        }
+
         // Calculate age
         $birthDate = new \DateTime('2004-01-06');
         $today = new \DateTime();
@@ -255,7 +301,8 @@ class HomeController extends AbstractController
             'experiences' => $experiences,
             'educations' => $educations,
             'projects' => $projects,
-            'age' => $age
+            'age' => $age,
+            'form' => $form->createView()
         ]);
     }
 

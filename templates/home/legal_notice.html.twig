@@ -19,31 +19,36 @@
                 
                 <div class="space-y-6 text-base-content/80">
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">1. Éditeur du site</h2>
-                        <p>Ce site est édité par Guillaume PIARD</p>
-                        <p>Contact : gpiard27@gmail.com</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'legal_notice.editor.title'|trans }}</h2>
+                        <p>{{ 'legal_notice.editor.edited_by'|trans }}</p>
+                        <p>{{ 'legal_notice.editor.contact'|trans }} : gpiard27@gmail.com</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">2. Hébergement</h2>
-                        <p>Ce site est hébergé par :</p>
-                        <p>[Nom de l'hébergeur]</p>
-                        <p>[Adresse de l'hébergeur]</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'legal_notice.hosting.title'|trans }}</h2>
+                        <p>{{ 'legal_notice.hosting.hosted_by'|trans }} :</p>
+                        <p>OVH</p>
+                        <p>{{ 'legal_notice.hosting.company_info'|trans({'capital': '10 174 560 €'}) }}</p>
+                        <p>RCS Lille Métropole 424 761 419 00045</p>
+                        <p>{{ 'legal_notice.hosting.ape'|trans }} 2620Z</p>
+                        <p>{{ 'legal_notice.hosting.vat'|trans }} : FR 22 424 761 419</p>
+                        <p>{{ 'legal_notice.hosting.address'|trans }}</p>
+                        <p>{{ 'legal_notice.hosting.phone'|trans }} : 1007</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">3. Propriété intellectuelle</h2>
-                        <p>L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'legal_notice.intellectual_property.title'|trans }}</h2>
+                        <p>{{ 'legal_notice.intellectual_property.content'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">4. Liens hypertextes</h2>
-                        <p>Le site peut contenir des liens hypertextes vers d'autres sites. Je ne suis pas responsable du contenu de ces sites externes.</p>
+                        <h2 class="text-xl font-semibold mb-4">{{ 'legal_notice.links.title'|trans }}</h2>
+                        <p>{{ 'legal_notice.links.content'|trans }}</p>
                     </section>
                 </div>
 
                 <div class="mt-8 text-center">
-                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; Retour à l'accueil</a>
+                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; {{ 'common.back_to_home'|trans }}</a>
                 </div>
             </div>
         </div>

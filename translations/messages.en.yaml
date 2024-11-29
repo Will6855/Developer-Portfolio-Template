@@ -98,3 +98,50 @@ about:
 footer:
   legal_notice: 'Legal Notice'
   privacy_policy: 'Privacy Policy'
+
+legal_notice:
+  editor:
+    title: 'Website Editor'
+    edited_by: 'This website is edited by Guillaume PIARD'
+    contact: 'Contact'
+  hosting:
+    title: 'Hosting'
+    hosted_by: 'This website is hosted by'
+    company_info: 'SAS with a capital of {capital}'
+    ape: 'APE Code'
+    vat: 'VAT Number'
+    address: 'Head Office: 2 rue Kellermann - 59100 Roubaix – France'
+    phone: 'Phone'
+  intellectual_property:
+    title: 'Intellectual Property'
+    content: 'This entire website is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.'
+  links:
+    title: 'Hyperlinks'
+    content: 'The website may contain hyperlinks to other sites. I am not responsible for the content of these external sites.'
+
+privacy_policy:
+  data_collection:
+    title: 'Data Collection'
+    description: 'Personal data collected on this site is limited to the information you voluntarily provide through the contact form:'
+    fields:
+      name: 'Name'
+      email: 'Email address'
+      message: 'Message'
+  data_usage:
+    title: 'Data Usage'
+    description: 'The information you provide is used solely to respond to your messages and is never shared with third parties.'
+  data_retention:
+    title: 'Data Retention'
+    description: 'Personal data is retained for the duration necessary to manage our relationship with you.'
+  your_rights:
+    title: 'Your Rights'
+    description: 'In accordance with the French "Data Protection Act" of January 6, 1978, as amended, and European Regulation No. 2016/679/EU of April 27, 2016, you have the right to access, rectify, port, and delete your data.'
+  cookies:
+    title: 'Cookies'
+    description: 'This site does not use tracking or advertising cookies. Only cookies necessary for the website''s functionality may be used.'
+  contact:
+    title: 'Contact'
+    description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: gpiard27@gmail.com'
+
+common:
+  back_to_home: 'Back to Home'
