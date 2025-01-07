@@ -1,5 +1,9 @@
 {% extends 'base.html.twig' %}
 
+{% block stylesheets %}
+    {{ parent() }}
+{% endblock %}
+
 {% block body %}
 <div class="min-h-screen bg-base-100 relative">
     <!-- Background elements -->
@@ -197,23 +201,35 @@
             <section id="about" class="max-w-3xl mx-auto lg:mx-0">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.about'|trans }}</h2>
                 <div class="space-y-6 text-base-content/80 text-lg text-justify">
-                    <p>
-                        {{ 'about.paragraph1'|trans({'%age%': age})|raw }}
-                    </p>
-                    <p>
-                        {{ 'about.paragraph2'|trans|raw }}
-                    </p>
+                    <p>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
+                    <p>{{ 'about.paragraph2'|trans|raw }}</p>
                 </div>
             </section>
 
             <!-- Skills Section -->
             {% include 'components/_skills.html.twig' %}
 
-            <!-- Experience Section -->
-            {% include 'components/_experience.html.twig' %}
+            <!-- Experience/Education Toggle -->
+            <div class="max-w-3xl flex justify-center mb-1 mt-12 lg:mt-16">
+                <div class="flex items-center bg-base-200 rounded-full p-1 space-x-2">
+                    <button id="experience-toggle" class="toggle-btn px-4 py-2 rounded-full transition-all duration-300 ease-in-out font-bold hover:bg-base-300/50">
+                        {{ 'sections.experiences'|trans }}
+                    </button>
+                    <button id="education-toggle" class="toggle-btn px-4 py-2 rounded-full transition-all duration-300 ease-in-out font-bold hover:bg-base-300/50">
+                        {{ 'sections.education'|trans }}
+                    </button>
+                </div>
+            </div>
 
-            <!-- Education Section -->
-            {% include 'components/_education.html.twig' %}
+            <!-- Sections Container -->
+            <div id="sections-container" class="relative overflow-hidden">
+                <section id="experience" class="transition-all duration-300 ease-in-out transform">
+                    {% include 'components/_experience.html.twig' %}
+                </section>
+                <section id="education" class="transition-all duration-300 ease-in-out transform">
+                    {% include 'components/_education.html.twig' %}
+                </section>
+            </div>
 
             <!-- Projects Section -->
             {% include 'components/_projects.html.twig' %}
@@ -237,12 +253,61 @@
 {% endblock %}
 
 {% block javascripts %}
-{{ parent() }}
-<script>
-    document.addEventListener('DOMContentLoaded', function() {
-        {% if app.flashes('reopen-modal')|length > 0 %}
-            contact_modal.showModal();
-        {% endif %}
-    });
-</script>
+    {{ parent() }}
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            {% if app.flashes('reopen-modal')|length > 0 %}
+                contact_modal.showModal();
+            {% endif %}
+        });
+    </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const educationToggle = document.getElementById('education-toggle');
+            const experienceToggle = document.getElementById('experience-toggle');
+            const educationSection = document.getElementById('education');
+            const experienceSection = document.getElementById('experience');
+
+            const toggleSections = (outSection, inSection, outToggle, inToggle) => {
+                const isEducation = inSection.id === 'education';
+                const outDir = isEducation ? '-translate-x-full' : 'translate-x-full';
+                const inDir = isEducation ? 'translate-x-full' : '-translate-x-full';
+
+                outSection.classList.add(outDir, 'opacity-0');
+                setTimeout(() => {
+                    outSection.classList.add('hidden');
+                    outSection.classList.remove(outDir, 'opacity-0');
+                    
+                    inSection.classList.remove('hidden');
+                    inSection.classList.add(inDir, 'opacity-0');
+                    
+                    // Update toggle button styles
+                    inToggle.classList.remove('text-base-content/60');
+                    inToggle.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
+                    outToggle.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
+                    outToggle.classList.add('text-base-content/60');
+                    
+                    // Trigger reflow and remove slide animation
+                    setTimeout(() => {
+                        inSection.classList.remove(inDir, 'opacity-0');
+                    }, 50);
+                }, 200);
+            };
+
+            // Initially hide education section and set experience as active
+            educationSection.classList.add('hidden');
+            educationToggle.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
+            educationToggle.classList.add('text-base-content/60');
+            experienceToggle.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
+
+            // Toggle functionality
+            educationToggle.addEventListener('click', () => 
+                toggleSections(experienceSection, educationSection, experienceToggle, educationToggle)
+            );
+
+            experienceToggle.addEventListener('click', () => 
+                toggleSections(educationSection, experienceSection, educationToggle, experienceToggle)
+            );
+        });
+    </script>
 {% endblock %}
