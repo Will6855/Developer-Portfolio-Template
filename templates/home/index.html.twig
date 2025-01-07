@@ -210,12 +210,12 @@
             {% include 'components/_skills.html.twig' %}
 
             <!-- Experience/Education Toggle -->
-            <div class="max-w-3xl flex justify-center mb-1 mt-12 lg:mt-16">
-                <div class="flex items-center bg-base-200 rounded-full p-1 space-x-2">
-                    <button id="experience-toggle" class="toggle-btn px-4 py-2 rounded-full transition-all duration-300 ease-in-out font-bold hover:bg-base-300/50">
+            <div class="max-w-3xl mb-1 mt-12 lg:mt-16">
+                <div class="flex items-center space-x-4">
+                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-white bg-transparent border-none focus:outline-none" data-section="experience">
                         {{ 'sections.experiences'|trans }}
                     </button>
-                    <button id="education-toggle" class="toggle-btn px-4 py-2 rounded-full transition-all duration-300 ease-in-out font-bold hover:bg-base-300/50">
+                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-gray-500 bg-transparent border-none focus:outline-none" data-section="education">
                         {{ 'sections.education'|trans }}
                     </button>
                 </div>
@@ -262,52 +262,52 @@
         });
     </script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const educationToggle = document.getElementById('education-toggle');
-            const experienceToggle = document.getElementById('experience-toggle');
-            const educationSection = document.getElementById('education');
-            const experienceSection = document.getElementById('experience');
+    document.addEventListener('DOMContentLoaded', function() {
+        const educationToggle = document.getElementById('education-toggle');
+        const experienceToggle = document.getElementById('experience-toggle');
+        const educationSection = document.getElementById('education');
+        const experienceSection = document.getElementById('experience');
 
-            const toggleSections = (outSection, inSection, outToggle, inToggle) => {
-                const isEducation = inSection.id === 'education';
-                const outDir = isEducation ? '-translate-x-full' : 'translate-x-full';
-                const inDir = isEducation ? 'translate-x-full' : '-translate-x-full';
+        const toggleSections = (outSection, inSection, outToggle, inToggle) => {
+            const isEducation = inSection.id === 'education';
+            const outDir = isEducation ? '-translate-x-full' : 'translate-x-full';
+            const inDir = isEducation ? 'translate-x-full' : '-translate-x-full';
 
-                outSection.classList.add(outDir, 'opacity-0');
+            outSection.classList.add(outDir, 'opacity-0');
+            setTimeout(() => {
+                outSection.classList.add('hidden');
+                outSection.classList.remove(outDir, 'opacity-0');
+                
+                inSection.classList.remove('hidden');
+                inSection.classList.add(inDir, 'opacity-0');
+                
+                // Update toggle button styles
+                inToggle.classList.remove('text-gray-500');
+                inToggle.classList.add('text-white');
+                outToggle.classList.remove('text-white');
+                outToggle.classList.add('text-gray-500');
+                
+                // Trigger reflow and remove slide animation
                 setTimeout(() => {
-                    outSection.classList.add('hidden');
-                    outSection.classList.remove(outDir, 'opacity-0');
-                    
-                    inSection.classList.remove('hidden');
-                    inSection.classList.add(inDir, 'opacity-0');
-                    
-                    // Update toggle button styles
-                    inToggle.classList.remove('text-base-content/60');
-                    inToggle.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
-                    outToggle.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
-                    outToggle.classList.add('text-base-content/60');
-                    
-                    // Trigger reflow and remove slide animation
-                    setTimeout(() => {
-                        inSection.classList.remove(inDir, 'opacity-0');
-                    }, 50);
-                }, 200);
-            };
+                    inSection.classList.remove(inDir, 'opacity-0');
+                }, 50);
+            }, 200);
+        };
 
-            // Initially hide education section and set experience as active
-            educationSection.classList.add('hidden');
-            educationToggle.classList.remove('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
-            educationToggle.classList.add('text-base-content/60');
-            experienceToggle.classList.add('bg-gradient-to-r', 'from-primary', 'to-secondary', 'text-primary-content');
+        // Initially hide education section and set experience as active
+        educationSection.classList.add('hidden');
+        educationToggle.classList.remove('text-white');
+        educationToggle.classList.add('text-gray-500');
+        experienceToggle.classList.add('text-white');
 
-            // Toggle functionality
-            educationToggle.addEventListener('click', () => 
-                toggleSections(experienceSection, educationSection, experienceToggle, educationToggle)
-            );
+        // Toggle functionality
+        educationToggle.addEventListener('click', () => 
+            toggleSections(experienceSection, educationSection, experienceToggle, educationToggle)
+        );
 
-            experienceToggle.addEventListener('click', () => 
-                toggleSections(educationSection, experienceSection, educationToggle, experienceToggle)
-            );
-        });
-    </script>
+        experienceToggle.addEventListener('click', () => 
+            toggleSections(educationSection, experienceSection, educationToggle, experienceToggle)
+        );
+    });
+</script>
 {% endblock %}
