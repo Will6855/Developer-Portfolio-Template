@@ -1,8 +1,8 @@
 sections:
-  about: 'À Propos'
+  about: 'À Propos De Moi'
   skills: 'Compétences'
   experiences: 'Expériences'
-  education: 'Formation'
+  education: 'Formations'
   projects: 'Projets'
 
 sidebar:

@@ -210,23 +210,23 @@
             {% include 'components/_skills.html.twig' %}
 
             <!-- Experience/Education Toggle -->
-            <div class="max-w-3xl mb-1 mt-12 lg:mt-16">
+            <div class="max-w-3xl mb-1 mt-12 lg:mt-16 mx-auto lg:mx-0">
                 <div class="flex items-center space-x-4">
-                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-white bg-transparent border-none focus:outline-none" data-section="experience">
+                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer border-none focus:outline-none">
                         {{ 'sections.experiences'|trans }}
                     </button>
-                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-gray-500 bg-transparent border-none focus:outline-none" data-section="education">
+                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-gray-500 border-none focus:outline-none">
                         {{ 'sections.education'|trans }}
                     </button>
                 </div>
             </div>
 
             <!-- Sections Container -->
-            <div id="sections-container" class="relative overflow-hidden">
+            <div id="sections-container" class="relative overflow-hidden max-w-3xl">
                 <section id="experience" class="transition-all duration-300 ease-in-out transform">
                     {% include 'components/_experience.html.twig' %}
                 </section>
-                <section id="education" class="transition-all duration-300 ease-in-out transform">
+                <section id="education" class="transition-all duration-300 ease-in-out transform hidden">
                     {% include 'components/_education.html.twig' %}
                 </section>
             </div>
@@ -235,7 +235,7 @@
             {% include 'components/_projects.html.twig' %}
 
             <!-- Footer -->
-            <footer class="mt-16 pb-8">
+            <footer class="max-w-3xl mt-16 pb-8">
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-base-content/50">
                     <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors">
                         {{ 'footer.legal_notice'|trans }}
@@ -283,8 +283,6 @@
                 
                 // Update toggle button styles
                 inToggle.classList.remove('text-gray-500');
-                inToggle.classList.add('text-white');
-                outToggle.classList.remove('text-white');
                 outToggle.classList.add('text-gray-500');
                 
                 // Trigger reflow and remove slide animation
@@ -293,12 +291,6 @@
                 }, 50);
             }, 200);
         };
-
-        // Initially hide education section and set experience as active
-        educationSection.classList.add('hidden');
-        educationToggle.classList.remove('text-white');
-        educationToggle.classList.add('text-gray-500');
-        experienceToggle.classList.add('text-white');
 
         // Toggle functionality
         educationToggle.addEventListener('click', () => 

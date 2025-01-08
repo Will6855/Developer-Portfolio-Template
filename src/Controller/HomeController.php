@@ -109,7 +109,7 @@ class HomeController extends AbstractController
                 'items' => [
                     [ 'icon' => 'fa-brands fa-symfony', 'name' => 'Symfony', 'display' => true ],
                     [ 'image' => 'skills/flask.svg', 'name' => 'Flask', 'display' => true ],
-                    [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
+                    [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => false ],
                     // [ 'icon' => 'fa-solid fa-leaf', 'name' => 'Twig', 'display' => true ]
@@ -195,6 +195,7 @@ class HomeController extends AbstractController
                     $findTechByName('JavaScript'),
                     $findTechByName('Kotlin'),
                     $findTechByName('Swift'),
+                    $findTechByName('Bootstrap'),
                     $findTechByName('MySQL'),
                     $findTechByName('REST APIs'),
                     $findTechByName('Agile'),
@@ -217,6 +218,7 @@ class HomeController extends AbstractController
                     $findTechByName('CSS'),
                     $findTechByName('JavaScript'),
                     $findTechByName('Flask'),
+                    $findTechByName('Bootstrap'),
                     $findTechByName('REST APIs'),
                 ]
             ]
