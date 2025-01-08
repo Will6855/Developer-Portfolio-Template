@@ -86,7 +86,7 @@ class HomeController extends AbstractController
         $skills = [
             'Languages' => [
                 'icon' => 'fa-solid fa-code',
-                'color_bg' => 'blue-500/20',
+                'color_bg' => 'blue-500/40',
                 'color_text' => 'blue-400',
                 'color_hover' => 'blue-800',
                 'items' => [
@@ -103,7 +103,7 @@ class HomeController extends AbstractController
             ],
             'Frameworks' => [
                 'icon' => 'fa-solid fa-layer-group',
-                'color_bg' => 'red-500/20',
+                'color_bg' => 'red-500/40',
                 'color_text' => 'red-400',
                 'color_hover' => 'red-800',
                 'items' => [
@@ -117,7 +117,7 @@ class HomeController extends AbstractController
             ],
             'Backend' => [
                 'icon' => 'fa-solid fa-server',
-                'color_bg' => 'green-500/20',
+                'color_bg' => 'green-500/40',
                 'color_text' => 'green-400',
                 'color_hover' => 'green-800',
                 'items' => [
@@ -128,7 +128,7 @@ class HomeController extends AbstractController
             ],
             'Practices' => [
                 'icon' => 'fa-solid fa-list-check',
-                'color_bg' => 'yellow-500/20',
+                'color_bg' => 'yellow-500/40',
                 'color_text' => 'yellow-400',
                 'color_hover' => 'yellow-800',
                 'items' => [

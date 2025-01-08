@@ -53,7 +53,7 @@
                     <div class="text-center lg:text-left">
                         <h1 class="text-3xl lg:text-4xl font-bold mb-2">Guillaume PIARD</h1>
                         <div class="flex flex-col gap-2">
-                            <div class="flex items-center gap-4 justify-center lg:justify-start">
+                            <div class="flex items-center gap-4 justify-center lg:justify-start flex-col lg:flex-row">
                                 <h2 class="text-lg lg:text-xl font-semibold text-gray-300">{{ 'sidebar.job_title'|trans }}</h2>
                                 <div class="flex items-center gap-2 py-1 px-2.5 bg-success/10 text-success rounded-full">
                                     <span class="relative flex h-2 w-2">
@@ -215,7 +215,7 @@
                     <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer border-none focus:outline-none">
                         {{ 'sections.experiences'|trans }}
                     </button>
-                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-gray-500 border-none focus:outline-none">
+                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-base-content/40 border-none focus:outline-none">
                         {{ 'sections.education'|trans }}
                     </button>
                 </div>
@@ -282,8 +282,8 @@
                 inSection.classList.add(inDir, 'opacity-0');
                 
                 // Update toggle button styles
-                inToggle.classList.remove('text-gray-500');
-                outToggle.classList.add('text-gray-500');
+                inToggle.classList.remove('text-base-content/40');
+                outToggle.classList.add('text-base-content/40');
                 
                 // Trigger reflow and remove slide animation
                 setTimeout(() => {
@@ -293,13 +293,17 @@
         };
 
         // Toggle functionality
-        educationToggle.addEventListener('click', () => 
-            toggleSections(experienceSection, educationSection, experienceToggle, educationToggle)
-        );
+        educationToggle.addEventListener('click', () => {
+            // Check if education section is already active
+            if (!educationSection.classList.contains('hidden')) return;
+            toggleSections(experienceSection, educationSection, experienceToggle, educationToggle);
+        });
 
-        experienceToggle.addEventListener('click', () => 
-            toggleSections(educationSection, experienceSection, educationToggle, experienceToggle)
-        );
+        experienceToggle.addEventListener('click', () => {
+            // Check if experience section is already active
+            if (!experienceSection.classList.contains('hidden')) return;
+            toggleSections(educationSection, experienceSection, educationToggle, experienceToggle);
+        });
     });
 </script>
 {% endblock %}

@@ -46,7 +46,7 @@
                     <!-- Technologies -->
                     <div class="flex flex-wrap gap-2">
                         {% for tech in experience.technologies %}
-                            <div class="badge badge-md gap-2 px-2 py-2 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors">
+                            <div class="badge badge-md gap-2 px-2 py-2 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors border-none">
                                 {% if tech.icon is defined %}
                                     <i class="{{ tech.icon }} mr-1"></i>
                                 {% else %}

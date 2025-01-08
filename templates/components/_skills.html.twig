@@ -1,16 +1,16 @@
 <section id="skills" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
-    <h2 class="text-3xl lg:text-4xl font-bold mb-6">{{ 'sections.skills'|trans }}</h2>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6">{{ 'sections.skills'|trans }}</h2>
     
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {% for category, data in skills %}
-            <div class="rounded-xl bg-gradient-to-br from-primary/10 to-base-300/80 border border-base-content/5 p-4">
-                <h3 class="text-lg font-semibold mb-3 text-base-content/70 flex items-center gap-2">
+            <div class="rounded-xl bg-gradient-to-br from-primary/10 to-base-300/80 border border-base-content/5 p-3">
+                <h3 class="text-lg font-semibold mb-2 text-base-content/70 flex items-center gap-2">
                     <i class="{{ data.icon }} text-primary"></i>{{ ('skills.categories.' ~ category|lower)|trans }}
                 </h3>
-                <div class="flex flex-wrap gap-2">
+                <div class="flex flex-wrap gap-1.5">
                     {% for item in data.items %}
                         {% if item.display is defined and item.display %}
-                            <div class="badge badge-md px-2 py-2 bg-{{ data.color_bg }} text-{{ data.color_text }} hover:bg-{{ data.color_hover }} transition-colors">
+                            <div class="badge badge-md px-2 py-2 bg-{{ data.color_bg }} text-{{ data.color_text }} hover:bg-{{ data.color_hover }} transition-colors border-none">
                                 {% if item.icon is defined %}
                                     <i class="{{ item.icon }} mr-1"></i>
                                 {% else %}
