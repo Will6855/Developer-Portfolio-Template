@@ -2,10 +2,11 @@ experiences:
   klimber_kids:
     title: 'Full-Stack Developer'
     location: 'Guichainville, France'
-    period: 'July 2024 - August 2024'
+    period: 'July 2024 - January 2025 (Part-time Project)'
     description:
       1: '↳ Development of a showcase website (PHP / Symfony)'
       2: '↳ Implementation of an Anti-Spam protection (Honeypot)'
+      3: '↳ Integration of a location reservation system with availability management'
   cs_lane:
     title: 'Full-Stack Developer (Internship)'
     location: 'Elbeuf, France'

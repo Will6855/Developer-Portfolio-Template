@@ -42,10 +42,11 @@ experiences:
   klimber_kids:
     title: 'Développeur Full-Stack'
     location: 'Guichainville, France'
-    period: 'Juillet 2024 - Août 2024'
+    period: 'Juillet 2024 - Janvier 2025 (Projet à temps partiel)'
     description:
       1: '↳ Développement d''un site vitrine (PHP / Symfony)'
       2: '↳ Implémentation d''une protection anti-spam (Honeypot)'
+      3: '↳ Intégration d''un système de réservation de location avec gestion de disponibilités'
   cs_lane:
     title: 'Développeur Full-Stack (Stage)'
     location: 'Elbeuf, France'

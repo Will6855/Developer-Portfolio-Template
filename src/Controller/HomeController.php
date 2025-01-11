@@ -162,7 +162,8 @@ class HomeController extends AbstractController
                 'logo' => 'companies/klimber-kids.svg',
                 'description' => [
                     $this->translator->trans('experiences.klimber_kids.description.1'),
-                    $this->translator->trans('experiences.klimber_kids.description.2')
+                    $this->translator->trans('experiences.klimber_kids.description.2'),
+                    $this->translator->trans('experiences.klimber_kids.description.3')
                 ],
                 'technologies' => [
                     $findTechByName('PHP'),
