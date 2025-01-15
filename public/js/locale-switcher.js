@@ -6,6 +6,10 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!currentLocale) {
         const browserLang = (navigator.language || navigator.userLanguage).split('-')[0].toLowerCase();
         supportedLocales.includes(browserLang) && switchLocale(browserLang);
+    } else {
+        if (currentLocale !== document.documentElement.lang) {
+            switchLocale(currentLocale);
+        }
     }
 
     languageLinks.forEach(link => {
