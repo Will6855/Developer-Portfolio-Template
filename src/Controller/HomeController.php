@@ -274,7 +274,7 @@ class HomeController extends AbstractController
                     'image' => 'projects/dashboard-si.png',
                     'github' => 'https://github.com/Will6855/IT-Department-Dashboard',
                     'website' => null,
-                    'demo' => '',
+                    'demo' => 'https://it-department-dashboard-demo.vercel.app/',
                     'technologies' => [
                         $findTechByName('Python'),
                         $findTechByName('HTML'),

@@ -1,22 +1,24 @@
 <div class="fixed top-4 right-4 z-50">
+    {% set languages = [
+        { code: 'en', name: 'English', flag: '🇬🇧' },
+        { code: 'fr', name: 'Français', flag: '🇫🇷' }
+    ] %}
+    
     <div class="dropdown dropdown-end">
         <label tabindex="0" class="btn btn-ghost m-1">
-            <span class="language-flag language-flag-fr text-lg" style="display: {% if app.request.locale == 'fr' %}inline{% else %}none{% endif %}">🇫🇷</span>
-            <span class="language-flag language-flag-en text-lg" style="display: {% if app.request.locale == 'en' %}inline{% else %}none{% endif %}">🇬🇧</span>
+            {% for lang in languages %}
+                <span class="language-flag language-flag-{{ lang.code }} text-lg" style="display: {% if app.request.locale == lang.code %}inline{% else %}none{% endif %}">{{ lang.flag }}</span>
+            {% endfor %}
         </label>
         <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32">
-            <li>
-                <a href="#" data-locale="en" class="flex items-center gap-2 {% if app.request.locale == 'en' %}active{% endif %}">
-                    <span class="text-lg">🇬🇧</span>
-                    <span>English</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" data-locale="fr" class="flex items-center gap-2 {% if app.request.locale == 'fr' %}active{% endif %}">
-                    <span class="text-lg">🇫🇷</span>
-                    <span>Français</span>
-                </a>
-            </li>
+            {% for lang in languages %}
+                <li>
+                    <a href="#" data-locale="{{ lang.code }}" class="flex items-center gap-2 {% if app.request.locale == lang.code %}active{% endif %}">
+                        <span class="text-lg">{{ lang.flag }}</span>
+                        <span>{{ lang.name }}</span>
+                    </a>
+                </li>
+            {% endfor %}
         </ul>
     </div>
 </div>
