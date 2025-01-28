@@ -8,7 +8,7 @@
                 <!-- Background Image -->
                 <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-25 transition-opacity duration-300">
                     <img src="{{ asset('images/' ~ project.image) }}" 
-                         alt="{{ project.title }}" 
+                         alt="{{ project.title|trans }}" 
                          class="w-full h-full object-cover">
                 </div>
 
@@ -16,11 +16,11 @@
                 <div class="relative z-10 flex flex-col flex-grow p-3">
                     <!-- Project Title -->
                     <h3 class="text-lg font-bold mb-2 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
-                        {{ project.title }}
+                        {{ project.title|trans }}
                     </h3>
 
                     <!-- Description -->
-                    <p class="text-sm leading-tight mb-3">{{ project.description }}</p>
+                    <p class="text-sm leading-tight mb-3">{{ project.description|trans }}</p>
 
                     <!-- Spacer to push badges and links to bottom -->
                     <div class="flex-grow"></div>

@@ -19,18 +19,18 @@
                         </div>
                         <div>
                             <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
-                                <h3 class="text-xl font-bold">{{ experience.title }}</h3>
-                                <span class="text-base-content/70">{{ 'sidebar.at_experience'|trans }}</span>
+                                <h3 class="text-xl font-bold">{{ experience.title|trans }}</h3>
+                                <span class="text-base-content/70">{{ 'experiences.at_experience'|trans }}</span>
                                 <span class="font-semibold">{{ experience.company }}</span>
                             </div>
                             <div class="flex flex-wrap gap-4 text-sm text-base-content/70 mt-1">
                                 <div class="flex items-center gap-1">
                                     <i class="fa-solid fa-location-dot"></i>
-                                    <span>{{ experience.location }}</span>
+                                    <span>{{ experience.location|trans }}</span>
                                 </div>
                                 <div class="flex items-center gap-1">
                                     <i class="fa-regular fa-calendar"></i>
-                                    <span>{{ experience.period }}</span>
+                                    <span>{{ experience.period|trans }}</span>
                                 </div>
                             </div>
                         </div>
@@ -39,7 +39,7 @@
                     <!-- Description -->
                     <div class="space-y-2 text-base-content/70">
                         {% for item in experience.description %}
-                            <p>{{ item }}</p>
+                            <p>{{ item|trans }}</p>
                         {% endfor %}
                     </div>
 

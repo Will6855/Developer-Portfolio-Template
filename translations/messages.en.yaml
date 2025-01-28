@@ -1,4 +1,39 @@
+meta:
+  title: 'Guillaume PIARD | Portfolio'
+  description: 'Portfolio of Guillaume PIARD, software developer. Discover my innovative projects, creative approach, and how I can help you turn your ideas into unique digital solutions.'
+  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'
+  
+sidebar:
+  job_title: 'Full-Stack Developer'
+  status: 'Open to Job Offers'
+  location: 'Evreux, France 🇫🇷'
+  tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
+  resume: 'View Full Resume'
+  contact_button: 'Get in Touch'
+  open_to_job: 'Open to Opportunities'
+  open_to_job_description: 'Currently seeking full-time positions'
+  lets_connect: 'Let''s Connect'
+
+sections:
+  about: 'About Me'
+  skills: 'Skills'
+  experiences: 'Experiences'
+  education: 'Education'
+  projects: 'Projects'
+  
+about:
+  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web and application development</span>. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
+  paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
+
+skills:
+  categories:
+    languages: 'Languages'
+    frameworks: 'Frameworks'
+    backend: 'Backend'
+    practices: 'Practices'
+
 experiences:
+  at_experience: 'at'
   klimber_kids:
     title: 'Full-Stack Developer'
     location: 'Guichainville, France'
@@ -25,6 +60,7 @@ experiences:
       2: '↳ Utilization of a REST API (Microsoft Graph API)'
 
 education:
+  at_education: 'at'
   bts:
     degree: 'BTS SIO (Organisational IT Services)'
     location: 'Rouen, France'
@@ -53,33 +89,6 @@ projects:
     title: 'Email Sender'
     description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
 
-sections:
-  about: 'About Me'
-  skills: 'Skills'
-  experiences: 'Experiences'
-  education: 'Education'
-  projects: 'Projects'
-
-skills:
-  categories:
-    languages: 'Languages'
-    frameworks: 'Frameworks'
-    backend: 'Backend'
-    practices: 'Practices'
-
-sidebar:
-  job_title: 'Full-Stack Developer'
-  status: 'Open to Job Offers'
-  location: 'Evreux, France 🇫🇷'
-  tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
-  resume: 'View Full Resume'
-  contact_button: 'Get in Touch'
-  at_experience: 'at'
-  at_education: 'at'
-  open_to_job: 'Open to Opportunities'
-  open_to_job_description: 'Currently seeking full-time positions'
-  lets_connect: 'Let''s Connect'
-
 contact_form:
   title: 'Get in Touch'
   name: 'Name'
@@ -88,14 +97,6 @@ contact_form:
   send: 'Send Message'
   cancel: 'Cancel'
   privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>."
-
-about:
-  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web and application development</span>. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
-  paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
-
-footer:
-  legal_notice: 'Legal Notice'
-  privacy_policy: 'Privacy Policy'
 
 legal_notice:
   editor:
@@ -141,10 +142,9 @@ privacy_policy:
     title: 'Contact'
     description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: gpiard27@gmail.com'
 
+footer:
+  legal_notice: 'Legal Notice'
+  privacy_policy: 'Privacy Policy'
+
 common:
   back_to_home: 'Back to Home'
-
-meta:
-  title: 'Guillaume PIARD | Portfolio'
-  description: 'Portfolio of Guillaume PIARD, software developer. Discover my innovative projects, creative approach, and how I can help you turn your ideas into unique digital solutions.'
-  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'

@@ -1,10 +1,8 @@
-sections:
-  about: 'À Propos De Moi'
-  skills: 'Compétences'
-  experiences: 'Expériences'
-  education: 'Formations'
-  projects: 'Projets'
-
+meta:
+  title: 'Guillaume PIARD | Portfolio'
+  description: 'Portfolio de Guillaume PIARD, développeur informatique. Découvrez mes projets innovants, mon approche créative, et comment je peux vous aider à concrétiser vos idées en solutions digitales uniques.'
+  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
+  
 sidebar:
   job_title: 'Développeur Full-Stack'
   status: 'Disponible pour Opportunités'
@@ -15,17 +13,13 @@ sidebar:
   open_to_job: 'Disponible pour Opportunités'
   open_to_job_description: 'En recherche active d''opportunités professionnelles'
   lets_connect: 'Prendre Contact'
-  at_experience: 'chez'
-  at_education: 'au'
 
-contact_form:
-  title: 'Me Contacter'
-  name: 'Nom'
-  email: 'Email'
-  message: 'Message'
-  send: 'Envoyer'
-  cancel: 'Annuler'
-  privacy_consent: "J'accepte que mes données soient traitées conformément à la <a href='%privacy_url%' class='link link-primary' target='_blank'>politique de confidentialité</a>."
+sections:
+  about: 'À Propos De Moi'
+  skills: 'Compétences'
+  experiences: 'Expériences'
+  education: 'Formations'
+  projects: 'Projets'
 
 about:
   paragraph1: 'Technicien en informatique de %age% ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">développement web et d''applications</span>. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions logicielles adaptées aux besoins des utilisateurs.'
@@ -39,6 +33,7 @@ skills:
     practices: 'Pratiques'
 
 experiences:
+  at_experience: 'chez'
   klimber_kids:
     title: 'Développeur Full-Stack'
     location: 'Guichainville, France'
@@ -65,6 +60,7 @@ experiences:
       2: '↳ Utilisation d''une API REST (Microsoft Graph API)'
 
 education:
+  at_education: 'au'
   bts:
     degree: 'BTS SIO (Services Informatiques aux Organisations)'
     location: 'Rouen, France'
@@ -93,13 +89,14 @@ projects:
     title: 'Email Sender'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
 
-common:
-  back_to_home: 'Retour à l''accueil'
-
-meta:
-  title: 'Guillaume PIARD | Portfolio'
-  description: 'Portfolio de Guillaume PIARD, développeur informatique. Découvrez mes projets innovants, mon approche créative, et comment je peux vous aider à concrétiser vos idées en solutions digitales uniques.'
-  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
+contact_form:
+  title: 'Me Contacter'
+  name: 'Nom'
+  email: 'Email'
+  message: 'Message'
+  send: 'Envoyer'
+  cancel: 'Annuler'
+  privacy_consent: "J'accepte que mes données soient traitées conformément à la <a href='%privacy_url%' class='link link-primary' target='_blank'>politique de confidentialité</a>."
 
 legal_notice:
   editor:
@@ -148,3 +145,6 @@ privacy_policy:
 footer:
   legal_notice: 'Mentions Légales'
   privacy_policy: 'Politique de Confidentialité'
+
+common:
+  back_to_home: 'Retour à l''accueil'
