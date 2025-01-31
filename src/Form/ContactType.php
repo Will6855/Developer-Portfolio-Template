@@ -19,21 +19,21 @@ class ContactType extends AbstractType
             ->add('name', TextType::class, [
                 'label' => 'Nom',
                 'attr' => [
-                    'placeholder' => 'Votre nom',
+                    'placeholder' => 'contact_form.name_placeholder',
                     'class' => 'input input-bordered w-full'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [
-                    'placeholder' => 'Votre email',
+                    'placeholder' => 'contact_form.email_placeholder',
                     'class' => 'input input-bordered w-full'
                 ]
             ])
             ->add('message', TextareaType::class, [
                 'label' => 'Message',
                 'attr' => [
-                    'placeholder' => 'Votre message',
+                    'placeholder' => 'contact_form.message_placeholder',
                     'rows' => 4,
                     'class' => 'textarea textarea-bordered w-full'
                 ]

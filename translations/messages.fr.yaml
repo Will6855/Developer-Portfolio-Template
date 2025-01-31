@@ -92,8 +92,11 @@ projects:
 contact_form:
   title: 'Me Contacter'
   name: 'Nom'
+  name_placeholder: 'Votre nom'
   email: 'Email'
+  email_placeholder: 'Votre email'
   message: 'Message'
+  message_placeholder: 'Votre message'
   send: 'Envoyer'
   cancel: 'Annuler'
   privacy_consent: "J'accepte que mes données soient traitées conformément à la <a href='%privacy_url%' class='link link-primary' target='_blank'>politique de confidentialité</a>."

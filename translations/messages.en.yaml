@@ -92,8 +92,11 @@ projects:
 contact_form:
   title: 'Get in Touch'
   name: 'Name'
+  name_placeholder: 'Your name'
   email: 'Email'
+  email_placeholder: 'Your email'
   message: 'Message'
+  message_placeholder: 'Your message'
   send: 'Send Message'
   cancel: 'Cancel'
   privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>."

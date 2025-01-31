@@ -1,5 +1,5 @@
 <?php
-// src/Service/PortfolioService.php
+
 namespace App\Service;
 
 class PortfolioService
@@ -34,8 +34,7 @@ class PortfolioService
                     [ 'image' => 'skills/flask.svg', 'name' => 'Flask', 'display' => true ],
                     [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
-                    [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => false ],
-                    // [ 'icon' => 'fa-solid fa-leaf', 'name' => 'Twig', 'display' => true ]
+                    [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => true ]
                 ]
             ],
             'Backend' => [
