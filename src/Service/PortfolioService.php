@@ -182,10 +182,26 @@ class PortfolioService
                 'image' => 'projects/email-sender.png',
                 'github' => 'https://github.com/Will6855/HTML-Email-Sender',
                 'website' => null,
-                'demo' => '',
+                'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])
             ],
+        ];
+    }
+
+    public function getPersonalInfo(): array
+    {
+        return [
+            'name' => 'Guillaume PIARD',
+            'files' => [
+                'cv' => 'files/cv_guillaume_piard.pdf',
+                'profile_image' => 'images/profile-image.webp'
+            ],
+            'social' => [
+                'github' => 'https://github.com/Will6855',
+                'email' => 'gpiard27@gmail.com',
+                'linkedin' => 'https://linkedin.com/in/piard-guillaume'
+            ]
         ];
     }
 }

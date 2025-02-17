@@ -84,12 +84,14 @@ class HomeController extends AbstractController
         $today = new \DateTime();
         $age = $today->diff($birthDate)->y;
 
+        $personalInfo = $this->portfolioService->getPersonalInfo();
         $skills = $this->portfolioService->getSkills();
         $experiences = $this->portfolioService->getExperiences();
         $educations = $this->portfolioService->getEducations();
         $projects = $this->portfolioService->getProjects();
 
         return $this->render('home/index.html.twig', [
+            'personal_info' => $personalInfo,
             'skills' => $skills,
             'experiences' => $experiences,
             'educations' => $educations,

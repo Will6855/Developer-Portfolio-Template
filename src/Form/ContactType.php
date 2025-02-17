@@ -34,7 +34,7 @@ class ContactType extends AbstractType
                 'label' => 'Message',
                 'attr' => [
                     'placeholder' => 'contact_form.message_placeholder',
-                    'rows' => 4,
+                    'rows' => 3,
                     'class' => 'textarea textarea-bordered w-full'
                 ]
             ])

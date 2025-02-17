@@ -20,7 +20,7 @@
         <!-- Left Sidebar -->
         <div class="w-full lg:w-2/5 p-6 lg:p-8 lg:pl-20 lg:fixed lg:h-screen overflow-y-auto flex items-center">
             <div class="w-full">
-                <header>
+                <header class="max-w-3xl mx-auto">
                     <div class="mb-6 relative w-36 h-36 lg:w-48 lg:h-48 mx-auto lg:mx-0">
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600" class="w-full h-full">
                             <clipPath id="blob-mask">
@@ -41,7 +41,7 @@
                             </clipPath>
                             <image 
                                 clip-path="url(#blob-mask)"
-                                href="{{ asset('images/profile-image.webp') }}"
+                                href="{{ asset(personal_info.files.profile_image) }}"
                                 width="100%"
                                 height="100%"
                                 preserveAspectRatio="xMidYMid slice"
@@ -51,7 +51,7 @@
                         </svg>
                     </div>
                     <div class="text-center lg:text-left">
-                        <h1 class="text-3xl lg:text-4xl font-bold mb-2">Guillaume PIARD</h1>
+                        <h1 class="text-3xl lg:text-4xl font-bold mb-2">{{personal_info.name}}</h1>
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center gap-4 justify-center lg:justify-start flex-col lg:flex-row">
                                 <h2 class="text-lg lg:text-xl font-semibold text-gray-300">{{ 'sidebar.job_title'|trans }}</h2>
@@ -74,7 +74,7 @@
                     <!-- Resume Download and Social Links -->
                     <div class="mt-6 flex items-center gap-4 flex-col lg:flex-row">
                         <div class="group flex-1 w-full">
-                            <a href="{{ asset('files/cv_guillaume_piard.pdf') }}" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
+                            <a href="{{ asset(personal_info.files.cv) }}" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
                                 <span class="relative flex items-center gap-2 text-sm font-medium">
                                     <i class="fa-solid fa-file-arrow-down"></i>
@@ -83,13 +83,13 @@
                             </a>
                         </div>
                         <div class="flex gap-4 mt-4 lg:mt-0">
-                            <a href="https://github.com/Will6855" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                            <a href="{{ personal_info.social.github }}" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
                                 <i class="fa-brands fa-github fa-xl"></i>
                             </a>
-                            <a href="mailto:gpiard27@gmail.com" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                            <a href="mailto:{{ personal_info.social.email }}" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
                                 <i class="fa-solid fa-envelope fa-xl"></i>
                             </a>
-                            <a href="https://linkedin.com/in/piard-guillaume" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
+                            <a href="{{ personal_info.social.linkedin }}" target="_blank" rel="noopener noreferrer" class="text-gray-300 hover:text-base-content transition-colors hover:scale-110 transform duration-200">
                                 <i class="fa-brands fa-linkedin fa-xl"></i>
                             </a>
                         </div>
@@ -124,7 +124,7 @@
                                 
                                 <!-- Content -->
                                 <div class="relative">
-                                    <h3 class="font-bold text-3xl mt-2 mb-4 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
+                                    <h3 class="font-bold text-3xl mx-auto mt-2 mb-4 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
                                     
                                     {% for message in app.flashes('success') %}
                                         <div class="alert alert-success mb-4">
@@ -222,7 +222,7 @@
             </div>
 
             <!-- Sections Container -->
-            <div id="sections-container" class="relative overflow-hidden max-w-3xl">
+            <div id="sections-container" class="relative overflow-hidden max-w-3xl lg:mx-0 mx-auto">
                 <section id="experience" class="transition-all duration-300 ease-in-out transform">
                     {% include 'components/_experience.html.twig' %}
                 </section>
