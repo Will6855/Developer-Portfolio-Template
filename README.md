@@ -32,13 +32,7 @@ To personalize this portfolio, you'll need to modify the following files:
   - Modify legal terms and conditions
   - Add your specific legal disclaimers and contact information
 
-### Translations
-All translatable content is managed in the `translations/` directory:
-- `messages.en.yaml`: English translations
-- `messages.fr.yaml`: French translations
-- Add more language files as needed
-
-### SEO and Webmaster Configuration
+#### SEO and Webmaster Configuration
 - `public/robots.txt`: 
   - Modify crawling and indexing rules
   - Update disallow/allow directives
@@ -48,6 +42,12 @@ All translatable content is managed in the `translations/` directory:
   - Update site URLs
   - Modify last modification dates
   - Add/remove pages as needed
+
+#### Translations
+All translatable content is managed in the `translations/` directory:
+- `messages.en.yaml`: English translations
+- `messages.fr.yaml`: French translations
+- Add more language files as needed
 
 ## Setup Instructions
 

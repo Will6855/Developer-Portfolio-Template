@@ -16,7 +16,7 @@ class PortfolioService
                     [ 'icon' => 'fa-brands fa-html5', 'name' => 'HTML', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-css3-alt', 'name' => 'CSS', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-js', 'name' => 'JavaScript', 'display' => true ],
-                    [ 'image' => 'skills/typescript.svg', 'name' => 'TypeScript', 'display' => false ],
+                    [ 'image' => 'skills/typescript.svg', 'name' => 'TypeScript', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-php', 'name' => 'PHP', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-python', 'name' => 'Python', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-java', 'name' => 'Java', 'display' => true ],
@@ -32,7 +32,7 @@ class PortfolioService
                 'items' => [
                     [ 'icon' => 'fa-brands fa-symfony', 'name' => 'Symfony', 'display' => true ],
                     [ 'image' => 'skills/flask.svg', 'name' => 'Flask', 'display' => true ],
-                    [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => false ],
+                    [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => true ]
                 ]
@@ -82,6 +82,21 @@ class PortfolioService
     public function getExperiences(): array
     {
         return [
+            [
+                'title' => 'experiences.sogea.title',
+                'company' => 'SOGEA Environnement',
+                'location' => 'experiences.sogea.location',
+                'period' => 'experiences.sogea.period',
+                'logo' => 'companies/sogea.svg',
+                'description' => [
+                    'experiences.sogea.description.1',
+                    'experiences.sogea.description.2',
+                    'experiences.sogea.description.3',
+                    'experiences.sogea.description.4'
+                ],
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])
+            ],
             [
                 'title' => 'experiences.klimber_kids.title',
                 'company' => 'Klimber-Kids',
@@ -181,7 +196,7 @@ class PortfolioService
                 'description' => 'projects.email-sender.description',
                 'image' => 'projects/email-sender.png',
                 'github' => 'https://github.com/Will6855/HTML-Email-Sender',
-                'website' => null,
+                'website' => 'https://html-email-sender.vercel.app/',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])

@@ -4,7 +4,7 @@ meta:
   keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
   
 sidebar:
-  job_title: 'Développeur Full-Stack'
+  job_title: 'Développeur Web Full-Stack'
   status: 'Disponible pour Opportunités'
   location: 'Evreux, France 🇫🇷'
   tagline: 'Conception de Solutions Numériques Innovantes à Fort Impact'
@@ -34,8 +34,17 @@ skills:
 
 experiences:
   at_experience: 'chez'
+  sogea:
+    title: 'Développeur Web Full-Stack'
+    location: 'Evreux, France'
+    period: 'Mars 2025'
+    description:
+      1: '↳ Développement d''une application de gestion d''inventaire (Next.js / Node.js)'
+      2: '↳ Création d''un tableau de bord pour le suivi des stocks'
+      3: '↳ Génération de rapports automatisés'
+      4: '↳ Compilation en application Windows'
   klimber_kids:
-    title: 'Développeur Full-Stack'
+    title: 'Développeur Web Full-Stack'
     location: 'Guichainville, France'
     period: 'Juillet 2024 - Janvier 2025 (Projet à temps partiel)'
     description:
@@ -43,7 +52,7 @@ experiences:
       2: '↳ Implémentation d''une protection anti-spam (Honeypot)'
       3: '↳ Intégration d''un système de réservation de location avec gestion de disponibilités'
   cs_lane:
-    title: 'Développeur Full-Stack (Stage)'
+    title: 'Développeur Web Full-Stack (Stage)'
     location: 'Elbeuf, France'
     period: 'Janvier 2024 - Février 2024'
     description:
@@ -52,7 +61,7 @@ experiences:
       3: '↳ Création d''une API REST (PHP & MySQL)'
       4: '↳ Gestion de projet en équipe (SCRUMBAN)'
   uimm:
-    title: 'Développeur Full-Stack (Stage)'
+    title: 'Développeur Web Full-Stack (Stage)'
     location: 'Evreux, France'
     period: 'Mai 2023 - Juin 2023'
     description:

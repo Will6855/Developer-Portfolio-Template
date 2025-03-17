@@ -4,7 +4,7 @@ meta:
   keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'
   
 sidebar:
-  job_title: 'Full-Stack Developer'
+  job_title: 'Full-Stack Web Developer'
   status: 'Open to Job Offers'
   location: 'Evreux, France 🇫🇷'
   tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
@@ -34,8 +34,17 @@ skills:
 
 experiences:
   at_experience: 'at'
+  sogea:
+    title: 'Full-Stack Web Developer'
+    location: 'Evreux, France'
+    period: 'March 2025'
+    description:
+      1: '↳ Development of an inventory management application (Next.js / Node.js)'
+      2: '↳ Creation of a dashboard for stock tracking'
+      3: '↳ Generation of automated reports'
+      4: '↳ Compilation into a Windows application'
   klimber_kids:
-    title: 'Full-Stack Developer'
+    title: 'Full-Stack Web Developer'
     location: 'Guichainville, France'
     period: 'July 2024 - January 2025 (Part-time Project)'
     description:
@@ -43,7 +52,7 @@ experiences:
       2: '↳ Implementation of an Anti-Spam protection (Honeypot)'
       3: '↳ Integration of a location reservation system with availability management'
   cs_lane:
-    title: 'Full-Stack Developer (Internship)'
+    title: 'Full-Stack Web Developer (Internship)'
     location: 'Elbeuf, France'
     period: 'January 2024 - February 2024'
     description:
@@ -52,7 +61,7 @@ experiences:
       3: '↳ Creation of a REST API (PHP & MySQL)'
       4: '↳ Team project management (SCRUMBAN)'
   uimm:
-    title: 'Full-Stack Developer (Internship)'
+    title: 'Full-Stack Web Developer (Internship)'
     location: 'Evreux, France'
     period: 'May 2023 - June 2023'
     description:
