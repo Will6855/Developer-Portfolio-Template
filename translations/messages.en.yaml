@@ -7,7 +7,7 @@ sidebar:
   job_title: 'Full-Stack Web Developer'
   status: 'Open to Job Offers'
   location: 'Evreux, France 🇫🇷'
-  tagline: 'Crafting Digital Solutions That Drive Real Business Impact'
+  tagline: 'Crafting Intuitive and High-Performance Applications'
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
   open_to_job: 'Open to Opportunities'
@@ -36,37 +36,35 @@ experiences:
   at_experience: 'at'
   sogea:
     title: 'Full-Stack Web Developer'
-    location: 'Evreux, France'
+    location: 'Gravigny, France'
     period: 'March 2025'
     description:
       1: '↳ Development of an inventory management application (Next.js / Node.js)'
-      2: '↳ Creation of a dashboard for stock tracking'
-      3: '↳ Generation of automated reports'
-      4: '↳ Compilation into a Windows application'
+      2: '↳ Automation of reports and stock tracking'
+      3: '↳ Windows compilation for local usage'
   klimber_kids:
     title: 'Full-Stack Web Developer'
     location: 'Guichainville, France'
     period: 'July 2024 - January 2025 (Part-time Project)'
     description:
-      1: '↳ Development of a showcase website (PHP / Symfony)'
-      2: '↳ Implementation of an Anti-Spam protection (Honeypot)'
-      3: '↳ Integration of a location reservation system with availability management'
+      1: '↳ Creation of a showcase website (PHP / Symfony)'
+      2: '↳ Security implementation with anti-spam protection (Honeypot)'
+      3: '↳ Reservation system with availability management'
   cs_lane:
     title: 'Full-Stack Web Developer (Internship)'
     location: 'Elbeuf, France'
     period: 'January 2024 - February 2024'
     description:
       1: '↳ Development of Android (Kotlin) & iOS (Swift) mobile applications'
-      2: '↳ Implementation of a complete appointment system (PHP)'
-      3: '↳ Creation of a REST API (PHP & MySQL)'
-      4: '↳ Team project management (SCRUMBAN)'
+      2: '↳ Implementation of an appointment system and REST API (PHP & MySQL)'
+      3: '↳ Agile project management (SCRUMBAN)'
   uimm:
     title: 'Full-Stack Web Developer (Internship)'
     location: 'Evreux, France'
     period: 'May 2023 - June 2023'
     description:
-      1: '↳ Development of a Web App for the IT Department (Python / Flask)'
-      2: '↳ Utilization of a REST API (Microsoft Graph API)'
+      1: '↳ Development of a Web application for the IT department (Python / Flask)'
+      2: '↳ Dynamic display of IT data via Microsoft Graph API'
 
 education:
   at_education: 'at'

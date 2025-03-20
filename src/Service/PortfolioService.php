@@ -84,15 +84,14 @@ class PortfolioService
         return [
             [
                 'title' => 'experiences.sogea.title',
-                'company' => 'SOGEA Environnement',
+                'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea.location',
                 'period' => 'experiences.sogea.period',
                 'logo' => 'companies/sogea.svg',
                 'description' => [
                     'experiences.sogea.description.1',
                     'experiences.sogea.description.2',
-                    'experiences.sogea.description.3',
-                    'experiences.sogea.description.4'
+                    'experiences.sogea.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])
@@ -116,12 +115,11 @@ class PortfolioService
                 'company' => 'CS-Lane',
                 'location' => 'experiences.cs_lane.location',
                 'period' => 'experiences.cs_lane.period',
-                'logo' => 'companies/cs-lane.png',
+                'logo' => 'companies/cs-lane.svg',
                 'description' => [
                     'experiences.cs_lane.description.1',
                     'experiences.cs_lane.description.2',
-                    'experiences.cs_lane.description.3',
-                    'experiences.cs_lane.description.4'
+                    'experiences.cs_lane.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['PHP', 'HTML', 'CSS', 'JavaScript', 'Kotlin', 'Swift', 'Bootstrap', 'MySQL', 'REST APIs', 'Agile', 'Git'])
