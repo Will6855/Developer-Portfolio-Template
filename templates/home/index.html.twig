@@ -168,7 +168,7 @@
                                         <div class="form-control">
                                             <label class="label cursor-pointer justify-start gap-3">
                                                 {{ form_widget(form.consent) }}
-                                                <span class="label-text text-sm" data-trans="contact_form.privacy_consent" data-trans-params="{ '%privacy_url%': {{path('privacy_policy')}} }" data-trans-raw>
+                                                <span class="label-text text-sm" data-trans="contact_form.privacy_consent" data-trans-params='{ "%privacy_url%": "{{path('privacy_policy')}}" }' data-trans-raw>
                                                     {{ 'contact_form.privacy_consent'|trans({'%privacy_url%': path('privacy_policy')})|raw }}
                                                 </span>
                                             </label>
@@ -202,7 +202,7 @@
             <section id="about" class="max-w-3xl mx-auto lg:mx-0">
                 <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8" data-trans="sections.about">{{ 'sections.about'|trans }}</h2>
                 <div class="space-y-6 text-base-content/80 text-lg text-justify">
-                    <p data-trans="about.paragraph1" data-trans-params="{ '%age%': {{age}} }" data-trans-raw>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
+                    <p data-trans="about.paragraph1" data-trans-params='{ "%age%": {{age}} }' data-trans-raw>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
                     <p data-trans="about.paragraph2" data-trans-raw>{{ 'about.paragraph2'|trans|raw }}</p>
                 </div>
             </section>

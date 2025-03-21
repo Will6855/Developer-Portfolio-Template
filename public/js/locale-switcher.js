@@ -109,14 +109,10 @@ document.addEventListener('DOMContentLoaded', () => {
                             
                             if (paramsAttr) {
                                 try {
-                                    let params = {};
-                                    if (paramsAttr.includes('/')) {
-                                        const match = paramsAttr.match(/{\s*['"]?(%\w+%?)['"]?\s*:\s*\/([^}]+)\s*}/);
-                                        if (match) params[match[1]] = match[2];
-                                    } else {
-                                        params = JSON.parse(paramsAttr.trim().replace(/'/g, '"').replace(/([{,]\s*)(\w+):/g, '$1"$2":'));
-                                    }
-                                    Object.entries(params).forEach(([k, v]) => finalText = finalText.replace(new RegExp(k.replace(/%/g, '%'), 'g'), v));
+                                    const params = JSON.parse(paramsAttr);
+                                    Object.entries(params).forEach(([k, v]) => {
+                                        finalText = finalText.replace(new RegExp(k.replace(/%/g, '%'), 'g'), v);
+                                    });
                                 } catch (e) {
                                     console.error('Invalid JSON in data-trans-params:', e, paramsAttr);
                                 }
