@@ -13,16 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
         switchLocale(currentLocale);
     }
     
-    // Set up event listeners
-    languageLinks.forEach(link => {
-        link.addEventListener('click', e => {
-            e.preventDefault();
-            switchLocale(link.dataset.locale);
-            closeDropdown();
-        });
-    });
-    
-    // Close dropdown when clicking outside
+    // Set up event listeners and close dropdown when clicking outside
     document.addEventListener('click', e => {
         const details = document.querySelector('details.dropdown');
         if (details && !details.contains(e.target)) {
@@ -30,23 +21,19 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
     
-    // Simple function to close dropdown
-    function closeDropdown() {
-        const details = document.querySelector('details.dropdown');
-        if (details) {
-            details.removeAttribute('open');
-        }
-    }
+    languageLinks.forEach(link => {
+        link.addEventListener('click', e => {
+            e.preventDefault();
+            switchLocale(link.dataset.locale);
+            const details = document.querySelector('details.dropdown');
+            if (details) {
+                details.removeAttribute('open');
+            }
+        });
+    });
     
     // Function to handle locale switching
     async function switchLocale(locale) {
-        // Update active state of language links
-        const activeLink = document.querySelector(`[data-locale="${locale}"]`);
-        if (activeLink) {
-            const activeLinks = document.querySelectorAll('[data-locale].active');
-            activeLinks.forEach(link => link.classList.remove('active'));
-            activeLink.classList.add('active');
-        }
         try {
             // Collect all translatable elements before making the request
             const transElements = document.querySelectorAll('[data-trans], [data-trans-placeholder]');
@@ -57,34 +44,18 @@ document.addEventListener('DOMContentLoaded', () => {
             
             transElements.forEach(element => {
                 // Handle both regular translations and placeholder translations
-                if (element.hasAttribute('data-trans')) {
-                    const transKey = element.getAttribute('data-trans');
-                    translationKeys.push(transKey);
-                    
-                    // Store element with its key for later processing
-                    if (!elementMap.has(transKey)) {
-                        elementMap.set(transKey, []);
-                    }
-                    elementMap.get(transKey).push({
-                        element, 
-                        type: 'content'
-                    });
-                }
+                const transKey = element.getAttribute('data-trans') || element.getAttribute('data-trans-placeholder');
+                const type = element.getAttribute('data-trans') ? 'content' : 'placeholder';
+                translationKeys.push(transKey);
                 
-                // Handle placeholder translations separately
-                if (element.hasAttribute('data-trans-placeholder')) {
-                    const placeholderKey = element.getAttribute('data-trans-placeholder');
-                    translationKeys.push(placeholderKey);
-                    
-                    // Store element with its placeholder key for later processing
-                    if (!elementMap.has(placeholderKey)) {
-                        elementMap.set(placeholderKey, []);
-                    }
-                    elementMap.get(placeholderKey).push({
-                        element, 
-                        type: 'placeholder'
-                    });
+                // Store element with its key for later processing
+                if (!elementMap.has(transKey)) {
+                    elementMap.set(transKey, []);
                 }
+                elementMap.get(transKey).push({
+                    element, 
+                    type
+                });
             });
             
             // Make the request with all the keys we need
@@ -121,61 +92,40 @@ document.addEventListener('DOMContentLoaded', () => {
                     activeFlag.style.display = 'inline';
                 }
                 
+                // Update active state of language links
+                const activeLink = document.querySelector(`[data-locale="${locale}"]`);
+                if (activeLink) {
+                    const activeLinks = document.querySelectorAll('[data-locale].active');
+                    activeLinks.forEach(link => link.classList.remove('active'));
+                    activeLink.classList.add('active');
+                }
+                
                 // Update translations if available
                 if (data.translations) {
-                    // Process each translation key
-                    Object.keys(data.translations).forEach(key => {
-                        const translation = data.translations[key];
-                        
-                        // Process all elements that use this translation key
-                        if (elementMap.has(key)) {
-                            elementMap.get(key).forEach(({element, type}) => {
-                                let finalText = translation;
-                                
-                                // Apply parameters if defined
-                                const paramsAttr = element.getAttribute('data-trans-params');
-                                if (paramsAttr) {
-                                    try {
-                                        let params = {};
-                                        
-                                        // Handle object notation with RegExp values: { '%key%': /value }
-                                        if (paramsAttr.includes('/')) {
-                                            const match = paramsAttr.match(/{\s*['"]?(%\w+%?)['"]?\s*:\s*\/([^\/]+).*}/);
-                                            if (match) {
-                                                params[match[1]] = match[2];
-                                            }
-                                        } else {
-                                            // Handle JSON format
-                                            const sanitizedParams = paramsAttr.trim()
-                                                .replace(/'/g, '"')
-                                                .replace(/([{,]\s*)(\w+):/g, '$1"$2":');
-                                            params = JSON.parse(sanitizedParams);
-                                        }
-                                        
-                                        // Apply replacements
-                                        Object.keys(params).forEach(key => {
-                                            const paramPattern = new RegExp(key.replace(/%/g, '%'), 'g');
-                                            finalText = finalText.replace(paramPattern, params[key]);
-                                        });
-                                    } catch (e) {
-                                        console.error('Invalid JSON in data-trans-params:', e, paramsAttr);
-                                    }
-                                }
-                                
-                                // Apply as content or placeholder based on type
-                                if (type === 'content') {
-                                    // Apply as raw HTML or text for content
-                                    if (element.hasAttribute('data-trans-raw')) {
-                                        element.innerHTML = finalText;
+                    Object.entries(data.translations).forEach(([key, translation]) => {
+                        elementMap.get(key)?.forEach(({ element, type }) => {
+                            let finalText = translation;
+                            const paramsAttr = element.getAttribute('data-trans-params');
+                            
+                            if (paramsAttr) {
+                                try {
+                                    let params = {};
+                                    if (paramsAttr.includes('/')) {
+                                        const match = paramsAttr.match(/{\s*['"]?(%\w+%?)['"]?\s*:\s*\/([^}]+)\s*}/);
+                                        if (match) params[match[1]] = match[2];
                                     } else {
-                                        element.textContent = finalText;
+                                        params = JSON.parse(paramsAttr.trim().replace(/'/g, '"').replace(/([{,]\s*)(\w+):/g, '$1"$2":'));
                                     }
-                                } else if (type === 'placeholder') {
-                                    // Apply as placeholder attribute
-                                    element.setAttribute('placeholder', finalText);
+                                    Object.entries(params).forEach(([k, v]) => finalText = finalText.replace(new RegExp(k.replace(/%/g, '%'), 'g'), v));
+                                } catch (e) {
+                                    console.error('Invalid JSON in data-trans-params:', e, paramsAttr);
                                 }
-                            });
-                        }
+                            }
+                            
+                            type === 'content' 
+                                ? (element.hasAttribute('data-trans-raw') ? element.innerHTML = finalText : element.textContent = finalText)
+                                : element.setAttribute('placeholder', finalText);
+                        });
                     });
                 }
             }
