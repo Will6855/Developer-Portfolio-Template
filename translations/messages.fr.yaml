@@ -116,7 +116,7 @@ legal_notice:
   hosting:
     title: 'Hébergement'
     hosted_by: 'Ce site est hébergé par'
-    company_info: 'SAS au capital de {capital}'
+    company_info: 'SAS au capital de %capital% €'
     ape: 'Code APE'
     vat: 'N° TVA'
     address: 'Siège social : 2 rue Kellermann - 59100 Roubaix – France'
@@ -157,4 +157,4 @@ footer:
   privacy_policy: 'Politique de Confidentialité'
 
 common:
-  back_to_home: 'Retour à l''accueil'
+  back_to_home: '&larr; Retour à l''accueil'

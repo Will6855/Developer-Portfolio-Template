@@ -20,14 +20,16 @@ class ContactType extends AbstractType
                 'label' => 'Nom',
                 'attr' => [
                     'placeholder' => 'contact_form.name_placeholder',
-                    'class' => 'input input-bordered w-full'
+                    'class' => 'input input-bordered w-full',
+                    'data-trans-placeholder' => 'contact_form.name_placeholder'
                 ]
             ])
             ->add('email', EmailType::class, [
                 'label' => 'Email',
                 'attr' => [
                     'placeholder' => 'contact_form.email_placeholder',
-                    'class' => 'input input-bordered w-full'
+                    'class' => 'input input-bordered w-full',
+                    'data-trans-placeholder' => 'contact_form.email_placeholder'
                 ]
             ])
             ->add('message', TextareaType::class, [
@@ -35,7 +37,8 @@ class ContactType extends AbstractType
                 'attr' => [
                     'placeholder' => 'contact_form.message_placeholder',
                     'rows' => 3,
-                    'class' => 'textarea textarea-bordered w-full'
+                    'class' => 'textarea textarea-bordered w-full',
+                    'data-trans-placeholder' => 'contact_form.message_placeholder'
                 ]
             ])
             ->add('consent', CheckboxType::class, [

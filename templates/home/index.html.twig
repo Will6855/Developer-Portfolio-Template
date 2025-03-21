@@ -54,20 +54,20 @@
                         <h1 class="text-3xl lg:text-4xl font-bold mb-2">{{personal_info.name}}</h1>
                         <div class="flex flex-col gap-2">
                             <div class="flex items-center gap-4 justify-center lg:justify-start flex-col lg:flex-row">
-                                <h2 class="text-lg lg:text-xl font-semibold text-gray-300">{{ 'sidebar.job_title'|trans }}</h2>
+                                <h2 class="text-lg lg:text-xl font-semibold text-gray-300" data-trans="sidebar.job_title">{{ 'sidebar.job_title'|trans }}</h2>
                                 <div class="flex items-center gap-2 py-1 px-2.5 bg-success/10 text-success rounded-full">
                                     <span class="relative flex h-2 w-2">
                                         <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-success opacity-75"></span>
                                         <span class="relative inline-flex rounded-full h-2 w-2 bg-success"></span>
                                     </span>
-                                    <span class="text-xs font-medium">{{ 'sidebar.open_to_job'|trans }}</span>
+                                    <span class="text-xs font-medium" data-trans="sidebar.open_to_job">{{ 'sidebar.open_to_job'|trans }}</span>
                                 </div>
                             </div>
                             <div class="flex items-center gap-1 text-gray-400 justify-center lg:justify-start">
                                 <i class="fa-solid fa-location-dot"></i>
-                                <span>{{ 'sidebar.location'|trans }}</span>
+                                <span data-trans="sidebar.location">{{ 'sidebar.location'|trans }}</span>
                             </div>
-                            <p class="text-gray-300 text-sm mt-1">{{ 'sidebar.tagline'|trans }}</p>
+                            <p class="text-gray-300 text-sm mt-1" data-trans="sidebar.tagline">{{ 'sidebar.tagline'|trans }}</p>
                         </div>
                     </div>
 
@@ -76,7 +76,7 @@
                         <div class="group flex-1 w-full">
                             <a href="{{ asset(personal_info.files.cv) }}" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <span class="relative flex items-center gap-2 text-sm font-medium">
+                                <span class="relative flex items-center gap-2 text-sm font-medium" data-trans="sidebar.resume">
                                     <i class="fa-solid fa-file-arrow-down"></i>
                                     {{ 'sidebar.resume'|trans }}
                                 </span>
@@ -98,12 +98,13 @@
                     <div class="mt-6 space-y-3">
                         <div class="grid gap-3">
                             <div class="p-4 rounded-xl bg-gradient-to-br from-primary/10 to-base-300/80 border border-base-content/5">
-                                <h2 class="text-base font-bold mb-1">{{ 'sidebar.open_to_job'|trans }}</h2>
-                                <p class="text-base-content/70 mb-3 text-sm">{{ 'sidebar.open_to_job_description'|trans }}</p>
+                                <h2 class="text-base font-bold mb-1" data-trans="sidebar.open_to_job">{{ 'sidebar.open_to_job'|trans }}</h2>
+                                <p class="text-base-content/70 mb-3 text-sm" data-trans="sidebar.open_to_job_description">{{ 'sidebar.open_to_job_description'|trans }}</p>
                                 <div class="flex justify-center">
                                     <button 
                                         onclick="contact_modal.showModal()" 
-                                        class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm">
+                                        class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm"
+                                        data-trans="sidebar.lets_connect">
                                         <i class="fa-solid fa-briefcase"></i>
                                         {{ 'sidebar.lets_connect'|trans }}
                                     </button>
@@ -124,7 +125,7 @@
                                 
                                 <!-- Content -->
                                 <div class="relative">
-                                    <h3 class="font-bold text-3xl mx-auto mt-2 mb-4 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">{{ 'contact_form.title'|trans }}</h3>
+                                    <h3 class="font-bold text-3xl mx-auto mt-2 mb-4 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-trans="contact_form.title">{{ 'contact_form.title'|trans }}</h3>
                                     
                                     {% for message in app.flashes('success') %}
                                         <div class="alert alert-success mb-4">
@@ -143,21 +144,21 @@
                                     {{ form_start(form, {'attr': {'class': 'space-y-6'}}) }}
                                         <div class="form-control">
                                             <label class="label">
-                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.name'|trans }}</span>
+                                                <span class="label-text font-medium text-base-content/70" data-trans="contact_form.name">{{ 'contact_form.name'|trans }}</span>
                                             </label>
                                             {{ form_widget(form.name) }}
                                             {{ form_errors(form.name) }}
                                         </div>
                                         <div class="form-control">
                                             <label class="label">
-                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.email'|trans }}</span>
+                                                <span class="label-text font-medium text-base-content/70" data-trans="contact_form.email">{{ 'contact_form.email'|trans }}</span>
                                             </label>
                                             {{ form_widget(form.email) }}
                                             {{ form_errors(form.email) }}
                                         </div>
                                         <div class="form-control">
                                             <label class="label">
-                                                <span class="label-text font-medium text-base-content/70">{{ 'contact_form.message'|trans }}</span>
+                                                <span class="label-text font-medium text-base-content/70" data-trans="contact_form.message">{{ 'contact_form.message'|trans }}</span>
                                             </label>
                                             {{ form_widget(form.message) }}
                                             {{ form_errors(form.message) }}
@@ -167,7 +168,7 @@
                                         <div class="form-control">
                                             <label class="label cursor-pointer justify-start gap-3">
                                                 {{ form_widget(form.consent) }}
-                                                <span class="label-text text-sm">
+                                                <span class="label-text text-sm" data-trans="contact_form.privacy_consent" data-trans-params="{ '%privacy_url%': {{path('privacy_policy')}} }" data-trans-raw>
                                                     {{ 'contact_form.privacy_consent'|trans({'%privacy_url%': path('privacy_policy')})|raw }}
                                                 </span>
                                             </label>
@@ -175,11 +176,11 @@
                                         </div>
 
                                         <div class="modal-action">
-                                            <button type="submit" class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2">
+                                            <button type="submit" class="px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2" data-trans="contact_form.send">
                                                 <i class="fa-solid fa-paper-plane"></i>
                                                 {{ 'contact_form.send'|trans }}
                                             </button>
-                                            <button type="button" class="btn" onclick="contact_modal.close()">{{ 'contact_form.cancel'|trans }}</button>
+                                            <button type="button" class="btn" onclick="contact_modal.close()" data-trans="contact_form.cancel">{{ 'contact_form.cancel'|trans }}</button>
                                         </div>
                                     {{ form_end(form) }}
                                 </div>
@@ -199,10 +200,10 @@
         <div class="w-full lg:w-3/5 lg:ml-auto p-6 lg:p-12 mt-6 lg:mt-0">
             <!-- About Section -->
             <section id="about" class="max-w-3xl mx-auto lg:mx-0">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.about'|trans }}</h2>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8" data-trans="sections.about">{{ 'sections.about'|trans }}</h2>
                 <div class="space-y-6 text-base-content/80 text-lg text-justify">
-                    <p>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
-                    <p>{{ 'about.paragraph2'|trans|raw }}</p>
+                    <p data-trans="about.paragraph1" data-trans-params="{ '%age%': {{age}} }" data-trans-raw>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
+                    <p data-trans="about.paragraph2" data-trans-raw>{{ 'about.paragraph2'|trans|raw }}</p>
                 </div>
             </section>
 
@@ -212,10 +213,10 @@
             <!-- Experience/Education Toggle -->
             <div class="max-w-3xl mb-1 mt-12 lg:mt-16 mx-auto lg:mx-0">
                 <div class="flex items-center space-x-4">
-                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer border-none focus:outline-none">
+                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer border-none focus:outline-none" data-trans="sections.experiences">
                         {{ 'sections.experiences'|trans }}
                     </button>
-                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-base-content/40 border-none focus:outline-none">
+                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-base-content/40 border-none focus:outline-none" data-trans="sections.education">
                         {{ 'sections.education'|trans }}
                     </button>
                 </div>
@@ -237,11 +238,11 @@
             <!-- Footer -->
             <footer class="max-w-3xl mt-16 pb-8">
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-base-content/50">
-                    <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors">
+                    <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors" data-trans="footer.legal_notice">
                         {{ 'footer.legal_notice'|trans }}
                     </a>
                     <span class="hidden sm:inline">•</span>
-                    <a href="{{ path('privacy_policy') }}" class="hover:text-base-content transition-colors">
+                    <a href="{{ path('privacy_policy') }}" class="hover:text-base-content transition-colors" data-trans="footer.privacy_policy">
                         {{ 'footer.privacy_policy'|trans }}
                     </a>
                 </div>

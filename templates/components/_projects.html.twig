@@ -1,5 +1,5 @@
 <section id="projects" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
-    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.projects'|trans }}</h2>
+    <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8" data-trans="sections.projects">{{ 'sections.projects'|trans }}</h2>
     
         <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {% for project in projects %}
@@ -15,12 +15,12 @@
                 <!-- Content Wrapper -->
                 <div class="relative z-10 flex flex-col flex-grow p-3">
                     <!-- Project Title -->
-                    <h3 class="text-lg font-bold mb-2 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">
+                    <h3 class="text-lg font-bold mb-2 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-trans="{{ project.title }}">
                         {{ project.title|trans }}
                     </h3>
 
                     <!-- Description -->
-                    <p class="text-sm leading-tight mb-3">{{ project.description|trans }}</p>
+                    <p class="text-sm leading-tight mb-3" data-trans="{{ project.description }}">{{ project.description|trans }}</p>
 
                     <!-- Spacer to push badges and links to bottom -->
                     <div class="flex-grow"></div>
@@ -47,21 +47,21 @@
                             <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-xs gap-1.5 bg-base-content/5 hover:bg-base-content/10 text-base-content border-0 transition-all duration-300">
                                 <i class="fa-brands fa-github"></i>
-                                <span class="text-[10px]">{{ 'projects.links.view_code'|trans }}</span>
+                                <span class="text-[10px]" data-trans="projects.links.view_code">{{ 'projects.links.view_code'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.website %}
                             <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-xs gap-1.5 bg-primary/10 hover:bg-primary/20 text-primary border-0 transition-all duration-300">
                                 <i class="fa-solid fa-globe"></i>
-                                <span class="text-[10px]">{{ 'projects.links.visit_website'|trans }}</span>
+                                <span class="text-[10px]" data-trans="projects.links.visit_website">{{ 'projects.links.visit_website'|trans }}</span>
                             </a>
                         {% endif %}
                         {% if project.demo %}
                             <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" 
                                class="btn btn-xs gap-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-500 border-0 transition-all duration-300">
                                 <i class="fa-solid fa-arrow-up-right-from-square"></i>
-                                <span class="text-[10px]">{{ 'projects.links.live_demo'|trans }}</span>
+                                <span class="text-[10px]" data-trans="projects.links.live_demo">{{ 'projects.links.live_demo'|trans }}</span>
                             </a>
                         {% endif %}
                     </div>

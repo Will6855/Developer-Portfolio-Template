@@ -116,7 +116,7 @@ legal_notice:
   hosting:
     title: 'Hosting'
     hosted_by: 'This website is hosted by'
-    company_info: 'SAS with a capital of {capital}'
+    company_info: 'SAS with a capital of %capital% €'
     ape: 'APE Code'
     vat: 'VAT Number'
     address: 'Head Office: 2 rue Kellermann - 59100 Roubaix – France'
@@ -157,4 +157,4 @@ footer:
   privacy_policy: 'Privacy Policy'
 
 common:
-  back_to_home: 'Back to Home'
+  back_to_home: '&larr; Back to Home'

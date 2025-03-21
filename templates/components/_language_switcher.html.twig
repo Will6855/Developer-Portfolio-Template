@@ -4,21 +4,21 @@
         { code: 'fr', name: 'Français', flag: '🇫🇷' }
     ] %}
     
-    <div class="dropdown dropdown-end">
-        <label tabindex="0" class="btn btn-ghost m-1">
+    <details class="dropdown dropdown-end">
+        <summary role="button" class="btn btn-ghost m-1">
             {% for lang in languages %}
                 <span class="language-flag language-flag-{{ lang.code }} text-lg" style="display: {% if app.request.locale == lang.code %}inline{% else %}none{% endif %}">{{ lang.flag }}</span>
             {% endfor %}
-        </label>
-        <ul tabindex="0" class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32">
+        </summary>
+        <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32">
             {% for lang in languages %}
                 <li>
-                    <a href="#" data-locale="{{ lang.code }}" class="flex items-center gap-2 {% if app.request.locale == lang.code %}active{% endif %}">
+                    <button data-locale="{{ lang.code }}" class="flex items-center gap-2 {% if app.request.locale == lang.code %}active{% endif %}">
                         <span class="text-lg">{{ lang.flag }}</span>
                         <span>{{ lang.name }}</span>
-                    </a>
+                    </button>
                 </li>
             {% endfor %}
         </ul>
-    </div>
+    </details>
 </div>

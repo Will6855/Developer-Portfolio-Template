@@ -15,47 +15,47 @@
     <div class="relative z-10">
         <div class="container mx-auto px-4 py-12">
             <div class="max-w-3xl mx-auto">
-                <h1 class="text-3xl font-bold mb-8">{{ 'footer.privacy_policy'|trans }}</h1>
+                <h1 class="text-3xl font-bold mb-8" data-trans="footer.privacy_policy">{{ 'footer.privacy_policy'|trans }}</h1>
                 
                 <div class="space-y-6 text-base-content/80">
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_collection.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.data_collection.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.data_collection.title">{{ 'privacy_policy.data_collection.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.data_collection.description">{{ 'privacy_policy.data_collection.description'|trans }}</p>
                         <ul class="list-disc ml-6 mt-2">
-                            <li>{{ 'privacy_policy.data_collection.fields.name'|trans }}</li>
-                            <li>{{ 'privacy_policy.data_collection.fields.email'|trans }}</li>
-                            <li>{{ 'privacy_policy.data_collection.fields.message'|trans }}</li>
+                            <li data-trans="privacy_policy.data_collection.fields.name">{{ 'privacy_policy.data_collection.fields.name'|trans }}</li>
+                            <li data-trans="privacy_policy.data_collection.fields.email">{{ 'privacy_policy.data_collection.fields.email'|trans }}</li>
+                            <li data-trans="privacy_policy.data_collection.fields.message">{{ 'privacy_policy.data_collection.fields.message'|trans }}</li>
                         </ul>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_usage.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.data_usage.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.data_usage.title">{{ 'privacy_policy.data_usage.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.data_usage.description">{{ 'privacy_policy.data_usage.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.data_retention.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.data_retention.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.data_retention.title">{{ 'privacy_policy.data_retention.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.data_retention.description">{{ 'privacy_policy.data_retention.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.your_rights.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.your_rights.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.your_rights.title">{{ 'privacy_policy.your_rights.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.your_rights.description">{{ 'privacy_policy.your_rights.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.cookies.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.cookies.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.cookies.title">{{ 'privacy_policy.cookies.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.cookies.description">{{ 'privacy_policy.cookies.description'|trans }}</p>
                     </section>
 
                     <section>
-                        <h2 class="text-xl font-semibold mb-4">{{ 'privacy_policy.contact.title'|trans }}</h2>
-                        <p>{{ 'privacy_policy.contact.description'|trans }}</p>
+                        <h2 class="text-xl font-semibold mb-4" data-trans="privacy_policy.contact.title">{{ 'privacy_policy.contact.title'|trans }}</h2>
+                        <p data-trans="privacy_policy.contact.description">{{ 'privacy_policy.contact.description'|trans }}</p>
                     </section>
                 </div>
 
                 <div class="mt-8 text-center">
-                    <a href="{{ path('home') }}" class="text-primary hover:underline">&larr; {{ 'common.back_to_home'|trans }}</a>
+                    <a href="{{ path('home') }}" class="text-primary hover:underline" data-trans="common.back_to_home" data-trans-raw>{{ 'common.back_to_home'|trans|raw }}</a>
                 </div>
             </div>
         </div>

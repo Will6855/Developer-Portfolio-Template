@@ -11,6 +11,8 @@ use App\Form\ContactType;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Mime\Address;
+use Symfony\Contracts\Translation\TranslatorInterface;
+use Symfony\Component\HttpFoundation\JsonResponse;
 
 class HomeController extends AbstractController
 {
@@ -23,15 +25,31 @@ class HomeController extends AbstractController
     }
 
     #[Route('/switch-locale/{locale}', name: 'switch_locale', methods: ['POST', 'GET'])]
-    public function switchLocale(Request $request, string $locale): Response
+    public function switchLocale(Request $request, string $locale, TranslatorInterface $translator): JsonResponse
     {
+        $supportedLocales = ['en', 'fr'];
+        if (!in_array($locale, $supportedLocales)) {
+            return new JsonResponse(['success' => false, 'message' => 'Unsupported locale'], 400);
+        }
+
+        // Set locale in session
         $request->getSession()->set('_locale', $locale);
         
-        if ($request->isXmlHttpRequest()) {
-            return $this->json(['success' => true, 'locale' => $locale]);
-        }
+        // Get translation keys from request body
+        $content = json_decode($request->getContent(), true);
+        $keys = $content['keys'] ?? [];
         
-        return $this->redirect($request->headers->get('referer', $this->generateUrl('home')));
+        // Translate all requested keys
+        $translations = [];
+        foreach ($keys as $key) {
+            $translations[$key] = $translator->trans($key, [], null, $locale);
+        }
+
+        return new JsonResponse([
+            'success' => true,
+            'locale' => $locale,
+            'translations' => $translations
+        ]);
     }
 
     #[Route('/', name: 'home')]
