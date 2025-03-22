@@ -86,11 +86,14 @@ projects:
     view_code: 'View Code'
     visit_website: 'Visit Website'
     live_demo: 'Demo'
+  inventory-management:
+    title: 'Inventory Management'
+    description: 'A web application for inventory management, compiled into an executable for Windows, built with Next.js, Node.js, and SQLite, featuring report generation, etc.'
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
   dashboard-si:
-    title: 'Dashboard SI'
+    title: 'IT Dashboard'
     description: 'An IT Department dashboard integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
   email-sender:
     title: 'Email Sender'

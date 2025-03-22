@@ -86,14 +86,17 @@ projects:
     view_code: 'Code Source'
     visit_website: 'Visiter le Site'
     live_demo: 'Démo'
+  inventory-management:
+    title: 'Gestion d''Inventaire'
+    description: 'Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite, incluant des fonctionnalités de génération de rapports, etc.'
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'Plateforme web vitrine pour un fabricant de modules d''escalade, mettant en valeur leur gamme de produits et services avec une interface moderne et intuitive.'
   dashboard-si:
-    title: 'Dashboard SI'
+    title: 'Tableau De Bord SI'
     description: 'Tableau de bord pour DSI intégrant l''API Microsoft Graph, offrant une gestion centralisée et un monitoring en temps réel des ressources informatiques.'
   email-sender:
-    title: 'Email Sender'
+    title: 'Expéditeur d''Emails'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
 
 contact_form:

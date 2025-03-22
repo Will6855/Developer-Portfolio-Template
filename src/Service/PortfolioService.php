@@ -45,6 +45,8 @@ class PortfolioService
                 'items' => [
                     [ 'icon' => 'fa-brands fa-node', 'name' => 'Node.js', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'MySQL', 'display' => true ],
+                    [ 'icon' => 'fa-solid fa-database', 'name' => 'SQLite', 'display' => true ],
+                    [ 'icon' => 'fa-solid fa-database', 'name' => 'PostgreSQL', 'display' => false ],
                     [ 'icon' => 'fa-solid fa-server', 'name' => 'REST APIs', 'display' => true ]
                 ]
             ],
@@ -94,7 +96,7 @@ class PortfolioService
                     'experiences.sogea.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'Git'])
             ],
             [
                 'title' => 'experiences.klimber_kids.title',
@@ -170,6 +172,16 @@ class PortfolioService
     {
         return [
             [
+                'title' => 'projects.inventory-management.title',
+                'description' => 'projects.inventory-management.description',
+                'image' => 'projects/inventory-management.png',
+                'github' => null,
+                'website' => null,
+                'demo' => null,
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'Git'])
+            ],
+            [
                 'title' => 'projects.klimber_kids.title',
                 'description' => 'projects.klimber_kids.description',
                 'image' => 'projects/klimber-kids.png',
@@ -197,7 +209,7 @@ class PortfolioService
                 'website' => 'https://html-email-sender.vercel.app/',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'Git'])
             ],
         ];
     }
