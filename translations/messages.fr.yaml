@@ -5,12 +5,11 @@ meta:
   
 sidebar:
   job_title: 'Développeur Web Full-Stack'
-  status: 'Disponible pour Opportunités'
   location: 'Evreux, France 🇫🇷'
   tagline: 'Conception d''Applications Intuitives et Performantes'
   resume: 'Consulter mon CV'
   contact_button: 'Me Contacter'
-  open_to_job: 'Disponible pour Opportunités'
+  open_to_job: 'À la recherche de nouveaux défis'
   open_to_job_description: 'En recherche active d''opportunités professionnelles'
   lets_connect: 'Prendre Contact'
 
@@ -22,7 +21,7 @@ sections:
   projects: 'Projets'
 
 about:
-  paragraph1: 'Technicien en informatique de %age% ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">développement web et d''applications</span>. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions logicielles adaptées aux besoins des utilisateurs.'
+  paragraph1: 'Technicien en informatique de %age% ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">développement d''applications web</span>. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions adaptées aux besoins des utilisateurs.'
   paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organisé, autonome, réactif et curieux</span>, je me concentre sur des solutions fiables et efficaces.'
 
 skills:

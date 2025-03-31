@@ -31,10 +31,10 @@ class PortfolioService
                 'color_hover' => 'red-800',
                 'items' => [
                     [ 'icon' => 'fa-brands fa-symfony', 'name' => 'Symfony', 'display' => true ],
-                    [ 'image' => 'skills/flask.svg', 'name' => 'Flask', 'display' => true ],
+                    [ 'image' => 'skills/flask.png', 'name' => 'Flask', 'display' => true ],
                     [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
-                    [ 'icon' => 'fa-solid fa-wind', 'name' => 'Tailwind CSS', 'display' => true ]
+                    [ 'image' => 'skills/tailwind.png', 'name' => 'Tailwind CSS', 'display' => true ]
                 ]
             ],
             'Backend' => [
@@ -89,14 +89,14 @@ class PortfolioService
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea.location',
                 'period' => 'experiences.sogea.period',
-                'logo' => 'companies/sogea.svg',
+                'logo' => 'companies/sogea.png',
                 'description' => [
                     'experiences.sogea.description.1',
                     'experiences.sogea.description.2',
                     'experiences.sogea.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'experiences.klimber_kids.title',
@@ -110,7 +110,7 @@ class PortfolioService
                     'experiences.klimber_kids.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'Git'])
+                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'experiences.cs_lane.title',
@@ -177,9 +177,9 @@ class PortfolioService
                 'image' => 'projects/inventory-management.png',
                 'github' => null,
                 'website' => null,
-                'demo' => null,
+                'demo' => 'https://inventory-management-simple-demo.vercel.app/',
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'projects.klimber_kids.title',
@@ -189,7 +189,7 @@ class PortfolioService
                 'website' => 'https://klimber-kids.com',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'Git'])
+                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'projects.dashboard-si.title',
@@ -209,7 +209,7 @@ class PortfolioService
                 'website' => 'https://html-email-sender.vercel.app/',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
             ],
         ];
     }

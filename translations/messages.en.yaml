@@ -5,24 +5,23 @@ meta:
   
 sidebar:
   job_title: 'Full-Stack Web Developer'
-  status: 'Open to Job Offers'
   location: 'Evreux, France 🇫🇷'
   tagline: 'Crafting Intuitive and High-Performance Applications'
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
-  open_to_job: 'Open to Opportunities'
+  open_to_job: 'Open to new challenges'
   open_to_job_description: 'Currently seeking full-time positions'
   lets_connect: 'Let''s Connect'
 
 sections:
   about: 'About Me'
   skills: 'Skills'
-  experiences: 'Experiences'
+  experiences: 'Experience'
   education: 'Education'
   projects: 'Projects'
   
 about:
-  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web and application development</span>. I have experience in designing, deploying, and maintaining software solutions tailored to user needs.'
+  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web application development</span>. I have experience in designing, deploying, and maintaining solutions tailored to user needs.'
   paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
 
 skills:
