@@ -85,4 +85,4 @@ All translatable content is managed in the `translations/` directory:
 Feel free to fork and customize for your own use. Pull requests are welcome!
 
 ## License
-This project is licensed under the [MIT License](LICENSE.md)
+This project is licensed under the [MIT License](LICENSE)
