@@ -57,7 +57,8 @@ class PortfolioService
                 'color_hover' => 'yellow-800',
                 'items' => [
                     [ 'icon' => 'fa-solid fa-arrows-spin', 'name' => 'Agile', 'display' => true ],
-                    [ 'icon' => 'fa-brands fa-git-alt', 'name' => 'Git', 'display' => true ]
+                    [ 'icon' => 'fa-brands fa-git-alt', 'name' => 'Git', 'display' => true ],
+                    [ 'image' => 'skills/postman.svg', 'name' => 'Postman', 'display' => true ],
                 ]
             ]
         ];
@@ -96,7 +97,7 @@ class PortfolioService
                     'experiences.sogea.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'REST APIs', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'experiences.klimber_kids.title',
@@ -124,7 +125,7 @@ class PortfolioService
                     'experiences.cs_lane.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Kotlin', 'Swift', 'Bootstrap', 'MySQL', 'REST APIs', 'Agile', 'Git'])
+                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Kotlin', 'Swift', 'Bootstrap', 'MySQL', 'REST APIs', 'Agile', 'Git', 'Postman'])
             ],
             [
                 'title' => 'experiences.uimm.title',

@@ -26,15 +26,13 @@
                     <div class="flex-grow"></div>
 
                     <!-- Technologies -->
-                    <div class="flex flex-wrap gap-1 mt-2 mb-2">
+                    <div class="flex flex-wrap gap-1 mb-2">
                         {% for tech in project.technologies %}
-                            <div class="badge badge-md gap-1 px-1.5 py-1 
-                                        bg-{{ tech.color_bg }} text-{{ tech.color_text }} 
-                                        hover:bg-{{ tech.color_hover }} transition-colors border-none">
+                            <div class="badge badge-md px-1.5 py-1 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors border-none">
                                 {% if tech.icon is defined %}
                                     <i class="{{ tech.icon }} mr-0.5 text-xs"></i>
                                 {% else %}
-                                    <img src="{{ asset('images/' ~ tech.image) }}" alt="{{ tech.name }}" class="w-2.5 h-2.5 mr-0.5">
+                                    <img src="{{ asset('images/' ~ tech.image) }}" alt="{{ tech.name }}" class="w-2.5 h-2.5 mr-1">
                                 {% endif %}
                                 {{ tech.name }}
                             </div>
