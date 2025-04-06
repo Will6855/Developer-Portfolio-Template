@@ -1,26 +1,32 @@
 <section id="projects" class="mt-12 lg:mt-16 max-w-3xl mx-auto lg:mx-0">
     <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8" data-trans="sections.projects">{{ 'sections.projects'|trans }}</h2>
     
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {% for project in projects %}
             <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-500 
                         flex flex-col bg-gradient-to-br from-primary/20 to-base-300/90 border border-base-content/10">
-                <!-- Background Image -->
-                <div class="absolute inset-0 z-0 opacity-20 group-hover:opacity-30 group-hover:scale-105 transition-all duration-300">
+                <!-- Background Image with overlay -->
+                <div class="absolute inset-0 z-0 opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-300">
                     <img src="{{ asset('images/' ~ project.image) }}" 
                          alt="{{ project.title|trans }}" 
                          class="w-full h-full object-cover">
+                    <!-- Dark overlay -->
+                    <div class="absolute inset-0 bg-base-100/60"></div>
                 </div>
 
                 <!-- Content Wrapper -->
-                <div class="relative z-10 flex flex-col flex-grow p-3">
+                <div class="relative z-10 flex flex-col flex-grow p-4 pt-2">
                     <!-- Project Title -->
-                    <h3 class="text-lg font-bold mb-2 w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-trans="{{ project.title }}">
-                        {{ project.title|trans }}
-                    </h3>
+                    <div class="text-center w-fit mx-auto mb-1">
+                        <h3 class="text-lg font-bold w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent" data-trans="{{ project.title }}">
+                            {{ project.title|trans }}
+                        </h3>
+                    </div>
 
                     <!-- Description -->
-                    <p class="text-sm leading-tight mb-3" data-trans="{{ project.description }}">{{ project.description|trans }}</p>
+                    <p class="text-sm leading-tight mb-3 text-justify" data-trans="{{ project.description }}">
+                        {{ project.description|trans }}
+                    </p>
 
                     <!-- Spacer to push badges and links to bottom -->
                     <div class="flex-grow"></div>
