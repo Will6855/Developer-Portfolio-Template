@@ -14,9 +14,17 @@ This is a modern, multilingual developer portfolio built with Symfony, designed 
 ### Personal Information
 To personalize this portfolio, you'll need to modify the following files:
 
-#### Google Tag
-- `templates/base.html.twig`:
-  - Remove or change the Google Tag script at the top of the file
+#### Favicon
+- `public/favicon`:
+  - Replace for your own favicon
+
+#### CV
+- `public/files`:
+  - Add your own CV
+
+#### Profile Image
+- `public/images/profile-image.jpg`:
+  - Add your own profile image
 
 #### Core Information
 - `src/Service/PortfolioService.php`: 
@@ -27,8 +35,7 @@ To personalize this portfolio, you'll need to modify the following files:
 
 #### Contact and Personal Details
 - `src/Controller/HomeController.php`:
-  - Configure mailing settings for contact form
-  - Set birthdate for age display (optional: it depends if you keep it in 'about.paragraph.1')
+  - Change (or not) response from contact form
 
 #### Legal and Compliance
 - `templates/home/legal_notice.html.twig`:
@@ -46,6 +53,9 @@ To personalize this portfolio, you'll need to modify the following files:
   - Update site URLs
   - Modify last modification dates
   - Add/remove pages as needed
+
+- `.htaccess`:
+  - Update site URLs
 
 #### Translations
 All translatable content is managed in the `translations/` directory:

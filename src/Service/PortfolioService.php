@@ -86,59 +86,18 @@ class PortfolioService
     {
         return [
             [
-                'title' => 'experiences.sogea.title',
-                'company' => 'SOGEA Environnement (Groupe VINCI)',
-                'location' => 'experiences.sogea.location',
-                'period' => 'experiences.sogea.period',
-                'logo' => 'companies/sogea.png',
+                'title' => 'experiences.company.title',
+                'company' => 'COMPANY NAME',
+                'location' => 'experiences.company.location',
+                'period' => 'experiences.company.period',
+                'logo' => 'companies/company.png',
                 'description' => [
-                    'experiences.sogea.description.1',
-                    'experiences.sogea.description.2',
-                    'experiences.sogea.description.3'
+                    'experiences.company.description.1',
+                    'experiences.company.description.2',
+                    'experiences.company.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
-            ],
-            [
-                'title' => 'experiences.klimber_kids.title',
-                'company' => 'Klimber-Kids',
-                'location' => 'experiences.klimber_kids.location',
-                'period' => 'experiences.klimber_kids.period',
-                'logo' => 'companies/klimber-kids.svg',
-                'description' => [
-                    'experiences.klimber_kids.description.1',
-                    'experiences.klimber_kids.description.2',
-                    'experiences.klimber_kids.description.3'
-                ],
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'REST APIs', 'Git'])
-            ],
-            [
-                'title' => 'experiences.cs_lane.title',
-                'company' => 'CS-Lane',
-                'location' => 'experiences.cs_lane.location',
-                'period' => 'experiences.cs_lane.period',
-                'logo' => 'companies/cs-lane.svg',
-                'description' => [
-                    'experiences.cs_lane.description.1',
-                    'experiences.cs_lane.description.2',
-                    'experiences.cs_lane.description.3'
-                ],
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Kotlin', 'Swift', 'Bootstrap', 'MySQL', 'REST APIs', 'Agile', 'Git', 'Postman'])
-            ],
-            [
-                'title' => 'experiences.uimm.title',
-                'company' => 'UIMM Eure Seine Estuaire',
-                'location' => 'experiences.uimm.location',
-                'period' => 'experiences.uimm.period',
-                'logo' => 'companies/uimm.png',
-                'description' => [
-                    'experiences.uimm.description.1',
-                    'experiences.uimm.description.2'
-                ],
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'Bootstrap', 'REST APIs'])
             ]
         ];
     }
@@ -147,23 +106,13 @@ class PortfolioService
     {
         return [
             [
-                'degree' => 'education.bts.degree',
-                'school' => 'Lycée Gustave Flaubert',
-                'location' => 'education.bts.location',
-                'period' => 'education.bts.period',
-                'logo' => 'schools/gustave-flaubert.png',
+                'degree' => 'education.school.degree',
+                'school' => 'SCHOOL NAME',
+                'location' => 'education.school.location',
+                'period' => 'education.school.period',
+                'logo' => 'schools/school.png',
                 'description' => [
-                    'education.bts.description.1',
-                ]
-            ],
-            [
-                'degree' => 'education.bac.degree',
-                'school' => 'Lycée Aristide Briand',
-                'location' => 'education.bac.location',
-                'period' => 'education.bac.period',
-                'logo' => 'schools/aristide-briand.webp',
-                'description' => [
-                    'education.bac.description.1',
+                    'education.school.description.1',
                 ]
             ]
         ];
@@ -173,60 +122,32 @@ class PortfolioService
     {
         return [
             [
-                'title' => 'projects.inventory-management.title',
-                'description' => 'projects.inventory-management.description',
-                'image' => 'projects/inventory-management.png',
-                'github' => null,
-                'website' => null,
-                'demo' => 'https://inventory-management-simple-demo.vercel.app/',
+                'title' => 'projects.project.title',
+                'description' => 'projects.project.description',
+                'image' => 'projects/project.png',
+                'github' => 'https://google.com/',
+                'website' => 'https://google.com/',
+                'demo' => 'https://google.com/',
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
-            ],
-            [
-                'title' => 'projects.klimber_kids.title',
-                'description' => 'projects.klimber_kids.description',
-                'image' => 'projects/klimber-kids.png',
-                'github' => null,
-                'website' => 'https://klimber-kids.com',
-                'demo' => null,
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'REST APIs', 'Git'])
-            ],
-            [
-                'title' => 'projects.dashboard-si.title',
-                'description' => 'projects.dashboard-si.description',
-                'image' => 'projects/dashboard-si.png',
-                'github' => 'https://github.com/Will6855/IT-Department-Dashboard',
-                'website' => null,
-                'demo' => 'https://it-department-dashboard-demo.vercel.app/',
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'REST APIs'])
-            ],
-            [
-                'title' => 'projects.email-sender.title',
-                'description' => 'projects.email-sender.description',
-                'image' => 'projects/email-sender.png',
-                'github' => 'https://github.com/Will6855/HTML-Email-Sender',
-                'website' => 'https://html-email-sender.vercel.app/',
-                'demo' => null,
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
-            ],
+            ]
         ];
     }
 
     public function getPersonalInfo(): array
     {
         return [
-            'name' => 'Guillaume PIARD',
+            'name' => 'Your Name',
+            'email' => 'contact@your-website.dev',
+            'birthdate' => '1970-01-01',
             'files' => [
-                'cv' => 'files/cv_guillaume_piard.pdf',
-                'profile_image' => 'images/profile-image.webp'
+                'cv' => 'files/cv.pdf',
+                'profile_image' => 'images/profile-image.jpg'
             ],
             'social' => [
-                'github' => 'https://github.com/Will6855',
-                'email' => 'gpiard27@gmail.com',
-                'linkedin' => 'https://linkedin.com/in/piard-guillaume'
+                'github' => 'https://github.com/your-name',
+                'email' => 'your-name@gmail.com',
+                'linkedin' => 'https://linkedin.com/in/your-name'
             ]
         ];
     }

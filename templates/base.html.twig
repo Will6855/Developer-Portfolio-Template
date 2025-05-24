@@ -2,14 +2,7 @@
 <html lang="{{ app.request.locale }}">
     <head>
         <!-- Google tag (gtag.js) -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-NY1R4RSQ1G"></script>
-        <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-NY1R4RSQ1G');
-        </script>
+        {# Put your Google Tag here #}
         
         <!-- Meta Tags -->
         <meta name="description" lang="{{ app.request.locale }}" content="{% block description %}{{ 'meta.description'|trans }}{% endblock %}">

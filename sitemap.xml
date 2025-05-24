@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
-    <loc>https://guillaume-piard.fr/</loc>
+    <loc>https://your-website.dev/</loc>
     <lastmod>2024-11-29</lastmod>
     <priority>1.00</priority>
 </url>
 <url>
-    <loc>https://guillaume-piard.fr/legal-notice</loc>
+    <loc>https://your-website.dev/legal-notice</loc>
     <lastmod>2024-11-29</lastmod>
     <priority>0.20</priority>
 </url>
 <url>
-    <loc>https://guillaume-piard.fr/privacy-policy</loc>
+    <loc>https://your-website.dev/privacy-policy</loc>
     <lastmod>2024-11-29</lastmod>
     <priority>0.20</priority>
 </url>

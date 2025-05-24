@@ -1,12 +1,12 @@
 meta:
-  title: 'Guillaume PIARD | Portfolio'
-  description: 'Portfolio of Guillaume PIARD, software developer. Discover my innovative projects, creative approach, and how I can help you turn your ideas into unique digital solutions.'
-  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'
+  title: 'Your Name | Portfolio'
+  description: 'Description of portfolio'
+  keywords: 'keywords'
   
 sidebar:
   job_title: 'Full-Stack Web Developer'
-  location: 'Evreux, France 🇫🇷'
-  tagline: 'Crafting Intuitive and High-Performance Applications'
+  location: 'Your Location'
+  tagline: 'Your Tagline'
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
   open_to_job: 'Open to new challenges'
@@ -21,7 +21,7 @@ sections:
   projects: 'Projects'
   
 about:
-  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web application development</span>. I have experience in designing, deploying, and maintaining solutions tailored to user needs.'
+  paragraph1: '%age%-year-old Developer'
   paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
 
 skills:
@@ -33,70 +33,32 @@ skills:
 
 experiences:
   at_experience: 'at'
-  sogea:
-    title: 'Full-Stack Web Developer'
-    location: 'Gravigny, France'
-    period: 'March 2025'
+  company:
+    title: 'Job Title'
+    location: 'Location'
+    period: 'Period'
     description:
-      1: '↳ Development of an inventory management application (Next.js / Node.js)'
-      2: '↳ Automation of reports and stock tracking'
-      3: '↳ Windows compilation for local usage'
-  klimber_kids:
-    title: 'Full-Stack Web Developer'
-    location: 'Guichainville, France'
-    period: 'July 2024 - January 2025 (Part-time Project)'
-    description:
-      1: '↳ Creation of a showcase website (PHP / Symfony)'
-      2: '↳ Security implementation with anti-spam protection (Honeypot)'
-      3: '↳ Reservation system with availability management'
-  cs_lane:
-    title: 'Full-Stack Web Developer (Internship)'
-    location: 'Elbeuf, France'
-    period: 'January 2024 - February 2024'
-    description:
-      1: '↳ Development of Android (Kotlin) & iOS (Swift) mobile applications'
-      2: '↳ Implementation of an appointment system and REST API (PHP & MySQL)'
-      3: '↳ Agile project management (SCRUMBAN)'
-  uimm:
-    title: 'Full-Stack Web Developer (Internship)'
-    location: 'Evreux, France'
-    period: 'May 2023 - June 2023'
-    description:
-      1: '↳ Development of a Web application for the IT department (Python / Flask)'
-      2: '↳ Dynamic display of IT data via Microsoft Graph API'
+      1: '↳ Paragraph 1'
+      2: '↳ Paragraph 2'
+      3: '↳ Paragraph 3'
 
 education:
   at_education: 'at'
-  bts:
-    degree: 'BTS SIO (Organisational IT Services)'
-    location: 'Rouen, France'
-    period: '2022 - 2024'
+  school:
+    degree: 'Degree'
+    location: 'Location'
+    period: 'Period'
     description:
-      1: '↳ SLAM Option (Software Solutions & Business Applications)'
-  bac:
-    degree: 'General Baccalaureate'
-    location: 'Evreux, France'
-    period: '2022'
-    description:
-      1: '↳ Specialty in Mathematics and Contemporary English World'
+      1: '↳ Paragraph 1'
 
 projects:
   links:
     view_code: 'View Code'
     visit_website: 'Visit Website'
     live_demo: 'Demo'
-  inventory-management:
-    title: 'Inventory Management'
-    description: 'A web application for inventory management, compiled into an executable for Windows, built with Next.js, Node.js, and SQLite, featuring report generation, etc.'
-  klimber_kids:
-    title: 'Klimber-Kids'
-    description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
-  dashboard-si:
-    title: 'IT Dashboard'
-    description: 'An IT Department dashboard integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
-  email-sender:
-    title: 'Email Sender'
-    description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
+  project:
+    title: 'Project Title'
+    description: 'Project Description'
 
 contact_form:
   title: 'Get in Touch'
@@ -113,7 +75,7 @@ contact_form:
 legal_notice:
   editor:
     title: 'Website Editor'
-    edited_by: 'This website is edited by Guillaume PIARD'
+    edited_by: 'This website is edited by Your Name'
     contact: 'Contact'
   hosting:
     title: 'Hosting'
@@ -152,7 +114,7 @@ privacy_policy:
     description: 'This site does not use tracking or advertising cookies. Only cookies necessary for the website''s functionality may be used.'
   contact:
     title: 'Contact'
-    description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: gpiard27@gmail.com'
+    description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: your-name@gmail.com'
 
 footer:
   legal_notice: 'Legal Notice'

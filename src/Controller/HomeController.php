@@ -59,13 +59,18 @@ class HomeController extends AbstractController
         $form = $this->createForm(ContactType::class);
         $form->handleRequest($request);
 
+        $personalInfo = $this->portfolioService->getPersonalInfo();
+        $email = $personalInfo['email'];
+        $senderName = $personalInfo['name'];
+        $birthdate = $personalInfo['birthdate'];
+
         if($form->isSubmitted() && $form->isValid()) {
             try {
                 $contactFormData = $form->getData();
                 
                 $adminEmail = (new Email())
                     ->from(new Address($contactFormData->getEmail()))
-                    ->to(new Address('contact@guillaume-piard.fr'))
+                    ->to(new Address($email))
                     ->subject('Nouveau message de ' . $contactFormData->getEmail())
                     ->html(
                         '<p><strong>Nom:</strong> ' . htmlspecialchars($contactFormData->getName()) . '</p>' .
@@ -75,7 +80,7 @@ class HomeController extends AbstractController
                 $mailer->send($adminEmail);
 
                 $userEmail = (new Email())
-                    ->from(new Address('contact@guillaume-piard.fr', 'Guillaume PIARD'))
+                    ->from(new Address($email, $senderName))
                     ->to(new Address($contactFormData->getEmail()))
                     ->subject('Message reçu')
                     ->html(
@@ -85,7 +90,7 @@ class HomeController extends AbstractController
                         '<br>' .
                         '<p>Merci pour votre message et de votre intérêt, je reviens vers vous dans les meilleurs délais. </p>' .
                         '<p>Cordialement,</p>' .
-                        '<p>Guillaume PIARD</p>');
+                        '<p>' . $senderName . '</p>');
                 $mailer->send($userEmail);
 
                 $this->addFlash('success', 'Votre message a bien été envoyé');
@@ -98,7 +103,7 @@ class HomeController extends AbstractController
         }
 
         // Calculate age
-        $birthDate = new \DateTime('2004-01-06');
+        $birthDate = new \DateTime($birthdate);
         $today = new \DateTime();
         $age = $today->diff($birthDate)->y;
 

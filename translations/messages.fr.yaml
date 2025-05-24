@@ -1,12 +1,12 @@
 meta:
-  title: 'Guillaume PIARD | Portfolio'
-  description: 'Portfolio de Guillaume PIARD, développeur informatique. Découvrez mes projets innovants, mon approche créative, et comment je peux vous aider à concrétiser vos idées en solutions digitales uniques.'
-  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
+  title: 'Your Name | Portfolio'
+  description: 'Description of portfolio'
+  keywords: 'keywords'
   
 sidebar:
   job_title: 'Développeur Web Full-Stack'
-  location: 'Evreux, France 🇫🇷'
-  tagline: 'Conception d''Applications Intuitives et Performantes'
+  location: 'Your Location'
+  tagline: 'Your Tagline'
   resume: 'Consulter mon CV'
   contact_button: 'Me Contacter'
   open_to_job: 'À la recherche de nouveaux défis'
@@ -21,7 +21,7 @@ sections:
   projects: 'Projets'
 
 about:
-  paragraph1: 'Technicien en informatique de %age% ans, titulaire d''un Bac+2 (BTS SIO, option SLAM), spécialisé dans le <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">développement d''applications web</span>. J''ai de l''expérience dans la conception, le déploiement et la maintenance de solutions adaptées aux besoins des utilisateurs.'
+  paragraph1: 'Développeur de %age% ans.'
   paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organisé, autonome, réactif et curieux</span>, je me concentre sur des solutions fiables et efficaces.'
 
 skills:
@@ -33,70 +33,32 @@ skills:
 
 experiences:
   at_experience: 'chez'
-  sogea:
-    title: 'Développeur Web Full-Stack'
-    location: 'Gravigny, France'
-    period: 'Mars 2025'
+  company:
+    title: 'Job Title'
+    location: 'Location'
+    period: 'Period'
     description:
-      1: '↳ Développement d''une application de gestion d''inventaire (Next.js / Node.js)'
-      2: '↳ Automatisation des rapports et suivi des stocks'
-      3: '↳ Compilation Windows pour un usage local'
-  klimber_kids:
-    title: 'Développeur Web Full-Stack'
-    location: 'Guichainville, France'
-    period: 'Juillet 2024 - Janvier 2025 (Projet à temps partiel)'
-    description:
-      1: '↳ Création d’un site vitrine (PHP / Symfony)'
-      2: '↳ Sécurisation avec protection anti-spam (Honeypot)'
-      3: '↳ Système de réservation avec gestion des disponibilités'
-  cs_lane:
-    title: 'Développeur Web Full-Stack (Stage)'
-    location: 'Elbeuf, France'
-    period: 'Janvier 2024 - Février 2024'
-    description:
-      1: '↳ Développement d’applications mobiles Android (Kotlin) & iOS (Swift)'
-      2: '↳ Implémentation d’un système de rendez-vous et API REST (PHP & MySQL)'
-      3: '↳ Gestion de projet agile (SCRUMBAN)'
-  uimm:
-    title: 'Développeur Web Full-Stack (Stage)'
-    location: 'Evreux, France'
-    period: 'Mai 2023 - Juin 2023'
-    description:
-      1: '↳ Développement d’une application Web pour le service informatique (Python / Flask)'
-      2: '↳ Affichage dynamique des données IT via Microsoft Graph API'
+      1: '↳ Paragraph 1'
+      2: '↳ Paragraph 2'
+      3: '↳ Paragraph 3'
 
 education:
   at_education: 'au'
-  bts:
-    degree: 'BTS SIO (Services Informatiques aux Organisations)'
-    location: 'Rouen, France'
-    period: '2022 - 2024'
+  school:
+    degree: 'Degree'
+    location: 'Location'
+    period: 'Period'
     description:
-      1: '↳ Option SLAM - Solutions Logicielles et Applications Métiers'
-  bac:
-    degree: 'Baccalauréat Général'
-    location: 'Evreux, France'
-    period: '2022'
-    description:
-      1: '↳ Spécialités Mathématiques et Anglais Monde Contemporain'
+      1: '↳ Paragraph 1'
 
 projects:
   links:
     view_code: 'Code Source'
     visit_website: 'Visiter le Site'
     live_demo: 'Démo'
-  inventory-management:
-    title: 'Gestion d''Inventaire'
-    description: 'Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite, incluant des fonctionnalités de génération de rapports, etc.'
-  klimber_kids:
-    title: 'Klimber-Kids'
-    description: 'Plateforme web vitrine pour un fabricant de modules d''escalade, mettant en valeur leur gamme de produits et services avec une interface moderne et intuitive.'
-  dashboard-si:
-    title: 'Tableau De Bord SI'
-    description: 'Tableau de bord pour DSI intégrant l''API Microsoft Graph, offrant une gestion centralisée et un monitoring en temps réel des ressources informatiques.'
-  email-sender:
-    title: 'Expéditeur d''Emails'
-    description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
+  project:
+    title: 'Project Title'
+    description: 'Project Description'
 
 contact_form:
   title: 'Me Contacter'
@@ -113,7 +75,7 @@ contact_form:
 legal_notice:
   editor:
     title: 'Éditeur du site'
-    edited_by: 'Ce site est édité par Guillaume PIARD'
+    edited_by: 'Ce site est édité par Your Name'
     contact: 'Contact'
   hosting:
     title: 'Hébergement'
@@ -152,7 +114,7 @@ privacy_policy:
     description: 'Ce site n''utilise pas de cookies de tracking ou de publicité. Seuls les cookies nécessaires au fonctionnement du site peuvent être utilisés.'
   contact:
     title: 'Contact'
-    description: 'Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, vous pouvez me contacter à l''adresse : gpiard27@gmail.com'
+    description: 'Pour toute question relative à cette politique de confidentialité ou pour exercer vos droits, vous pouvez me contacter à l''adresse : your-name@gmail.com'
 
 footer:
   legal_notice: 'Mentions Légales'
