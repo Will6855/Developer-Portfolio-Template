@@ -14,6 +14,10 @@ This is a modern, multilingual developer portfolio built with Symfony, designed 
 ### Personal Information
 To personalize this portfolio, you'll need to modify the following files:
 
+#### Google Tag
+- `templates/base.html.twig`:
+  - Remove or change the Google Tag script at the top of the file
+
 #### Core Information
 - `src/Service/PortfolioService.php`: 
   - Update skills
