@@ -21,19 +21,27 @@
                     <section>
                         <h2 class="text-xl font-semibold mb-4" data-trans="legal_notice.editor.title">{{ 'legal_notice.editor.title'|trans }}</h2>
                         <p data-trans="legal_notice.editor.edited_by">{{ 'legal_notice.editor.edited_by'|trans }}</p>
-                        <p><span data-trans="legal_notice.editor.contact">{{ 'legal_notice.editor.contact'|trans }}</span> : your-name@gmail.com</p>
+                        <p data-trans="legal_notice.editor.contact">{{ 'legal_notice.editor.contact'|trans }}</p>
                     </section>
 
                     <section>
                         <h2 class="text-xl font-semibold mb-4" data-trans="legal_notice.hosting.title">{{ 'legal_notice.hosting.title'|trans }}</h2>
                         <p><span data-trans="legal_notice.hosting.hosted_by">{{ 'legal_notice.hosting.hosted_by'|trans }}</span> :</p>
-                        <p>OVH</p>
-                        <p data-trans="legal_notice.hosting.company_info" data-trans-params='{ "%capital%": "10 174 560" }'>{{ 'legal_notice.hosting.company_info'|trans({'%capital%': '10 174 560'}) }}</p>
-                        <p>RCS Lille Métropole 424 761 419 00045</p>
-                        <p><span data-trans="legal_notice.hosting.address">{{ 'legal_notice.hosting.address'|trans }}</span> : 2620Z</p>
-                        <p><span data-trans="legal_notice.hosting.vat">{{ 'legal_notice.hosting.vat'|trans }}</span> : FR 22 424 761 419</p>
-                        <p data-trans="legal_notice.hosting.address">{{ 'legal_notice.hosting.address'|trans }}</p>
-                        <p><span data-trans="legal_notice.hosting.phone">{{ 'legal_notice.hosting.phone'|trans }}</span> : 1007</p>
+                        {% set hosting_info = [
+                            'legal_notice.hosting.company_name',
+                            'legal_notice.hosting.company_info',
+                            'legal_notice.hosting.rcs',
+                            'legal_notice.hosting.ape_code',
+                            'legal_notice.hosting.vat',
+                            'legal_notice.hosting.address',
+                            'legal_notice.hosting.phone'
+                        ] %}
+                        
+                        {% for key in hosting_info %}
+                            <p data-trans="{{ key }}">
+                                {{ key|trans }}
+                            </p>
+                        {% endfor %}
                     </section>
 
                     <section>

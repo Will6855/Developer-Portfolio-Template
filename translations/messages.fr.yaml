@@ -71,20 +71,24 @@ contact_form:
   send: 'Envoyer'
   cancel: 'Annuler'
   privacy_consent: "J'accepte que mes données soient traitées conformément à la <a href='%privacy_url%' class='link link-primary' target='_blank'>politique de confidentialité</a>."
+  success_message: 'Votre message a bien été envoyé'
+  error_message: "Une erreur est survenue lors de l'envoi du message"
 
 legal_notice:
   editor:
     title: 'Éditeur du site'
     edited_by: 'Ce site est édité par Your Name'
-    contact: 'Contact'
+    contact: 'Contact : your-name@gmail.com'
   hosting:
     title: 'Hébergement'
     hosted_by: 'Ce site est hébergé par'
-    company_info: 'SAS au capital de %capital% €'
-    ape: 'Code APE'
-    vat: 'N° TVA'
+    company_name: 'OVH'
+    company_info: 'SAS au capital de 10 174 560 €'
+    rcs: 'RCS Lille Métropole 424 761 419 00045'
+    ape_code: 'Code APE : 2620Z'
+    vat: 'N° TVA : FR 22 424 761 419'
     address: 'Siège social : 2 rue Kellermann - 59100 Roubaix – France'
-    phone: 'Tel'
+    phone: 'Tel : 1007'
   intellectual_property:
     title: 'Propriété intellectuelle'
     content: "L'ensemble de ce site relève de la législation française et internationale sur le droit d'auteur et la propriété intellectuelle. Tous les droits de reproduction sont réservés, y compris pour les documents téléchargeables et les représentations iconographiques et photographiques."
@@ -122,3 +126,12 @@ footer:
 
 common:
   back_to_home: '&larr; Retour à l''accueil'
+
+contact_email:
+  admin_subject: 'Nouveau message de %email%'
+  user_subject: 'Message reçu'
+  name_label: 'Nom'
+  email_label: 'Email'
+  message_label: 'Message'
+  thank_you_message: 'Merci pour votre message et de votre intérêt, je reviens vers vous dans les meilleurs délais.'
+  regards: 'Cordialement'

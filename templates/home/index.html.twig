@@ -130,14 +130,14 @@
                                     {% for message in app.flashes('success') %}
                                         <div class="alert alert-success mb-4">
                                             <i class="fa-solid fa-check"></i>
-                                            <span>{{ message }}</span>
+                                            <span data-trans="{{ message }}">{{ message|trans }}</span>
                                         </div>
                                     {% endfor %}
                                     
                                     {% for message in app.flashes('error') %}
                                         <div class="alert alert-error mb-4">
                                             <i class="fa-solid fa-circle-exclamation"></i>
-                                            <span>{{ message }}</span>
+                                            <span data-trans="{{ message }}">{{ message|trans }}</span>
                                         </div>
                                     {% endfor %}
 

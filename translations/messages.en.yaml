@@ -71,20 +71,24 @@ contact_form:
   send: 'Send Message'
   cancel: 'Cancel'
   privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>."
+  success_message: 'Your message has been sent successfully'
+  error_message: 'An error occurred while sending your message'
 
 legal_notice:
   editor:
     title: 'Website Editor'
     edited_by: 'This website is edited by Your Name'
-    contact: 'Contact'
+    contact: 'Contact : your-name@gmail.com'
   hosting:
     title: 'Hosting'
     hosted_by: 'This website is hosted by'
-    company_info: 'SAS with a capital of %capital% €'
-    ape: 'APE Code'
-    vat: 'VAT Number'
+    company_name: 'OVH'
+    company_info: 'SAS with a capital of 10 174 560 €'
+    rcs: 'RCS Lille Métropole 424 761 419 00045'
+    ape_code: 'APE Code: 2620Z'
+    vat: 'VAT Number: FR 22 424 761 419'
     address: 'Head Office: 2 rue Kellermann - 59100 Roubaix – France'
-    phone: 'Phone'
+    phone: 'Phone: 1007'
   intellectual_property:
     title: 'Intellectual Property'
     content: 'This entire website is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.'
@@ -122,3 +126,12 @@ footer:
 
 common:
   back_to_home: '&larr; Back to Home'
+
+contact_email:
+  admin_subject: 'New message from %email%'
+  user_subject: 'Message Received'
+  name_label: 'Name'
+  email_label: 'Email'
+  message_label: 'Message'
+  thank_you_message: 'Thank you for your message and interest, I will get back to you as soon as possible.'
+  regards: 'Best regards'
