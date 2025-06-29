@@ -98,7 +98,7 @@ projects:
     title: 'Email Sender'
     description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
   play-with-your-friends:
-    title: 'Play with Your Friends'
+    title: 'Play With Your Friends'
     description: 'A fun and engaging web application for playing with your friends, offering a unique and interactive platform for social interaction.'
 
 contact_form:

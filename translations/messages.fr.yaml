@@ -98,7 +98,7 @@ projects:
     title: 'Expéditeur d''Emails'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
   play-with-your-friends:
-    title: 'Play with Your Friends'
+    title: 'Play With Your Friends'
     description: 'Une application web ludique et interactive pour jouer avec vos amis, offrant une plateforme unique et interactive pour l''interaction sociale.'
 
 contact_form:
