@@ -88,18 +88,298 @@ projects:
   inventory-management:
     title: 'Inventory Management'
     description: 'A web application for inventory management, compiled into an executable for Windows, built with Next.js, Node.js, and SQLite, featuring report generation, etc.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Inventory management app designed for <strong>SOGEA Environnement (Évreux)</strong>, installed locally on the storekeeper's computer. Network deployment was not chosen, so it works autonomously, without internet or remote server.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Add, edit, delete items</li>
+                  <li>Product categorization</li>
+                  <li>Alert threshold definition</li>
+                  <li>Movement history (in, out, adjustments)</li>
+                  <li>Search by name, reference, category</li>
+                  <li>PDF export of stock and availability reports</li>
+                  <li>Dropdowns for predefined fields (sites, managers, cities…)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Local deployment only (storekeeper's computer). No internal server or multi-user.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend / Backend:</strong> Next.js with TypeScript</li>
+                  <li><strong>Local server:</strong> Node.js LTS 22.14 (port 3000)</li>
+                  <li><strong>Database:</strong> SQLite (local file)</li>
+                  <li><strong>Packaging:</strong> Electron Builder → <code>setup.exe</code></li>
+                  <li><strong>Interface:</strong> WebView displayed in a dedicated window</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Compatibility</td>
+              <td class="px-4 py-2 border">
+                Windows 10/11. Port 3000 available. Local execution allowed.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                One-click install via <code>setup.exe</code> generated with Electron Builder. Everything is embedded (Node.js, SQLite, app).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The project was built to offer simple, reliable, and fast management, with no external dependencies or complex setup, perfectly suited for isolated environments.
+        </p>
+      </div>
+
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Showcase website developed for <strong>Klimber-Kids</strong>, a climbing module manufacturer, to present their range and facilitate contact.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Product catalog with image galleries</li>
+                  <li>Contact and quote request forms</li>
+                  <li>Service and project presentation pages</li>
+                  <li>SEO optimization and fast loading</li>
+                  <li>Modern, responsive interface</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Project carried out in collaboration with the client to showcase their expertise and generate leads.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend:</strong> Symfony 7 (PHP 8.2)</li>
+                  <li><strong>Frontend:</strong> Twig, Tailwind CSS</li>
+                  <li><strong>Hosting:</strong> OVH shared hosting</li>
+                  <li><strong>Security:</strong> Honeypot anti-spam</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                Deployed on OVH shared hosting, DNS and SSL configured.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The site allows Klimber-Kids to effectively present their products and increase their online visibility.
+        </p>
+      </div>
+
   dashboard-si:
     title: 'IT Dashboard'
     description: 'An IT Department dashboard integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Dashboard app developed for the UIMM IT department, centralizing management and visualization of IT resources.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Connects to Microsoft Graph API</li>
+                  <li>Dynamic display of users, groups, devices</li>
+                  <li>Custom dashboards</li>
+                  <li>Real-time stats and charts</li>
+                  <li>Secure authentication</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Project completed during an internship at UIMM to improve IT management.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend:</strong> Python (Flask)</li>
+                  <li><strong>Frontend:</strong> HTML, Tailwind CSS, Chart.js</li>
+                  <li><strong>API:</strong> Microsoft Graph</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                Deployed on UIMM internal server, access restricted to IT staff.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          This dashboard automated IT data collection and visualization, making decision-making easier.
+        </p>
+      </div>
+
   email-sender:
     title: 'Email Sender'
     description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Professional email management tool, designed for marketing campaigns and multi-account SMTP management.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Multi-account SMTP management</li>
+                  <li>Real-time preview</li>
+                  <li>Campaign scheduling</li>
+                  <li>Stats and analytics</li>
+                  <li>Contact import/export (CSV, Excel)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Developed to make professional email sending and campaign automation easier.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend:</strong> Next.js, React</li>
+                  <li><strong>Backend:</strong> Node.js</li>
+                  <li><strong>Database:</strong> SQLite</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                Packaged app for internal use, local installation on user workstation.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          The app saves time for campaign management and contact centralization.
+        </p>
+      </div>
+
   play-with-your-friends:
     title: 'Play With Your Friends'
     description: 'A fun and engaging web application for playing with your friends, offering a unique and interactive platform for social interaction.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Multiplayer web gaming platform designed to foster social interaction and fun with friends.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Real-time multiplayer games</li>
+                  <li>Integrated chat rooms</li>
+                  <li>User profiles and friend management</li>
+                  <li>Instant notifications</li>
+                  <li>Mobile-friendly interface</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Personal project aiming to create a fun and friendly space for remote play.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend:</strong> React, Tailwind CSS</li>
+                  <li><strong>Backend:</strong> Node.js, WebSocket</li>
+                  <li><strong>Database:</strong> MongoDB</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                Cloud hosting, accessible via web browser on mobile and desktop.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          This app aims to provide a smooth, social gaming experience accessible to all.
+        </p>
+      </div>
 
 contact_form:
   title: 'Get in Touch'
@@ -167,6 +447,7 @@ footer:
 
 common:
   back_to_home: '&larr; Back to Home'
+  more: 'Click for more details'
 
 contact_email:
   admin_subject: 'New message from %email%'

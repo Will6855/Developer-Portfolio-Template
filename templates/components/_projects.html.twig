@@ -3,8 +3,11 @@
     
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
         {% for project in projects %}
-            <div class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-500 
-                        flex flex-col bg-gradient-to-br from-primary/20 to-base-300/90 border border-base-content/10">
+            <div 
+                class="group relative overflow-hidden rounded-xl shadow-md hover:shadow-lg transition-all duration-500 flex flex-col bg-gradient-to-br from-primary/20 to-base-300/90 border border-base-content/10 cursor-pointer project-card"
+                data-modal-id="modal-{{ loop.index }}"
+                onclick="document.getElementById('modal-{{ loop.index }}').showModal()"
+            >
                 <!-- Background Image with overlay -->
                 <div class="absolute inset-0 z-0 opacity-40 group-hover:opacity-60 group-hover:scale-105 transition-all duration-300">
                     <img src="{{ asset('images/' ~ project.image) }}" 
@@ -69,8 +72,85 @@
                             </a>
                         {% endif %}
                     </div>
+                    <!-- Click for more -->
+                    <div class="absolute bottom-1.5 right-2 z-10">
+                        <span class="text-[10px] text-base-content/60 flex items-center gap-0.5 cursor-pointer select-none pointer-events-none m-0 p-0">
+                            <i class="fa-solid fa-ellipsis-h text-[11px]"></i>
+                            <span data-trans="common.more">{{ 'common.more'|trans }}</span>
+                        </span>
+                    </div>
                 </div>
             </div>
         {% endfor %}
     </div>
+
+    {# Modals outside the grid for proper stacking #}
+    {% for project in projects %}
+    <dialog id="modal-{{ loop.index }}" class="modal modal-bottom sm:modal-middle">
+        <div class="modal-box bg-base-200/95 border border-base-content/10">
+            <div class="relative">
+                <!-- Decorative elements -->
+                <div class="absolute -top-2 -left-2 w-20 h-20 bg-primary/10 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-2 -right-2 w-20 h-20 bg-secondary/10 rounded-full blur-2xl"></div>
+                <!-- Content -->
+                <div class="relative">
+                    <button type="button"
+                        class="absolute top-3 right-3 z-20 text-lg text-base-content/60 hover:text-base-content/80 bg-base-100/70 border border-base-content/10 rounded-full aspect-square w-8 h-8 flex items-center justify-center focus:outline-none transition"
+                        style="backdrop-filter: blur(2px);"
+                        aria-label="Close project details"
+                        onclick="this.closest('dialog').close()">
+                        &times;
+                    </button>
+                    <img src="{{ asset('images/' ~ project.image) }}" alt="{{ project.title|trans }}" class="w-full max-h-64 object-contain rounded mb-4">
+                    <h3 class="text-2xl font-bold mb-2 bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent text-center" data-trans="{{ project.title }}">
+                        {{ project.title|trans }}
+                    </h3>
+                    <div class="mb-4 text-sm text-justify" data-trans="{{ project.details }}" data-trans-raw>
+                        {{ project.details|trans|raw }}
+                    </div>
+                    <!-- Technologies -->
+                    <div class="flex flex-wrap gap-1 mb-4 justify-center">
+                        {% for tech in project.technologies %}
+                            <div class="badge badge-md px-1.5 py-1 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors border-none">
+                                {% if tech.icon is defined %}
+                                    <i class="{{ tech.icon }} mr-0.5 text-xs"></i>
+                                {% else %}
+                                    <img src="{{ asset('images/' ~ tech.image) }}" alt="{{ tech.name }}" class="w-2.5 h-2.5 mr-1">
+                                {% endif %}
+                                {{ tech.name }}
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <!-- Links -->
+                    <div class="flex flex-wrap gap-1.5 justify-center">
+                        {% if project.github %}
+                            <a href="{{ project.github }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-xs gap-1.5 bg-base-content/5 hover:bg-base-content/10 text-base-content border-0 transition-all duration-300">
+                                <i class="fa-brands fa-github"></i>
+                                <span class="text-[10px]" data-trans="projects.links.view_code">{{ 'projects.links.view_code'|trans }}</span>
+                            </a>
+                        {% endif %}
+                        {% if project.website %}
+                            <a href="{{ project.website }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-xs gap-1.5 bg-primary/10 hover:bg-primary/20 text-primary border-0 transition-all duration-300">
+                                <i class="fa-solid fa-globe"></i>
+                                <span class="text-[10px]" data-trans="projects.links.visit_website">{{ 'projects.links.visit_website'|trans }}</span>
+                            </a>
+                        {% endif %}
+                        {% if project.demo %}
+                            <a href="{{ project.demo }}" target="_blank" rel="noopener noreferrer" 
+                               class="btn btn-xs gap-1.5 bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-500 border-0 transition-all duration-300">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                                <span class="text-[10px]" data-trans="projects.links.live_demo">{{ 'projects.links.live_demo'|trans }}</span>
+                            </a>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <form method="dialog" class="modal-backdrop bg-base-200/50">
+            <button>close</button>
+        </form>
+    </dialog>
+    {% endfor %}
 </section>

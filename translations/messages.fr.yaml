@@ -88,19 +88,299 @@ projects:
   inventory-management:
     title: 'Gestion d''Inventaire'
     description: 'Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite, incluant des fonctionnalités de génération de rapports, etc.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Application de gestion d’inventaire conçue pour <strong>SOGEA Environnement (Évreux)</strong>, installée localement sur le poste du magasinier. Le déploiement réseau ayant été écarté, elle fonctionne en autonomie, sans connexion Internet ni serveur distant.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Ajout, modification, suppression d’articles</li>
+                  <li>Catégorisation des produits</li>
+                  <li>Définition de seuils d’alerte</li>
+                  <li>Historique des mouvements (entrées, sorties, régularisations)</li>
+                  <li>Recherches par nom, référence, catégorie</li>
+                  <li>Export PDF des rapports d’état de stock et disponibilité</li>
+                  <li>Listes déroulantes pour champs prédéfinis (sites, chefs, villes…)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Déploiement uniquement local (poste magasinier). Pas de serveur interne ni de multi-utilisateur.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend / Backend :</strong> Next.js avec TypeScript</li>
+                  <li><strong>Serveur local :</strong> Node.js LTS 22.14 (port 3000)</li>
+                  <li><strong>Base de données :</strong> SQLite (fichier local)</li>
+                  <li><strong>Packaging :</strong> Electron Builder → <code>setup.exe</code></li>
+                  <li><strong>Interface :</strong> WebView affichée dans une fenêtre dédiée</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Compatibilité</td>
+              <td class="px-4 py-2 border">
+                Windows 10/11. Port 3000 disponible. Exécution locale autorisée.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                Installation en un clic via <code>setup.exe</code> généré avec Electron Builder. Tout est embarqué (Node.js, SQLite, application).
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Le projet a été réalisé pour offrir une gestion simple, fiable et rapide, sans dépendances externes ni configuration complexe, parfaitement adaptée à un usage en environnement isolé.
+        </p>
+      </div>
+
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'Plateforme web vitrine pour un fabricant de modules d''escalade, mettant en valeur leur gamme de produits et services avec une interface moderne et intuitive.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Site vitrine développé pour <strong>Klimber-Kids</strong>, fabricant de modules d’escalade, afin de présenter leur gamme et faciliter la prise de contact.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Catalogue produits avec galeries d’images</li>
+                  <li>Formulaire de contact et demande de devis</li>
+                  <li>Pages de présentation des services et réalisations</li>
+                  <li>Optimisation SEO et chargement rapide</li>
+                  <li>Interface moderne et responsive</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Projet réalisé en collaboration avec le client pour valoriser leur savoir-faire et générer des prospects.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend :</strong> Symfony 7 (PHP 8.2)</li>
+                  <li><strong>Frontend :</strong> Twig, Tailwind CSS</li>
+                  <li><strong>Hébergement :</strong> OVH mutualisé</li>
+                  <li><strong>Sécurité :</strong> Honeypot anti-spam</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                Déploiement sur hébergement mutualisé OVH, configuration DNS et SSL.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Le site permet à Klimber-Kids de présenter efficacement ses produits et d’augmenter sa visibilité en ligne.
+        </p>
+      </div>
+
   dashboard-si:
     title: 'Tableau De Bord SI'
     description: 'Tableau de bord pour DSI intégrant l''API Microsoft Graph, offrant une gestion centralisée et un monitoring en temps réel des ressources informatiques.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Application de tableau de bord développée pour le service informatique de l’UIMM, permettant de centraliser la gestion et la visualisation des ressources IT.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Connexion à Microsoft Graph API</li>
+                  <li>Affichage dynamique des utilisateurs, groupes, appareils</li>
+                  <li>Tableaux de bord personnalisés</li>
+                  <li>Statistiques et graphiques en temps réel</li>
+                  <li>Authentification sécurisée</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Projet réalisé lors d’un stage à l’UIMM pour améliorer la gestion IT.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend :</strong> Python (Flask)</li>
+                  <li><strong>Frontend :</strong> HTML, Tailwind CSS, Chart.js</li>
+                  <li><strong>API :</strong> Microsoft Graph</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                Déploiement sur serveur interne UIMM, accès restreint au service informatique.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Ce tableau de bord a permis d’automatiser la collecte et la visualisation des données IT, facilitant la prise de décision.
+        </p>
+      </div>
+
   email-sender:
     title: 'Expéditeur d''Emails'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
+    details: |
+      <div class="space-y-4">
+        <p>
+          Outil de gestion d’emails professionnels, pensé pour les campagnes marketing et la gestion multi-comptes SMTP.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Gestion multi-comptes SMTP</li>
+                  <li>Prévisualisation en temps réel</li>
+                  <li>Programmation de campagnes</li>
+                  <li>Statistiques et analytics</li>
+                  <li>Import/export de contacts (CSV, Excel)</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Développé pour faciliter la gestion d’envois d’emails professionnels et automatiser les campagnes.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend :</strong> Next.js, React</li>
+                  <li><strong>Backend :</strong> Node.js</li>
+                  <li><strong>Base de données :</strong> SQLite</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                Application packagée pour usage interne, installation locale sur poste utilisateur.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          L’application permet un gain de temps considérable pour la gestion des campagnes et la centralisation des contacts.
+        </p>
+      </div>
+
   play-with-your-friends:
     title: 'Play With Your Friends'
     description: 'Une application web ludique et interactive pour jouer avec vos amis, offrant une plateforme unique et interactive pour l''interaction sociale.'
-
+    details: |
+      <div class="space-y-4">
+        <p>
+          Plateforme web de jeux multijoueurs pensée pour favoriser l’interaction sociale et le divertissement entre amis.
+        </p>
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Jeux multijoueurs en temps réel</li>
+                  <li>Salons de discussion intégrés</li>
+                  <li>Profils utilisateurs et gestion d’amis</li>
+                  <li>Notifications instantanées</li>
+                  <li>Interface mobile-friendly</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Projet personnel visant à créer un espace ludique et convivial pour jouer à distance.
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Frontend :</strong> React, Tailwind CSS</li>
+                  <li><strong>Backend :</strong> Node.js, WebSocket</li>
+                  <li><strong>Base de données :</strong> MongoDB</li>
+                </ul>
+              </td>
+            </tr>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                Hébergement cloud, accès via navigateur web sur mobile et desktop.
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        <p>
+          Cette application vise à offrir une expérience de jeu fluide et sociale, accessible à tous.
+        </p>
+      </div>
+      
 contact_form:
   title: 'Me Contacter'
   name: 'Nom'
@@ -167,6 +447,7 @@ footer:
 
 common:
   back_to_home: '&larr; Retour à l''accueil'
+  more: 'Cliquez pour plus de détails'
 
 contact_email:
   admin_subject: 'Nouveau message de %email%'
