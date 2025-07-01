@@ -47,6 +47,7 @@ class PortfolioService
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'MySQL', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'SQLite', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'PostgreSQL', 'display' => false ],
+                    [ 'icon' => 'fa-solid fa-database', 'name' => 'MongoDB', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-server', 'name' => 'REST APIs', 'display' => true ]
                 ]
             ],
@@ -59,6 +60,18 @@ class PortfolioService
                     [ 'icon' => 'fa-solid fa-arrows-spin', 'name' => 'Agile', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-git-alt', 'name' => 'Git', 'display' => true ],
                     [ 'image' => 'skills/postman.svg', 'name' => 'Postman', 'display' => true ],
+                ]
+            ],
+            'DevOps' => [
+                'icon' => 'fa-solid fa-server',
+                'color_bg' => 'gray-500/40',
+                'color_text' => 'gray-400',
+                'color_hover' => 'gray-800',
+                'items' => [
+                    [ 'icon' => 'fa-brands fa-docker', 'name' => 'Docker', 'display' => false ],
+                    [ 'icon' => 'fa-brands fa-linux', 'name' => 'Linux', 'display' => false ],
+                    [ 'icon' => 'fa-brands fa-github', 'name' => 'Github Action', 'display' => false ],
+                    [ 'icon' => 'fa-brands fa-nginx', 'name' => 'Nginx', 'display' => false ],
                 ]
             ]
         ];
@@ -225,7 +238,7 @@ class PortfolioService
                 'website' => 'https://playwithyourfriends.com/',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Git']) // Add Docker, MongoDB
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs', 'Agile', 'Git', 'Docker'])
             ]
         ];
     }

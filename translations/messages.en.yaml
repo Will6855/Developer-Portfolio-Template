@@ -30,6 +30,7 @@ skills:
     frameworks: 'Frameworks'
     backend: 'Backend'
     practices: 'Practices'
+    devops: 'DevOps'
 
 experiences:
   at_experience: 'at'
@@ -191,7 +192,7 @@ projects:
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
                   <li><strong>Backend:</strong> Symfony 7 (PHP 8.2)</li>
-                  <li><strong>Frontend:</strong> Twig, Tailwind CSS</li>
+                  <li><strong>Frontend:</strong> Twig, Bootstrap</li>
                   <li><strong>Hosting:</strong> OVH shared hosting</li>
                   <li><strong>Security:</strong> Honeypot anti-spam</li>
                 </ul>
@@ -249,7 +250,7 @@ projects:
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
                   <li><strong>Backend:</strong> Python (Flask)</li>
-                  <li><strong>Frontend:</strong> HTML, Tailwind CSS, Chart.js</li>
+                  <li><strong>Frontend:</strong> HTML, Bootstrap, Chart.js</li>
                   <li><strong>API:</strong> Microsoft Graph</li>
                 </ul>
               </td>
@@ -305,7 +306,7 @@ projects:
               <td class="px-4 py-2 border font-semibold">Technologies</td>
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Frontend:</strong> Next.js, React</li>
+                  <li><strong>Frontend:</strong> Next.js</li>
                   <li><strong>Backend:</strong> Node.js</li>
                   <li><strong>Database:</strong> SQLite</li>
                 </ul>
@@ -362,7 +363,7 @@ projects:
               <td class="px-4 py-2 border font-semibold">Technologies</td>
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Frontend:</strong> React, Tailwind CSS</li>
+                  <li><strong>Frontend:</strong> Next.js, Tailwind CSS</li>
                   <li><strong>Backend:</strong> Node.js, WebSocket</li>
                   <li><strong>Database:</strong> MongoDB</li>
                 </ul>
