@@ -16,12 +16,14 @@ sidebar:
 sections:
   about: 'About Me'
   skills: 'Skills'
-  experiences: 'Experience'
+  experience: 'Experience'
+  show_experience: 'Show Experience'
   education: 'Education'
+  show_education: 'Show Education'
   projects: 'Projects'
   
 about:
-  paragraph1: '%age%-year-old IT technician with a 2-year degree (BTS SIO, SLAM option), specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web application development</span>. I have experience in designing, deploying, and maintaining solutions tailored to user needs.'
+  paragraph1: '%age%-year-old IT technician, specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web application development</span>. I have experience in designing, deploying, and maintaining solutions tailored to user needs.'
   paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
 
 skills:

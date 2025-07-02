@@ -211,23 +211,28 @@
             {% include 'components/_skills.html.twig' %}
 
             <!-- Experience/Education Toggle -->
-            <div class="max-w-3xl mb-1 mt-12 lg:mt-16 mx-auto lg:mx-0">
-                <div class="flex items-center space-x-4">
-                    <button id="experience-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer border-none focus:outline-none" data-trans="sections.experiences">
-                        {{ 'sections.experiences'|trans }}
-                    </button>
-                    <button id="education-toggle" class="text-3xl lg:text-4xl font-bold cursor-pointer text-base-content/40 border-none focus:outline-none" data-trans="sections.education">
-                        {{ 'sections.education'|trans }}
-                    </button>
-                </div>
+            <div class="max-w-3xl mb-1 mt-12 lg:mt-16 mx-auto lg:mx-0 flex items-center space-x-4">
+                <h2 id="section-title" class="text-3xl lg:text-4xl font-bold transition-opacity duration-500 relative overflow-hidden">
+                    <span id="section-title-experience" class="inline-block transition-all duration-300" data-trans="sections.experience">{{ 'sections.experience'|trans }}</span>
+                    <span id="section-title-education" class="inline-block transition-all duration-300 hidden" data-trans="sections.education">{{ 'sections.education'|trans }}</span>
+                </h2>
+                <button id="toggle-section-btn" class="ml-4 px-2 py-1 border border-dashed text-base-content/80 hover:text-base-content border-base-content/30 bg-transparent shadow-none rounded-lg transition-all duration-200 hover:border-base-content/50 text-sm font-normal relative overflow-hidden" style="min-width:7em; min-height:2em;">
+                    <i class="fa-solid fa-angle-right mr-1"></i>
+                    <span id="toggle-btn-education" class="inline-block transition-all duration-200" data-trans="sections.show_education">
+                        {{ 'sections.show_education'|trans }}
+                    </span>
+                    <span id="toggle-btn-experience" class="inline-block transition-all duration-200 hidden" data-trans="sections.show_experience">
+                        {{ 'sections.show_experience'|trans }}
+                    </span>
+                </button>
             </div>
 
             <!-- Sections Container -->
             <div id="sections-container" class="relative overflow-hidden max-w-3xl lg:mx-0 mx-auto">
-                <section id="experience" class="transition-all duration-300 ease-in-out transform">
+                <section id="experience" class="transition-all duration-500 ease-in-out transform">
                     {% include 'components/_experience.html.twig' %}
                 </section>
-                <section id="education" class="transition-all duration-300 ease-in-out transform hidden">
+                <section id="education" class="transition-all duration-500 ease-in-out transform hidden">
                     {% include 'components/_education.html.twig' %}
                 </section>
             </div>
@@ -236,7 +241,7 @@
             {% include 'components/_projects.html.twig' %}
 
             <!-- Footer -->
-            <footer class="max-w-3xl mt-16 pb-8">
+            <footer class="mx-auto lg:mx-0 max-w-3xl mt-16 pb-8">
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-base-content/50">
                     <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors" data-trans="footer.legal_notice">
                         {{ 'footer.legal_notice'|trans }}
@@ -264,47 +269,78 @@
     </script>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
-        const educationToggle = document.getElementById('education-toggle');
-        const experienceToggle = document.getElementById('experience-toggle');
         const educationSection = document.getElementById('education');
         const experienceSection = document.getElementById('experience');
+        const sectionTitleExperience = document.getElementById('section-title-experience');
+        const sectionTitleEducation = document.getElementById('section-title-education');
+        const toggleBtnEducation = document.getElementById('toggle-btn-education');
+        const toggleBtnExperience = document.getElementById('toggle-btn-experience');
 
-        const toggleSections = (outSection, inSection, outToggle, inToggle) => {
-            const isEducation = inSection.id === 'education';
-            const outDir = isEducation ? '-translate-x-full' : 'translate-x-full';
-            const inDir = isEducation ? 'translate-x-full' : '-translate-x-full';
+        let showingExperience = true;
+        let isTransitioning = false;
 
-            outSection.classList.add(outDir, 'opacity-0');
+        function toggleTitleAndButton(showExperience) {
+            if (showExperience) {
+                sectionTitleExperience.classList.remove('hidden');
+                sectionTitleEducation.classList.add('hidden');
+                toggleBtnEducation.classList.remove('hidden');
+                toggleBtnExperience.classList.add('hidden');
+            } else {
+                sectionTitleExperience.classList.add('hidden');
+                sectionTitleEducation.classList.remove('hidden');
+                toggleBtnEducation.classList.add('hidden');
+                toggleBtnExperience.classList.remove('hidden');
+            }
+        }
+
+        function fadeOutIn(outSection, inSection, showExperienceNext) {
+            if (isTransitioning) return;
+            isTransitioning = true;
+            // Animate out section
+            outSection.classList.add('opacity-0', showingExperience ? '-translate-x-8' : 'translate-x-8');
+            setTimeout(() => {
+                toggleTitleAndButton(showExperienceNext);
+            }, 150);
             setTimeout(() => {
                 outSection.classList.add('hidden');
-                outSection.classList.remove(outDir, 'opacity-0');
-                
+                outSection.classList.remove('opacity-0', '-translate-x-8', 'translate-x-8');
+                // Animate in section
                 inSection.classList.remove('hidden');
-                inSection.classList.add(inDir, 'opacity-0');
-                
-                // Update toggle button styles
-                inToggle.classList.remove('text-base-content/40');
-                outToggle.classList.add('text-base-content/40');
-                
-                // Trigger reflow and remove slide animation
+                inSection.classList.add(showingExperience ? 'translate-x-8' : '-translate-x-8', 'opacity-0');
+                void inSection.offsetWidth;
+                inSection.classList.remove('opacity-0', 'translate-x-8', '-translate-x-8');
                 setTimeout(() => {
-                    inSection.classList.remove(inDir, 'opacity-0');
-                }, 50);
-            }, 200);
-        };
+                    isTransitioning = false;
+                }, 350);
+            }, 300);
+        }
 
-        // Toggle functionality
-        educationToggle.addEventListener('click', () => {
-            // Check if education section is already active
-            if (!educationSection.classList.contains('hidden')) return;
-            toggleSections(experienceSection, educationSection, experienceToggle, educationToggle);
+        const toggleBtn = document.getElementById('toggle-section-btn');
+
+        toggleBtn.addEventListener('click', function() {
+            if (isTransitioning) return;
+            if (showingExperience) {
+                fadeOutIn(
+                    experienceSection,
+                    educationSection,
+                    false
+                );
+            } else {
+                fadeOutIn(
+                    educationSection,
+                    experienceSection,
+                    true
+                );
+            }
+            showingExperience = !showingExperience;
         });
 
-        experienceToggle.addEventListener('click', () => {
-            // Check if experience section is already active
-            if (!experienceSection.classList.contains('hidden')) return;
-            toggleSections(educationSection, experienceSection, educationToggle, experienceToggle);
-        });
+        // Initial state
+        experienceSection.classList.remove('hidden');
+        educationSection.classList.add('hidden');
+        experienceSection.classList.remove('opacity-0', '-translate-x-8', 'translate-x-8');
+        educationSection.classList.remove('opacity-0', '-translate-x-8', 'translate-x-8');
+        toggleTitleAndButton(true);
     });
 </script>
 {% endblock %}
