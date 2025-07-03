@@ -16,7 +16,7 @@
         <div class="absolute inset-0" style="background-image: linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px); background-size: 30px 30px;"></div>
     </div>
 
-    <div class="relative z-10 flex flex-col lg:flex-row">
+    <div class="relative z-10 flex flex-col lg:flex-row lg:mx-auto">
         <!-- Left Sidebar -->
         <div class="w-full lg:w-2/5 p-6 lg:p-8 lg:pl-20 lg:fixed lg:h-screen overflow-y-auto flex items-center">
             <div class="w-full">
@@ -25,7 +25,7 @@
                         <svg xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 600 600" class="w-full h-full">
                             <clipPath id="blob-mask">
                                 <path id="blob" d="M570,205C596,115,396,33,303,32C210,30,40,108,14,197C-13,287,51,568,144,569C237,570,543,294,570,205C596,115,396,33,303,32" />
-                                <!-- <path id="blob">
+                                {# <path id="blob">
                                     <animate
                                         attributeName="d"
                                         dur="10s"
@@ -37,7 +37,7 @@
                                                M 564 267 C 596 173 386 22 297 16 C 208 10 64 135 32 229 C 0 322 15 573 104 579 C 193 586 531 361 564 267;
                                                M 570 205 C 596 115 396 33 303 32 C 210 30 40 108 14 197 C -13 287 51 568 144 569 C 237 570 543 294 570 205"
                                     />
-                                </path> -->
+                                </path> #}
                             </clipPath>
                             <image 
                                 clip-path="url(#blob-mask)"
@@ -76,10 +76,12 @@
                         <div class="group flex-1 w-full">
                             <a href="{{ asset(personal_info.files.cv) }}" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
                                 <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <span class="relative flex items-center gap-2 text-sm font-medium" data-trans="sidebar.resume">
+                                <div class="flex items-center gap-2">
                                     <i class="fa-solid fa-file-arrow-down"></i>
-                                    {{ 'sidebar.resume'|trans }}
-                                </span>
+                                    <span class="relative flex items-center text-sm font-medium" data-trans="sidebar.resume">
+                                        {{ 'sidebar.resume'|trans }}
+                                    </span>
+                                </div>
                             </a>
                         </div>
                         <div class="flex gap-4 mt-4 lg:mt-0">
@@ -103,10 +105,11 @@
                                 <div class="flex justify-center">
                                     <button 
                                         onclick="contact_modal.showModal()" 
-                                        class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm"
-                                        data-trans="sidebar.lets_connect">
+                                        class="w-full px-4 py-2 bg-gradient-to-r from-primary to-secondary text-primary-content rounded-lg font-medium transition-all duration-300 hover:shadow-lg hover:shadow-primary/20 hover:-translate-y-0.5 active:translate-y-0 flex items-center justify-center gap-2 text-sm">
                                         <i class="fa-solid fa-briefcase"></i>
-                                        {{ 'sidebar.lets_connect'|trans }}
+                                        <span class="relative flex items-center text-sm font-medium" data-trans="sidebar.lets_connect">
+                                            {{ 'sidebar.lets_connect'|trans }}
+                                        </span>
                                     </button>
                                 </div>
                             </div>
@@ -211,12 +214,12 @@
             {% include 'components/_skills.html.twig' %}
 
             <!-- Experience/Education Toggle -->
-            <div class="max-w-3xl mb-1 mt-12 lg:mt-16 mx-auto lg:mx-0 flex items-center space-x-4">
+            <div class="max-w-3xl mb-1 mt-12 sm:mt-16 mx-auto sm:mx-0 flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <h2 id="section-title" class="text-3xl lg:text-4xl font-bold transition-opacity duration-500 relative overflow-hidden">
                     <span id="section-title-experience" class="inline-block transition-all duration-300" data-trans="sections.experience">{{ 'sections.experience'|trans }}</span>
                     <span id="section-title-education" class="inline-block transition-all duration-300 hidden" data-trans="sections.education">{{ 'sections.education'|trans }}</span>
                 </h2>
-                <button id="toggle-section-btn" class="ml-4 px-2 py-1 border border-dashed text-base-content/80 hover:text-base-content border-base-content/30 bg-transparent shadow-none rounded-lg transition-all duration-200 hover:border-base-content/50 text-sm font-normal relative overflow-hidden" style="min-width:7em; min-height:2em;">
+                <button id="toggle-section-btn" class="lg:ml-4 px-2 py-1 border border-dashed text-base-content/80 hover:text-base-content border-base-content/30 bg-transparent shadow-none rounded-lg transition-all duration-200 hover:border-base-content/50 text-sm font-normal relative overflow-hidden">
                     <i class="fa-solid fa-angle-right mr-1"></i>
                     <span id="toggle-btn-education" class="inline-block transition-all duration-200" data-trans="sections.show_education">
                         {{ 'sections.show_education'|trans }}
@@ -242,12 +245,12 @@
 
             <!-- Footer -->
             <footer class="mx-auto lg:mx-0 max-w-3xl mt-16 pb-8">
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4 text-sm text-base-content/50">
-                    <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors" data-trans="footer.legal_notice">
+                <div class="grid grid-cols-1 sm:[grid-template-columns:1fr_auto_1fr] items-center justify-items-center text-sm text-base-content/50 gap-0">
+                    <a href="{{ path('legal_notice') }}" class="hover:text-base-content transition-colors sm:justify-self-end" data-trans="footer.legal_notice">
                         {{ 'footer.legal_notice'|trans }}
                     </a>
-                    <span class="hidden sm:inline">•</span>
-                    <a href="{{ path('privacy_policy') }}" class="hover:text-base-content transition-colors" data-trans="footer.privacy_policy">
+                    <span class="hidden sm:inline text-lg mx-2">•</span>
+                    <a href="{{ path('privacy_policy') }}" class="hover:text-base-content transition-colors sm:justify-self-start" data-trans="footer.privacy_policy">
                         {{ 'footer.privacy_policy'|trans }}
                     </a>
                 </div>
