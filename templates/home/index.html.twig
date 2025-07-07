@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block body %}
-<div class="min-h-screen bg-base-100 relative">
+<div class="min-h-screen relative">
     <!-- Background elements -->
     <div class="fixed inset-0 bg-gradient-to-br from-primary/5 via-base-100 to-secondary/5"></div>
     <div class="fixed inset-0 bg-[radial-gradient(circle_at_30%_50%,rgba(79,70,229,0.05)_0%,transparent_50%)]"></div>
@@ -75,8 +75,8 @@
                     <div class="mt-6 flex items-center gap-4 flex-col lg:flex-row">
                         <div class="group flex-1 w-full">
                             <a href="{{ asset(personal_info.files.cv) }}" download class="relative flex items-center justify-center w-full px-4 py-2 bg-base-200 rounded-lg border border-base-content/10 shadow-sm transition-all duration-300 hover:shadow-md hover:scale-[1.02] overflow-hidden">
-                                <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
-                                <div class="flex items-center gap-2">
+                                <div class="absolute inset-0 bg-gradient-to-r from-primary/80 to-secondary/80 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0"></div>
+                                <div class="flex items-center gap-2 relative z-10">
                                     <i class="fa-solid fa-file-arrow-down"></i>
                                     <span class="relative flex items-center text-sm font-medium" data-trans="sidebar.resume">
                                         {{ 'sidebar.resume'|trans }}

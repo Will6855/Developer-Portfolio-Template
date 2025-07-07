@@ -110,7 +110,7 @@ class PortfolioService
                     'experiences.sogea.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
             [
                 'title' => 'experiences.klimber_kids.title',
@@ -194,7 +194,7 @@ class PortfolioService
                 'website' => null,
                 'demo' => 'https://inventory-management-simple-demo.vercel.app/',
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
             [
                 'title' => 'projects.klimber_kids.title',

@@ -22,6 +22,7 @@
         <link rel="apple-touch-icon" sizes="180x180" href="{{ asset('favicon/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ asset('favicon/favicon-16x16.png') }}">
+        <link rel="icon" href="{{ asset('favicon.ico') }}">
         <link rel="manifest" href="{{ asset('favicon/site.webmanifest') }}">
         <link rel="canonical" href="{{ app.request.uri }}">
 
@@ -31,12 +32,14 @@
         <meta property="og:url" content="{{ app.request.uri }}">
         <meta property="og:type" content="website">
         <meta property="og:locale" content="{{ app.request.locale == 'fr' ? 'fr_FR' : 'en_US' }}">
-        
+        <meta property="og:image" content="{{ asset('images/profile-image.webp') }}">
+
         <!-- Twitter Card Meta Tags -->
         <meta name="twitter:card" content="summary">
         <meta name="twitter:title" content="{{ 'meta.title'|trans }}">
         <meta name="twitter:description" content="{{ 'meta.description'|trans }}">
         <meta name="twitter:url" content="{{ app.request.uri }}">
+        <meta name="twitter:image" content="{{ asset('images/profile-image.webp') }}">
         
         <!-- Tailwind CSS and DaisyUI -->
         <script src="https://cdn.tailwindcss.com"></script>
@@ -97,7 +100,7 @@
             }
         </script>
     </head>
-    <body class="min-h-screen bg-base-100 text-base-content grid-bg" data-theme="mytheme">
+    <body class="min-h-screen text-base-content">
         {% include 'components/_language_switcher.html.twig' %}
         {% block body %}{% endblock %}
         {% block javascripts %}{% endblock %}
