@@ -10,7 +10,8 @@ sidebar:
   resume: 'Consulter mon CV'
   contact_button: 'Me Contacter'
   open_to_job: 'À la recherche de nouveaux défis'
-  open_to_job_description: 'En recherche active d''opportunités professionnelles'
+  open_to_job_description: 'En poste, mais toujours ouvert à échanger.'
+  # open_to_job_description: 'En recherche active d''opportunités professionnelles'
   lets_connect: 'Prendre Contact'
 
 sections:
@@ -36,6 +37,13 @@ skills:
 
 experiences:
   at_experience: 'chez'
+  sogea2:
+    title: 'Agent Administratif'
+    location: 'Gravigny, France'
+    period: 'Octobre 2025 - En cours'
+    description:
+      1: "↳ Migration de l'application de gestion d'inventaire vers Tauri v2"
+      2: "↳ Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
   sogea:
     title: 'Développeur Web Full-Stack'
     location: 'Gravigny, France'
@@ -90,12 +98,13 @@ projects:
     live_demo: 'Démo'
   inventory-management:
     title: 'Gestion d''Inventaire'
-    description: 'Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite, incluant des fonctionnalités de génération de rapports, etc.'
+    description: "Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite (puis migrée sur Tauri v2), incluant des fonctionnalités de génération de rapports, etc."
     details: |
       <div class="space-y-4">
         <p>
           Application de gestion d’inventaire conçue pour <strong>SOGEA Environnement (Évreux)</strong>, installée localement sur le poste du magasinier. Le déploiement réseau ayant été écarté, elle fonctionne en autonomie, sans connexion Internet ni serveur distant.
         </p>
+
         <table class="table-auto w-full text-left border border-gray-300">
           <thead class="bg-gray-100 text-gray-700">
             <tr>
@@ -113,45 +122,62 @@ projects:
                   <li>Définition de seuils d’alerte</li>
                   <li>Historique des mouvements (entrées, sorties, régularisations)</li>
                   <li>Recherches par nom, référence, catégorie</li>
-                  <li>Export PDF des rapports d’état de stock et disponibilité</li>
+                  <li>Export PDF des rapports d’inventaire, des disponibilités et des factures — prêt à l’impression</li>
                   <li>Listes déroulantes pour champs prédéfinis (sites, chefs, villes…)</li>
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Contexte</td>
               <td class="px-4 py-2 border">
                 Déploiement uniquement local (poste magasinier). Pas de serveur interne ni de multi-utilisateur.
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Technologies</td>
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
                   <li><strong>Frontend / Backend :</strong> Next.js avec TypeScript</li>
-                  <li><strong>Serveur local :</strong> Node.js LTS 22.14 (port 3000)</li>
                   <li><strong>Base de données :</strong> SQLite (fichier local)</li>
-                  <li><strong>Packaging :</strong> Electron Builder → <code>setup.exe</code></li>
-                  <li><strong>Interface :</strong> WebView affichée dans une fenêtre dédiée</li>
+                  <li><strong>Version initiale :</strong> empaquetée avec Electron Builder (~680 Mo)</li>
+                  <li><strong>Version actuelle :</strong> migrée vers <strong>Tauri v2</strong> (~20 Mo)</li>
+                  <li><strong>Interface :</strong> WebView native avec lancement instantané (plus besoin de serveur Node local)</li>
                 </ul>
               </td>
             </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Améliorations clés</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Suppression du serveur local Node.js → démarrage immédiat</li>
+                  <li>Réduction de la taille de l’application : ~20 Mo (contre ~680 Mo sous Electron)</li>
+                  <li>Exécution plus sécurisée : tout reste en local sur le poste</li>
+                  <li>Consommation mémoire et CPU fortement réduite</li>
+                </ul>
+              </td>
+            </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Compatibilité</td>
               <td class="px-4 py-2 border">
-                Windows 10/11. Port 3000 disponible. Exécution locale autorisée.
+                Windows 10/11. Application autonome (aucun service en arrière-plan requis).
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Déploiement</td>
               <td class="px-4 py-2 border">
-                Installation en un clic via <code>setup.exe</code> généré avec Electron Builder. Tout est embarqué (Node.js, SQLite, application).
+                Installation en un clic via <code>setup.exe</code> généré avec Tauri. Tout est embarqué (application, base SQLite, interface).
               </td>
             </tr>
           </tbody>
         </table>
+
         <p>
-          Le projet a été réalisé pour offrir une gestion simple, fiable et rapide, sans dépendances externes ni configuration complexe, parfaitement adaptée à un usage en environnement isolé.
+          Le projet a évolué pour offrir une gestion simple, rapide et totalement autonome, tout en réduisant drastiquement la taille, les dépendances et le temps de démarrage. Une solution parfaitement adaptée à un environnement isolé.
         </p>
       </div>
 

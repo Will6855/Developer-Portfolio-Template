@@ -20,6 +20,7 @@ class PortfolioService
                     [ 'icon' => 'fa-brands fa-php', 'name' => 'PHP', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-python', 'name' => 'Python', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-java', 'name' => 'Java', 'display' => true ],
+                    [ 'icon' => 'fa-brands fa-rust', 'name' => 'Rust', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-kotlin', 'name' => 'Kotlin', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-swift', 'name' => 'Swift', 'display' => false ]
                 ]
@@ -98,6 +99,19 @@ class PortfolioService
     public function getExperiences(): array
     {
         return [
+            [
+                'title' => 'experiences.sogea2.title',
+                'company' => 'SOGEA Environnement (Groupe VINCI)',
+                'location' => 'experiences.sogea2.location',
+                'period' => 'experiences.sogea2.period',
+                'logo' => 'companies/sogea.png',
+                'description' => [
+                    'experiences.sogea2.description.1',
+                    'experiences.sogea2.description.2'
+                ],
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'SQLite', 'Agile', 'Git'])
+            ],
             [
                 'title' => 'experiences.sogea.title',
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
@@ -194,7 +208,7 @@ class PortfolioService
                 'website' => null,
                 'demo' => 'https://inventory-management-simple-demo.vercel.app/',
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
             [
                 'title' => 'projects.klimber_kids.title',

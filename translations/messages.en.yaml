@@ -10,7 +10,8 @@ sidebar:
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
   open_to_job: 'Open to new challenges'
-  open_to_job_description: 'Currently seeking full-time positions'
+  open_to_job_description: 'Currently employed, but always open to a chat.'
+  # open_to_job_description: 'Currently seeking full-time positions'
   lets_connect: 'Let''s Connect'
 
 sections:
@@ -36,6 +37,13 @@ skills:
 
 experiences:
   at_experience: 'at'
+  sogea2:
+  title: 'Administrative Assistant'
+  location: 'Gravigny, France'
+  period: 'October 2025 - Present'
+  description:
+    1: "↳ Migration of the inventory management application to Tauri v2"
+    2: "↳ Integration of new features based on feedback after more than 6 months of daily use in the field"
   sogea:
     title: 'Full-Stack Web Developer'
     location: 'Gravigny, France'
@@ -90,12 +98,14 @@ projects:
     live_demo: 'Demo'
   inventory-management:
     title: 'Inventory Management'
-    description: 'A web application for inventory management, compiled into an executable for Windows, built with Next.js, Node.js, and SQLite, featuring report generation, etc.'
+    description: "Web application compiled into a Windows executable, built with Next.js, Node.js, and SQLite (later migrated to Tauri v2), featuring reporting and PDF generation capabilities, among others."
     details: |
       <div class="space-y-4">
         <p>
-          Inventory management app designed for <strong>SOGEA Environnement (Évreux)</strong>, installed locally on the storekeeper's computer. Network deployment was not chosen, so it works autonomously, without internet or remote server.
+          Inventory management application developed for <strong>SOGEA Environnement (Évreux)</strong>, installed locally on the warehouse computer.  
+          As network deployment was not an option, the app operates autonomously — without Internet access or any remote server.
         </p>
+
         <table class="table-auto w-full text-left border border-gray-300">
           <thead class="bg-gray-100 text-gray-700">
             <tr>
@@ -108,50 +118,70 @@ projects:
               <td class="px-4 py-2 border font-semibold">Features</td>
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
-                  <li>Add, edit, delete items</li>
+                  <li>Add, edit, and delete items</li>
                   <li>Product categorization</li>
-                  <li>Alert threshold definition</li>
-                  <li>Movement history (in, out, adjustments)</li>
-                  <li>Search by name, reference, category</li>
-                  <li>PDF export of stock and availability reports</li>
-                  <li>Dropdowns for predefined fields (sites, managers, cities…)</li>
+                  <li>Alert threshold configuration</li>
+                  <li>Movement history (entries, exits, adjustments)</li>
+                  <li>Search by name, reference, or category</li>
+                  <li>PDF export of inventory reports, availability, and invoices — print-ready</li>
+                  <li>Dropdown menus for predefined fields (sites, managers, cities, etc.)</li>
                 </ul>
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Context</td>
               <td class="px-4 py-2 border">
-                Local deployment only (storekeeper's computer). No internal server or multi-user.
+                Local-only deployment (warehouse workstation).  
+                No internal server or multi-user access.
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Technologies</td>
               <td class="px-4 py-2 border">
                 <ul class="list-disc list-inside space-y-1">
                   <li><strong>Frontend / Backend:</strong> Next.js with TypeScript</li>
-                  <li><strong>Local server:</strong> Node.js LTS 22.14 (port 3000)</li>
                   <li><strong>Database:</strong> SQLite (local file)</li>
-                  <li><strong>Packaging:</strong> Electron Builder → <code>setup.exe</code></li>
-                  <li><strong>Interface:</strong> WebView displayed in a dedicated window</li>
+                  <li><strong>Initial version:</strong> packaged with Electron Builder (~680 MB)</li>
+                  <li><strong>Current version:</strong> migrated to <strong>Tauri v2</strong> (~20 MB)</li>
+                  <li><strong>Interface:</strong> Native WebView with instant startup (no local Node server required)</li>
                 </ul>
               </td>
             </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Key Improvements</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Removed local Node.js server → instant launch</li>
+                  <li>Reduced application size: ~20 MB (down from ~680 MB with Electron)</li>
+                  <li>Increased security: everything runs locally on the workstation</li>
+                  <li>Significantly lower memory and CPU usage</li>
+                </ul>
+              </td>
+            </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Compatibility</td>
               <td class="px-4 py-2 border">
-                Windows 10/11. Port 3000 available. Local execution allowed.
+                Windows 10/11. Fully standalone application (no background services required).
               </td>
             </tr>
+
             <tr>
               <td class="px-4 py-2 border font-semibold">Deployment</td>
               <td class="px-4 py-2 border">
-                One-click install via <code>setup.exe</code> generated with Electron Builder. Everything is embedded (Node.js, SQLite, app).
+                One-click installation via <code>setup.exe</code> generated with Tauri.  
+                Everything is bundled (application, SQLite database, interface).
               </td>
             </tr>
           </tbody>
         </table>
+
         <p>
-          The project was built to offer simple, reliable, and fast management, with no external dependencies or complex setup, perfectly suited for isolated environments.
+          The project evolved to deliver a simple, fast, and fully autonomous inventory solution — drastically reducing size, dependencies, and startup time.  
+          A lightweight and reliable tool perfectly suited for isolated environments.
         </p>
       </div>
 
