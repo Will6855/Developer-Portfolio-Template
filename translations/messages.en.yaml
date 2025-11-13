@@ -10,7 +10,7 @@ sidebar:
   resume: 'View Full Resume'
   contact_button: 'Get in Touch'
   open_to_job: 'Open to new challenges'
-  open_to_job_description: 'Currently employed, but always open to a chat.'
+  open_to_job_description: 'Currently employed, open to sharing and exchanging ideas'
   # open_to_job_description: 'Currently seeking full-time positions'
   lets_connect: 'Let''s Connect'
 
@@ -38,14 +38,15 @@ skills:
 experiences:
   at_experience: 'at'
   sogea2:
-  title: 'Administrative Assistant'
-  location: 'Gravigny, France'
-  period: 'October 2025 - Present'
-  description:
-    1: "↳ Migration of the inventory management application to Tauri v2"
-    2: "↳ Integration of new features based on feedback after more than 6 months of daily use in the field"
+    title: 'Administrative Assistant'
+    location: 'Gravigny, France'
+    period: 'October 2025 - Present'
+    description:
+      1: "↳ Migration of the inventory management application to Tauri v2"
+      2: "↳ Integration of new features based on feedback after more than 6 months of daily use in the field"
+      3: "↳ Printing of DICTs, on-site IT support, preparation of connection plans, ect."
   sogea:
-    title: 'Full-Stack Web Developer'
+    title: 'Administrative Assistant'
     location: 'Gravigny, France'
     period: 'March 2025'
     description:

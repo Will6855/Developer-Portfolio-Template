@@ -105,9 +105,11 @@ class PortfolioService
                 'location' => 'experiences.sogea2.location',
                 'period' => 'experiences.sogea2.period',
                 'logo' => 'companies/sogea.png',
+                'logo_large' => 'companies/sogea_large.webp',
                 'description' => [
                     'experiences.sogea2.description.1',
-                    'experiences.sogea2.description.2'
+                    'experiences.sogea2.description.2',
+                    'experiences.sogea2.description.3'
                 ],
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'SQLite', 'Agile', 'Git'])
@@ -118,6 +120,7 @@ class PortfolioService
                 'location' => 'experiences.sogea.location',
                 'period' => 'experiences.sogea.period',
                 'logo' => 'companies/sogea.png',
+                'logo_large' => 'companies/sogea_large.webp',
                 'description' => [
                     'experiences.sogea.description.1',
                     'experiences.sogea.description.2',
@@ -132,6 +135,7 @@ class PortfolioService
                 'location' => 'experiences.klimber_kids.location',
                 'period' => 'experiences.klimber_kids.period',
                 'logo' => 'companies/klimber-kids.svg',
+                'logo_large' => 'companies/klimber-kids.svg',
                 'description' => [
                     'experiences.klimber_kids.description.1',
                     'experiences.klimber_kids.description.2',
@@ -146,6 +150,7 @@ class PortfolioService
                 'location' => 'experiences.cs_lane.location',
                 'period' => 'experiences.cs_lane.period',
                 'logo' => 'companies/cs-lane.svg',
+                'logo_large' => 'companies/cs-lane.svg',
                 'description' => [
                     'experiences.cs_lane.description.1',
                     'experiences.cs_lane.description.2',
@@ -160,6 +165,7 @@ class PortfolioService
                 'location' => 'experiences.uimm.location',
                 'period' => 'experiences.uimm.period',
                 'logo' => 'companies/uimm.png',
+                'logo_large' => 'companies/uimm.png',
                 'description' => [
                     'experiences.uimm.description.1',
                     'experiences.uimm.description.2'
@@ -178,7 +184,8 @@ class PortfolioService
                 'school' => 'Lycée Gustave Flaubert',
                 'location' => 'education.bts.location',
                 'period' => 'education.bts.period',
-                'logo' => 'schools/gustave-flaubert.png',
+                'logo' => 'schools/gustave-flaubert.webp',
+                'logo_large' => 'schools/gustave-flaubert_large.png',
                 'description' => [
                     'education.bts.description.1',
                 ]
@@ -189,6 +196,7 @@ class PortfolioService
                 'location' => 'education.bac.location',
                 'period' => 'education.bac.period',
                 'logo' => 'schools/aristide-briand.webp',
+                'logo_large' => 'schools/aristide-briand.webp',
                 'description' => [
                     'education.bac.description.1',
                 ]

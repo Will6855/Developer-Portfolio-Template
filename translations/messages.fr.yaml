@@ -10,7 +10,7 @@ sidebar:
   resume: 'Consulter mon CV'
   contact_button: 'Me Contacter'
   open_to_job: 'À la recherche de nouveaux défis'
-  open_to_job_description: 'En poste, mais toujours ouvert à échanger.'
+  open_to_job_description: 'En poste, disponible pour partager et échanger'
   # open_to_job_description: 'En recherche active d''opportunités professionnelles'
   lets_connect: 'Prendre Contact'
 
@@ -44,8 +44,9 @@ experiences:
     description:
       1: "↳ Migration de l'application de gestion d'inventaire vers Tauri v2"
       2: "↳ Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
+      3: "↳ Impression de DICT, assistance informatique sur site, réalisation de plans de branchement, etc."
   sogea:
-    title: 'Développeur Web Full-Stack'
+    title: 'Agent Administratif'
     location: 'Gravigny, France'
     period: 'Mars 2025'
     description:

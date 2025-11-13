@@ -14,7 +14,18 @@
                     <!-- Header -->
                     <div class="flex flex-col sm:flex-row items-center gap-4">
                         <div class="shrink-0 w-full sm:w-12 h-16 sm:h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center mb-2 sm:mb-0">
-                            <img src="{{ asset('images/' ~ education.logo) }}" alt="{{ education.school }} Logo" class="w-full h-full object-contain">
+                            <!-- Small screens -->
+                            <img 
+                                src="{{ asset('images/' ~ education.logo) }}" 
+                                alt="{{ education.school }} Logo" 
+                                class="hidden sm:block w-full h-full object-contain"
+                            >
+                            <!-- sm and up -->
+                            <img 
+                                src="{{ asset('images/' ~ education.logo_large) }}" 
+                                alt="{{ education.school }} Logo Large" 
+                                class="block sm:hidden w-full h-full object-contain"
+                            >
                         </div>
                         <div>
                             <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
