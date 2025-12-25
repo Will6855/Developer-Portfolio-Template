@@ -20,7 +20,7 @@ class PortfolioService
                     [ 'icon' => 'fa-brands fa-php', 'name' => 'PHP', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-python', 'name' => 'Python', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-java', 'name' => 'Java', 'display' => true ],
-                    [ 'icon' => 'fa-brands fa-rust', 'name' => 'Rust', 'display' => false ],
+                    [ 'icon' => 'fa-brands fa-rust', 'name' => 'Rust', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-kotlin', 'name' => 'Kotlin', 'display' => false ],
                     [ 'icon' => 'fa-brands fa-swift', 'name' => 'Swift', 'display' => false ]
                 ]
@@ -35,7 +35,9 @@ class PortfolioService
                     [ 'image' => 'skills/flask.png', 'name' => 'Flask', 'display' => true ],
                     [ 'image' => 'skills/next-js.svg', 'name' => 'Next.js', 'display' => true ],
                     [ 'icon' => 'fa-brands fa-bootstrap', 'name' => 'Bootstrap', 'display' => true ],
-                    [ 'image' => 'skills/tailwind.png', 'name' => 'Tailwind CSS', 'display' => true ]
+                    [ 'image' => 'skills/tailwind.png', 'name' => 'Tailwind CSS', 'display' => true ],
+                    [ 'image' => 'skills/vite.svg', 'name' => 'Vite', 'display' => false ],
+                    [ 'icon' => 'fa-brands fa-react', 'name' => 'React', 'display' => true ]
                 ]
             ],
             'Backend' => [
@@ -47,7 +49,7 @@ class PortfolioService
                     [ 'icon' => 'fa-brands fa-node', 'name' => 'Node.js', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'MySQL', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'SQLite', 'display' => true ],
-                    [ 'icon' => 'fa-solid fa-database', 'name' => 'PostgreSQL', 'display' => false ],
+                    [ 'icon' => 'fa-solid fa-database', 'name' => 'PostgreSQL', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-database', 'name' => 'MongoDB', 'display' => true ],
                     [ 'icon' => 'fa-solid fa-server', 'name' => 'REST APIs', 'display' => true ]
                 ]
@@ -100,6 +102,21 @@ class PortfolioService
     {
         return [
             [
+                'title' => 'experiences.sogea3.title',
+                'company' => 'SOGEA Environnement (Groupe VINCI)',
+                'location' => 'experiences.sogea3.location',
+                'period' => 'experiences.sogea3.period',
+                'logo' => 'companies/sogea.png',
+                'logo_large' => 'companies/sogea_large.webp',
+                'description' => [
+                    'experiences.sogea3.description.1',
+                    'experiences.sogea3.description.2',
+                    'experiences.sogea3.description.3',
+                    'experiences.sogea3.description.4'
+                ],
+                'technologies' => '',
+            ],
+            [
                 'title' => 'experiences.sogea2.title',
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea2.location',
@@ -111,8 +128,9 @@ class PortfolioService
                     'experiences.sogea2.description.2',
                     'experiences.sogea2.description.3'
                 ],
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'SQLite', 'Agile', 'Git'])
+                'technologies' => '',
+                // 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                //     ['HTML', 'CSS', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'SQLite', 'Agile', 'Git'])
             ],
             [
                 'title' => 'experiences.sogea.title',
@@ -207,6 +225,17 @@ class PortfolioService
     public function getProjects(): array
     {
         return [
+            [
+                'title' => 'projects.annas-library.title',
+                'description' => 'projects.annas-library.description',
+                'image' => 'projects/annas-library.png',
+                'details' => 'projects.annas-library.details',
+                'github' => null,
+                'website' => null,
+                'demo' => null,
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Git'])
+            ],
             [
                 'title' => 'projects.inventory-management.title',
                 'description' => 'projects.inventory-management.description',

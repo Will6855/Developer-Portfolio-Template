@@ -37,16 +37,28 @@ skills:
 
 experiences:
   at_experience: 'chez'
-  sogea2:
-    title: 'Agent Administratif'
+  sogea3:
+    title: 'Dessinateur projeteur (CDI)'
     location: 'Gravigny, France'
-    period: 'Octobre 2025 - En cours'
+    period: 'Janvier 2025 - En cours'
     description:
-      1: "↳ Migration de l'application de gestion d'inventaire vers Tauri v2"
-      2: "↳ Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
-      3: "↳ Impression de DICT, assistance informatique sur site, réalisation de plans de branchement, etc."
+      1: "↳ Référent IT & Référent Connect"
+      2: "↳ Réalisation de plan de signalisation"
+      3: "↳ Aide à l'élaboration des mémoires techniques"
+      4: "↳ etc."
+  sogea2:
+    title: 'Agent Administratif (Intérim)'
+    location: 'Gravigny, France'
+    period: 'Octobre 2025 - Décembre 2025'
+    description:
+      # 1: "↳ Migration de l'application de gestion d'inventaire vers Tauri v2"
+      # 2: "↳ Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
+      # 3: "↳ Impression de DICT, assistance informatique sur site, réalisation de plans de branchement, etc."
+      1: "↳ Soutien informatique et administratif dans l'élaboration des mémoires techniques"
+      2: "↳ Formation interne suivie sur AutoCAD en vue de la réalisation de plans de signalisation"
+      3: "↳ Développement d'un script d'alerte pour Excel permettant de signaler les échéances dépassées"
   sogea:
-    title: 'Agent Administratif'
+    title: 'Agent Administratif (Intérim)'
     location: 'Gravigny, France'
     period: 'Mars 2025'
     description:
@@ -54,9 +66,9 @@ experiences:
       2: '↳ Automatisation des rapports et suivi des stocks'
       3: '↳ Compilation Windows pour un usage local'
   klimber_kids:
-    title: 'Développeur Web Full-Stack'
+    title: 'Développeur Web Full-Stack (Projet à temps partiel)'
     location: 'Guichainville, France'
-    period: 'Juillet 2024 - Janvier 2025 (Projet à temps partiel)'
+    period: 'Juillet 2024 - Janvier 2025'
     description:
       1: '↳ Création d’un site vitrine (PHP / Symfony)'
       2: '↳ Sécurisation avec protection anti-spam (Honeypot)'
@@ -97,6 +109,124 @@ projects:
     view_code: 'Code Source'
     visit_website: 'Visiter le Site'
     live_demo: 'Démo'
+  annas-library:
+    title: "Anna's Library"
+    description: "Serveur OPDS avec client web React permettant l'accès à la collection de livres d'Anna's Archive via des flux standardisés pour liseuses et navigation web."
+    details: |
+      <div class="space-y-4">
+        <p>
+          Un serveur OPDS (Open Publication Distribution System) moderne qui expose des millions de livres d'Anna's Archive via des flux de catalogue standardisés, compatibles avec toutes les principales applications de lecture. Inclut une interface web React élégante pour parcourir et rechercher dans la collection.
+        </p>
+
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Catégorie</th>
+              <th class="px-4 py-2 border">Détails</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Flux OPDS 1.0/2.0 compatibles pour intégration avec liseuses</li>
+                  <li>Interface web React moderne avec TypeScript</li>
+                  <li>Recherche avancée par titre, auteur, langue et catégorie</li>
+                  <li>Support multilingue (anglais et français)</li>
+                  <li>Flux de livres populaires par langue</li>
+                  <li>Résolution directe des liens de téléchargement</li>
+                  <li>Filtrage par catégorie et type de contenu</li>
+                  <li>Description OpenSearch pour intégration navigateur</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Contexte</td>
+              <td class="px-4 py-2 border">
+                Application serveur fournissant l'accès aux livres via des flux OPDS standardisés.  
+                Peut être auto-hébergée sur n'importe quel serveur ou machine locale pour usage personnel.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend :</strong> Express.js avec Node.js</li>
+                  <li><strong>Frontend :</strong> React 19 avec TypeScript</li>
+                  <li><strong>Outil de build :</strong> Vite pour la construction client</li>
+                  <li><strong>Stylisation :</strong> Tailwind CSS</li>
+                  <li><strong>Scraping :</strong> Cheerio pour l'analyse HTML</li>
+                  <li><strong>Internationalisation :</strong> i18next</li>
+                  <li><strong>Routing :</strong> React Router pour la navigation SPA</li>
+                  <li><strong>Icônes :</strong> Lucide React</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Architecture</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Couche serveur :</strong> Express.js génère les flux XML OPDS et fournit l'API REST</li>
+                  <li><strong>Couche client :</strong> SPA React pour la navigation web avec fallback SSR</li>
+                  <li><strong>Intégration données :</strong> Scraping en temps réel d'Anna's Archive avec cache</li>
+                  <li><strong>Design API :</strong> Endpoints doubles (XML OPDS pour liseuses, JSON API pour web)</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Compatibilité liseuses</td>
+              <td class="px-4 py-2 border">
+                Fonctionne avec toutes les liseuses compatibles OPDS :
+                <ul class="list-disc list-inside space-y-1 mt-1">
+                  <li>Readest, Moon+ Reader, FBReader</li>
+                  <li>Aldiko, KOReader, ReadEra</li>
+                  <li>Calibre, Lithium, et autres</li>
+                </ul>
+                Il suffit d'ajouter l'URL du flux OPDS à votre application de lecture
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Déploiement</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Auto-hébergé sur n'importe quel serveur compatible Node.js</li>
+                  <li>Installation en une commande : <code>npm install && npm start</code></li>
+                  <li>Client pré-construit pour la production avec Vite</li>
+                  <li>Configuration par variables d'environnement</li>
+                  <li>Aucune base de données requise - utilise Anna's Archive comme source de données</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Endpoints API</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><code>/opds</code> - Catalogue OPDS racine</li>
+                  <li><code>/opds/search</code> - Recherche de livres avec filtres</li>
+                  <li><code>/api/books</code> - API REST pour le client web</li>
+                  <li><code>/api/popular/:lang</code> - Livres tendance par langue</li>
+                  <li><code>/download/:md5</code> - Redirection de téléchargement direct</li>
+                  <li><code>/opensearch.xml</code> - Plugin de recherche navigateur</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          Le projet fait le pont entre la vaste collection d'Anna's Archive et les protocoles standardisés des liseuses,
+          fournissant à la fois une interface web élégante pour la navigation et des flux OPDS pour une intégration transparente
+          avec les appareils de lecture. Une solution complète pour accéder aux livres numériques via des technologies web modernes.
+        </p>
+      </div>
+      
   inventory-management:
     title: 'Gestion d''Inventaire'
     description: "Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite (puis migrée sur Tauri v2), incluant des fonctionnalités de génération de rapports, etc."

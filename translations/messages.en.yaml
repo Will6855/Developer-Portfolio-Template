@@ -37,16 +37,28 @@ skills:
 
 experiences:
   at_experience: 'at'
-  sogea2:
-    title: 'Administrative Assistant'
+  sogea3:
+    title: 'Design Drafter (Permanent)'
     location: 'Gravigny, France'
-    period: 'October 2025 - Present'
+    period: 'January 2025 - Present'
     description:
-      1: "↳ Migration of the inventory management application to Tauri v2"
-      2: "↳ Integration of new features based on feedback after more than 6 months of daily use in the field"
-      3: "↳ Printing of DICTs, on-site IT support, preparation of connection plans, ect."
+      1: "↳ IT Referent & Connect Referent"
+      2: "↳ Creation of signage plans"
+      3: "↳ Technical report preparation support"
+      4: "↳ etc."
+  sogea2:
+    title: 'Administrative Assistant (Interim)'
+    location: 'Gravigny, France'
+    period: 'October 2025 - December 2025'
+    description:
+      # 1: "↳ Migration of the inventory management application to Tauri v2"
+      # 2: "↳ Integration of new features based on feedback after more than 6 months of daily use in the field"
+      # 3: "↳ Printing of DICTs, on-site IT support, preparation of connection plans, ect."
+      1: "↳ IT and administrative support in the preparation of technical reports"
+      2: "↳ Internal training completed on AutoCAD for the creation of signage plans"
+      3: "↳ Development of an Excel alert script to notify overdue deadlines"
   sogea:
-    title: 'Administrative Assistant'
+    title: 'Administrative Assistant (Interim)'
     location: 'Gravigny, France'
     period: 'March 2025'
     description:
@@ -54,9 +66,9 @@ experiences:
       2: '↳ Automation of reports and stock tracking'
       3: '↳ Windows compilation for local usage'
   klimber_kids:
-    title: 'Full-Stack Web Developer'
+    title: 'Full-Stack Web Developer (Part-time Project)'
     location: 'Guichainville, France'
-    period: 'July 2024 - January 2025 (Part-time Project)'
+    period: 'July 2024 - January 2025'
     description:
       1: '↳ Creation of a showcase website (PHP / Symfony)'
       2: '↳ Security implementation with anti-spam protection (Honeypot)'
@@ -97,6 +109,124 @@ projects:
     view_code: 'View Code'
     visit_website: 'Visit Website'
     live_demo: 'Demo'
+  annas-library:
+    title: "Anna's Library"
+    description: "OPDS server with React web client providing access to Anna's Archive book collection through standardized feeds for e-readers and web browsing."
+    details: |
+      <div class="space-y-4">
+        <p>
+          A modern OPDS (Open Publication Distribution System) server that exposes millions of books from Anna's Archive through standardized catalog feeds, compatible with all major e-reader applications. Includes a beautiful React web interface for browsing and searching the collection.
+        </p>
+
+        <table class="table-auto w-full text-left border border-gray-300">
+          <thead class="bg-gray-100 text-gray-700">
+            <tr>
+              <th class="px-4 py-2 border">Category</th>
+              <th class="px-4 py-2 border">Details</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Features</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>OPDS 1.0/2.0 compliant feeds for e-reader integration</li>
+                  <li>Modern React web interface with TypeScript</li>
+                  <li>Advanced search by title, author, language, and category</li>
+                  <li>Multi-language support (English and French)</li>
+                  <li>Popular books feed by language</li>
+                  <li>Direct download link resolution</li>
+                  <li>Category and content type filtering</li>
+                  <li>OpenSearch description for browser integration</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Context</td>
+              <td class="px-4 py-2 border">
+                Server-based application providing book access through standardized OPDS feeds.  
+                Can be self-hosted on any server or local machine for personal use.
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Technologies</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Backend:</strong> Express.js with Node.js</li>
+                  <li><strong>Frontend:</strong> React 19 with TypeScript</li>
+                  <li><strong>Build Tool:</strong> Vite for client build</li>
+                  <li><strong>Styling:</strong> Tailwind CSS</li>
+                  <li><strong>Scraping:</strong> Cheerio for HTML parsing</li>
+                  <li><strong>Internationalization:</strong> i18next</li>
+                  <li><strong>Routing:</strong> React Router for SPA navigation</li>
+                  <li><strong>Icons:</strong> Lucide React</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Architecture</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><strong>Server Layer:</strong> Express.js generates OPDS XML feeds and provides REST API</li>
+                  <li><strong>Client Layer:</strong> React SPA for web browsing with server-side rendering fallback</li>
+                  <li><strong>Data Integration:</strong> Real-time scraping of Anna's Archive with caching</li>
+                  <li><strong>API Design:</strong> Dual endpoints (OPDS XML for e-readers, JSON API for web)</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">E-reader Compatibility</td>
+              <td class="px-4 py-2 border">
+                Works with all OPDS-compatible readers including:
+                <ul class="list-disc list-inside space-y-1 mt-1">
+                  <li>Readest, Moon+ Reader, FBReader</li>
+                  <li>Aldiko, KOReader, ReadEra</li>
+                  <li>Calibre, Lithium, and others</li>
+                </ul>
+                Simply add the OPDS feed URL to your e-reader app
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">Deployment</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li>Self-hosted on any Node.js compatible server</li>
+                  <li>Single command setup: <code>npm install && npm start</code></li>
+                  <li>Client pre-built for production with Vite</li>
+                  <li>Environment variable configuration for customization</li>
+                  <li>No database required - uses Anna's Archive as data source</li>
+                </ul>
+              </td>
+            </tr>
+
+            <tr>
+              <td class="px-4 py-2 border font-semibold">API Endpoints</td>
+              <td class="px-4 py-2 border">
+                <ul class="list-disc list-inside space-y-1">
+                  <li><code>/opds</code> - Root OPDS catalog</li>
+                  <li><code>/opds/search</code> - Search books with filters</li>
+                  <li><code>/api/books</code> - REST API for web client</li>
+                  <li><code>/api/popular/:lang</code> - Trending books by language</li>
+                  <li><code>/download/:md5</code> - Direct download redirection</li>
+                  <li><code>/opensearch.xml</code> - Browser search plugin</li>
+                </ul>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+
+        <p>
+          The project bridges the gap between Anna's Archive's vast collection and standardized e-reader protocols, 
+          providing both a beautiful web interface for browsing and OPDS feeds for seamless integration with reading devices.  
+          A complete solution for accessing digital books through modern web technologies.
+        </p>
+      </div>
+      
   inventory-management:
     title: 'Inventory Management'
     description: "Web application compiled into a Windows executable, built with Next.js, Node.js, and SQLite (later migrated to Tauri v2), featuring reporting and PDF generation capabilities, among others."
