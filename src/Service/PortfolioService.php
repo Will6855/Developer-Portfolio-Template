@@ -231,10 +231,10 @@ class PortfolioService
                 'image' => 'projects/annas-library.png',
                 'details' => 'projects.annas-library.details',
                 'github' => null,
-                'website' => null,
+                'website' => 'https://annas-library.guillaume-piard.fr',
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Git'])
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Git', 'Docker'])
             ],
             [
                 'title' => 'projects.inventory-management.title',
@@ -243,7 +243,7 @@ class PortfolioService
                 'details' => 'projects.inventory-management.details',
                 'github' => null,
                 'website' => null,
-                'demo' => 'https://inventory-management-simple-demo.vercel.app/',
+                'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
@@ -265,7 +265,7 @@ class PortfolioService
                 'details' => 'projects.dashboard-si.details',
                 'github' => 'https://github.com/Will6855/IT-Department-Dashboard',
                 'website' => null,
-                'demo' => 'https://it-department-dashboard-demo.vercel.app/',
+                'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'REST APIs'])
             ],
@@ -275,7 +275,7 @@ class PortfolioService
                 'image' => 'projects/email-sender.png',
                 'details' => 'projects.email-sender.details',
                 'github' => 'https://github.com/Will6855/HTML-Email-Sender',
-                'website' => 'https://html-email-sender.vercel.app/',
+                'website' => null,
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])

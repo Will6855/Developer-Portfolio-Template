@@ -38,9 +38,9 @@ skills:
 experiences:
   at_experience: 'chez'
   sogea3:
-    title: 'Dessinateur projeteur (CDI)'
+    title: 'Dessinateur Projeteur (CDI)'
     location: 'Gravigny, France'
-    period: 'Janvier 2025 - En cours'
+    period: 'Janvier 2026 - En cours'
     description:
       1: "↳ Référent IT & Référent Connect"
       2: "↳ Réalisation de plan de signalisation"
@@ -110,7 +110,7 @@ projects:
     visit_website: 'Visiter le Site'
     live_demo: 'Démo'
   annas-library:
-    title: "Anna's Library"
+    title: "La Bibliothèque d'Anna"
     description: "Serveur OPDS avec client web React permettant l'accès à la collection de livres d'Anna's Archive via des flux standardisés pour liseuses et navigation web."
     details: |
       <div class="space-y-4">
