@@ -2,8 +2,92 @@
 
 namespace App\Service;
 
+use Symfony\Contracts\Translation\TranslatorInterface;
+
 class PortfolioService
 {
+    public function __construct(
+        private TranslatorInterface $translator
+    ) {
+    }
+
+    /**
+     * Helper to automatically retrieve all indexed translation keys for a given prefix.
+     * Searches for keys like prefix.0, prefix.1, etc. until one is not found.
+     */
+    private function getTranslationList(string $prefix): array
+    {
+        $keys = [];
+        $i = 0;
+        while (true) {
+            $key = "$prefix.$i";
+            // In Symfony, if a translation doesn't exist, it returns the key itself.
+            if ($this->translator->trans($key) === $key) {
+                break;
+            }
+            $keys[] = $key;
+            $i++;
+        }
+        return $keys;
+    }
+
+    /**
+     * Helper to automatically retrieve all project sections for a project.
+     */
+    private function getProjectSections(string $prefix): array
+    {
+        $sections = [];
+        $i = 0;
+        while (true) {
+            $base = "$prefix.$i";
+            $titleKey = "$base.title";
+            // Check if section exists by checking if title translation key exists
+            if ($this->translator->trans($titleKey) === $titleKey) {
+                break;
+            }
+
+            $type = $this->translator->trans("$base.type");
+            $section = [
+                'title' => $titleKey,
+                'type' => $type,
+            ];
+
+            if ($type === 'list') {
+                $section['items'] = $this->getTranslationList("$base.items");
+            } elseif ($type === 'text') {
+                $section['content'] = "$base.content";
+            } elseif ($type === 'keyvalue') {
+                $section['items'] = $this->getKeyValueList("$base.items");
+            }
+            
+            $sections[] = $section;
+            $i++;
+        }
+        return $sections;
+    }
+
+    /**
+     * Helper to retrieve key-value pairs for project sections.
+     */
+    private function getKeyValueList(string $prefix): array
+    {
+        $items = [];
+        $i = 0;
+        while (true) {
+            $base = "$prefix.$i";
+            $keyKey = "$base.key";
+            if ($this->translator->trans($keyKey) === $keyKey) {
+                break;
+            }
+            
+            $items[] = [
+                'key' => $keyKey,
+                'value' => "$base.value"
+            ];
+            $i++;
+        }
+        return $items;
+    }
     public function getSkills(): array
     {
         return [
@@ -103,91 +187,73 @@ class PortfolioService
         return [
             [
                 'title' => 'experiences.sogea3.title',
+                'contract' => 'experiences.sogea3.contract',
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea3.location',
                 'period' => 'experiences.sogea3.period',
                 'logo' => 'companies/sogea.png',
                 'logo_large' => 'companies/sogea_large.webp',
-                'description' => [
-                    'experiences.sogea3.description.1',
-                    'experiences.sogea3.description.2',
-                    'experiences.sogea3.description.3',
-                    'experiences.sogea3.description.4'
-                ],
+                'description' => $this->getTranslationList('experiences.sogea3.description'),
                 'technologies' => '',
             ],
             [
                 'title' => 'experiences.sogea2.title',
+                'contract' => 'experiences.sogea2.contract',
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea2.location',
                 'period' => 'experiences.sogea2.period',
                 'logo' => 'companies/sogea.png',
                 'logo_large' => 'companies/sogea_large.webp',
-                'description' => [
-                    'experiences.sogea2.description.1',
-                    'experiences.sogea2.description.2',
-                    'experiences.sogea2.description.3'
-                ],
+                'description' => $this->getTranslationList('experiences.sogea2.description'),
                 'technologies' => '',
                 // 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                 //     ['HTML', 'CSS', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'SQLite', 'Agile', 'Git'])
             ],
             [
                 'title' => 'experiences.sogea.title',
+                'contract' => 'experiences.sogea.contract',
                 'company' => 'SOGEA Environnement (Groupe VINCI)',
                 'location' => 'experiences.sogea.location',
                 'period' => 'experiences.sogea.period',
                 'logo' => 'companies/sogea.png',
                 'logo_large' => 'companies/sogea_large.webp',
-                'description' => [
-                    'experiences.sogea.description.1',
-                    'experiences.sogea.description.2',
-                    'experiences.sogea.description.3'
-                ],
+                'description' => $this->getTranslationList('experiences.sogea.description'),
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
             [
                 'title' => 'experiences.klimber_kids.title',
+                'contract' => 'experiences.klimber_kids.contract',
                 'company' => 'Klimber-Kids',
                 'location' => 'experiences.klimber_kids.location',
                 'period' => 'experiences.klimber_kids.period',
                 'logo' => 'companies/klimber-kids.svg',
                 'logo_large' => 'companies/klimber-kids.svg',
-                'description' => [
-                    'experiences.klimber_kids.description.1',
-                    'experiences.klimber_kids.description.2',
-                    'experiences.klimber_kids.description.3'
-                ],
+                'description' => $this->getTranslationList('experiences.klimber_kids.description'),
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['PHP', 'HTML', 'CSS', 'JavaScript', 'Symfony', 'Bootstrap', 'MySQL', 'REST APIs', 'Git'])
             ],
             [
                 'title' => 'experiences.cs_lane.title',
+                'contract' => 'experiences.cs_lane.contract',
                 'company' => 'CS-Lane',
                 'location' => 'experiences.cs_lane.location',
                 'period' => 'experiences.cs_lane.period',
                 'logo' => 'companies/cs-lane.svg',
                 'logo_large' => 'companies/cs-lane.svg',
-                'description' => [
-                    'experiences.cs_lane.description.1',
-                    'experiences.cs_lane.description.2',
-                    'experiences.cs_lane.description.3'
-                ],
+                'description' => $this->getTranslationList('experiences.cs_lane.description'),
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['PHP', 'HTML', 'CSS', 'JavaScript', 'Kotlin', 'Swift', 'Bootstrap', 'MySQL', 'REST APIs', 'Agile', 'Git', 'Postman'])
             ],
             [
                 'title' => 'experiences.uimm.title',
+                'contract' => 'experiences.uimm.contract',
                 'company' => 'UIMM Eure Seine Estuaire',
                 'location' => 'experiences.uimm.location',
                 'period' => 'experiences.uimm.period',
                 'logo' => 'companies/uimm.png',
                 'logo_large' => 'companies/uimm.png',
-                'description' => [
-                    'experiences.uimm.description.1',
-                    'experiences.uimm.description.2'
-                ],
+                'description' => $this->getTranslationList('experiences.uimm.description'),
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'Bootstrap', 'REST APIs'])
             ]
@@ -204,9 +270,7 @@ class PortfolioService
                 'period' => 'education.bts.period',
                 'logo' => 'schools/gustave-flaubert.webp',
                 'logo_large' => 'schools/gustave-flaubert_large.png',
-                'description' => [
-                    'education.bts.description.1',
-                ]
+                'description' => $this->getTranslationList('education.bts.description')
             ],
             [
                 'degree' => 'education.bac.degree',
@@ -215,9 +279,7 @@ class PortfolioService
                 'period' => 'education.bac.period',
                 'logo' => 'schools/aristide-briand.webp',
                 'logo_large' => 'schools/aristide-briand.webp',
-                'description' => [
-                    'education.bac.description.1',
-                ]
+                'description' => $this->getTranslationList('education.bac.description')
             ]
         ];
     }
@@ -230,6 +292,11 @@ class PortfolioService
                 'description' => 'projects.annas-library.description',
                 'image' => 'projects/annas-library.png',
                 'details' => 'projects.annas-library.details',
+                'details_data' => [
+                    'intro' => 'projects.annas-library.details.intro',
+                    'sections' => $this->getProjectSections('projects.annas-library.details.sections'),
+                    'conclusion' => 'projects.annas-library.details.conclusion'
+                ],
                 'github' => null,
                 'website' => 'https://annas-library.guillaume-piard.fr',
                 'demo' => null,
@@ -237,10 +304,31 @@ class PortfolioService
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Vite', 'Tailwind CSS', 'Node.js', 'REST APIs', 'Git', 'Docker'])
             ],
             [
+                'title' => 'projects.play-with-your-friends.title',
+                'description' => 'projects.play-with-your-friends.description',
+                'image' => 'projects/play-with-your-friends.png',
+                'details' => 'projects.play-with-your-friends.details',
+                'details_data' => [
+                    'intro' => 'projects.play-with-your-friends.details.intro',
+                    'sections' => $this->getProjectSections('projects.play-with-your-friends.details.sections'),
+                    'conclusion' => 'projects.play-with-your-friends.details.conclusion'
+                ],
+                'github' => null,
+                'website' => 'https://playwithyourfriends.com/',
+                'demo' => null,
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs', 'Agile', 'Git', 'Docker'])
+            ],
+            [
                 'title' => 'projects.inventory-management.title',
                 'description' => 'projects.inventory-management.description',
                 'image' => 'projects/inventory-management.png',
                 'details' => 'projects.inventory-management.details',
+                'details_data' => [
+                    'intro' => 'projects.inventory-management.details.intro',
+                    'sections' => $this->getProjectSections('projects.inventory-management.details.sections'),
+                    'conclusion' => 'projects.inventory-management.details.conclusion'
+                ],
                 'github' => null,
                 'website' => null,
                 'demo' => null,
@@ -248,10 +336,31 @@ class PortfolioService
                     ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Rust', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Agile', 'Git'])
             ],
             [
+                'title' => 'projects.email-sender.title',
+                'description' => 'projects.email-sender.description',
+                'image' => 'projects/email-sender.png',
+                'details' => 'projects.email-sender.details',
+                'details_data' => [
+                    'intro' => 'projects.email-sender.details.intro',
+                    'sections' => $this->getProjectSections('projects.email-sender.details.sections'),
+                    'conclusion' => 'projects.email-sender.details.conclusion'
+                ],
+                'github' => 'https://github.com/Will6855/HTML-Email-Sender',
+                'website' => null,
+                'demo' => null,
+                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
+                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
+            ],
+            [
                 'title' => 'projects.klimber_kids.title',
                 'description' => 'projects.klimber_kids.description',
                 'image' => 'projects/klimber-kids.png',
                 'details' => 'projects.klimber_kids.details',
+                'details_data' => [
+                    'intro' => 'projects.klimber_kids.details.intro',
+                    'sections' => $this->getProjectSections('projects.klimber_kids.details.sections'),
+                    'conclusion' => 'projects.klimber_kids.details.conclusion'
+                ],
                 'github' => null,
                 'website' => 'https://klimber-kids.com',
                 'demo' => null,
@@ -263,33 +372,16 @@ class PortfolioService
                 'description' => 'projects.dashboard-si.description',
                 'image' => 'projects/dashboard-si.png',
                 'details' => 'projects.dashboard-si.details',
+                'details_data' => [
+                    'intro' => 'projects.dashboard-si.details.intro',
+                    'sections' => $this->getProjectSections('projects.dashboard-si.details.sections'),
+                    'conclusion' => 'projects.dashboard-si.details.conclusion'
+                ],
                 'github' => 'https://github.com/Will6855/IT-Department-Dashboard',
                 'website' => null,
                 'demo' => null,
                 'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
                     ['Python', 'HTML', 'CSS', 'JavaScript', 'Flask', 'REST APIs'])
-            ],
-            [
-                'title' => 'projects.email-sender.title',
-                'description' => 'projects.email-sender.description',
-                'image' => 'projects/email-sender.png',
-                'details' => 'projects.email-sender.details',
-                'github' => 'https://github.com/Will6855/HTML-Email-Sender',
-                'website' => null,
-                'demo' => null,
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'SQLite', 'PostgreSQL', 'REST APIs', 'Git'])
-            ],
-            [
-                'title' => 'projects.play-with-your-friends.title',
-                'description' => 'projects.play-with-your-friends.description',
-                'image' => 'projects/play-with-your-friends.png',
-                'details' => 'projects.play-with-your-friends.details',
-                'github' => null,
-                'website' => 'https://playwithyourfriends.com/',
-                'demo' => null,
-                'technologies' => array_map(fn($tech) => $this->findTechByName($tech), 
-                    ['HTML', 'CSS', 'JavaScript', 'TypeScript', 'Next.js', 'Tailwind CSS', 'Node.js', 'MongoDB', 'REST APIs', 'Agile', 'Git', 'Docker'])
             ]
         ];
     }

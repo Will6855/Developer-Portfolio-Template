@@ -1,19 +1,20 @@
 <section id="education" class="max-w-3xl mx-auto lg:mx-0">
     {# <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.education'|trans }}</h2> #}
-    <div class="relative space-y-8">
+    <div class="relative space-y-12">
         <!-- Vertical Line -->
         <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-base-300"></div>
 
         {% for education in educations %}
+            <!-- Education Item -->
             <div class="relative pl-8">
                 <!-- Timeline Dot -->
                 <div class="absolute left-[9px] top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
                 
                 <!-- Content -->
-                <div class="space-y-4">
+                <div class="space-y-2">
                     <!-- Header -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <div class="shrink-0 w-full sm:w-12 h-16 sm:h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center mb-2 sm:mb-0">
+                    <div class="flex flex-col sm:flex-row items-center gap-2">
+                        <div class="shrink-0 w-full sm:w-12 h-16 sm:h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
                             <!-- Small screens -->
                             <img 
                                 src="{{ asset('images/' ~ education.logo) }}" 
@@ -28,32 +29,38 @@
                             >
                         </div>
                         <div>
-                            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-center">
                                 <h3 class="text-xl font-bold" data-trans="{{ education.degree }}">{{ education.degree|trans }}</h3>
-                                <span class="text-base-content/70" data-trans="education.at_education">{{ 'education.at_education'|trans }}</span>
-                                <span class="font-semibold">{{ education.school }}</span>
                             </div>
                         </div>
                     </div>
-                    <!-- Meta Info: Location & Period -->
-                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-base-content/70 mt-1">
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-location-dot"></i>
+
+                    <!-- Meta Info: School, Location & Period -->
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-x-3 mb-4 text-base-content/80 text-sm">
+                        <div class="flex items-center gap-3 sm:gap-2">
+                            <div class="w-5 flex justify-center sm:w-auto"><i class="fa-solid fa-graduation-cap text-base-content/70"></i></div>
+                            <span class="font-bold text-base">{{ education.school }}</span>
+                        </div>
+                        <div class="hidden sm:block w-1 h-1 rounded-full bg-base-content/30"></div>
+                        <div class="flex items-center gap-3 sm:gap-1.5">
+                             <div class="w-5 flex justify-center sm:w-auto"><i class="fa-solid fa-location-dot text-base-content/70"></i></div>
                             <span data-trans="{{ education.location }}">{{ education.location|trans }}</span>
                         </div>
-                        <div class="flex items-center gap-1">
-                            <i class="fa-regular fa-calendar"></i>
+                        <div class="hidden sm:block w-1 h-1 rounded-full bg-base-content/30"></div>
+                        <div class="flex items-center gap-3 sm:gap-1.5">
+                             <div class="w-5 flex justify-center sm:w-auto"><i class="fa-regular fa-calendar text-base-content/70"></i></div>
                             <span data-trans="{{ education.period }}">{{ education.period|trans }}</span>
                         </div>
                     </div>
 
                     <!-- Description -->
-                    <div class="space-y-2 text-base-content/70">
-                        <ul class="list-none p-0 m-0 space-y-1">
-                            {% for item in education.description %}
-                                <li data-trans="{{ item }}">{{ item|trans }}</li>
-                            {% endfor %}
-                        </ul>
+                    <div class="space-y-0.5 text-base-content/70 border border-base-content/30 rounded-xl p-2 pl-3">
+                        {% for item in education.description %}
+                            <div class="flex gap-2">
+                                <i class="fa-solid fa-circle text-base-content/30 text-[6px] mt-2.5"></i>
+                                <p data-trans="{{ item }}">{{ item|trans }}</p>
+                            </div>
+                        {% endfor %}
                     </div>
                 </div>
             </div>

@@ -1,6 +1,6 @@
 <section id="experience" class="max-w-3xl mx-auto lg:mx-0">
     {# <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8">{{ 'sections.experience'|trans }}</h2> #}
-    <div class="relative space-y-8">
+    <div class="relative space-y-12">
         <!-- Vertical Line -->
         <div class="absolute left-2 top-2 bottom-2 w-0.5 bg-base-300"></div>
 
@@ -11,10 +11,10 @@
                 <div class="absolute left-[9px] top-6 w-3 h-3 -translate-x-1/2 rounded-full bg-primary border-2 border-base-100"></div>
                 
                 <!-- Content -->
-                <div class="space-y-4">
+                <div class="space-y-2">
                     <!-- Header -->
-                    <div class="flex flex-col sm:flex-row items-center gap-4">
-                        <div class="shrink-0 w-full sm:w-12 h-16 sm:h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center mb-2 sm:mb-0">
+                    <div class="flex flex-col sm:flex-row items-center gap-2">
+                        <div class="shrink-0 w-full sm:w-12 h-16 sm:h-12 rounded-xl bg-base-300/50 p-2 flex items-center justify-center">
                             <!-- Small screens -->
                             <img 
                                 src="{{ asset('images/' ~ experience.logo) }}" 
@@ -29,31 +29,41 @@
                             >
                         </div>
                         <div>
-                            <div class="flex flex-wrap items-center gap-x-2 gap-y-1">
+                            <div class="flex flex-wrap items-center gap-x-2 gap-y-1 text-center justify-center">
                                 <h3 class="text-xl font-bold" data-trans="{{experience.title}}">{{ experience.title|trans }}</h3>
-                                <span class="text-base-content/70" data-trans="experiences.at_experience">{{ 'experiences.at_experience'|trans }}</span>
-                                <span class="font-semibold">{{ experience.company }}</span>
+                                <span class="badge badge-outline text-base-content/70 badge-sm font-semibold py-2" data-trans="{{ experience.contract }}">{{ experience.contract|trans }}</span>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Meta Info: Location & Period -->
-                    <div class="flex flex-wrap gap-x-4 gap-y-2 text-sm text-base-content/70">
-                        <div class="flex items-center gap-1">
-                            <i class="fa-solid fa-location-dot"></i>
+                    <!-- Meta Info: Company, Location & Period -->
+                    <div class="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-x-3 mb-4 text-base-content/80 text-sm">
+                        <div class="flex items-center gap-3 sm:gap-2">
+                            <div class="w-5 flex justify-center sm:w-auto"><i class="fa-solid fa-building text-base-content/70"></i></div>
+                            <span class="font-bold text-base">{{ experience.company }}</span>
+                        </div>
+                        <div class="hidden sm:block w-1 h-1 rounded-full bg-base-content/30"></div>
+                        <div class="flex items-center gap-3 sm:gap-1.5">
+                             <div class="w-5 flex justify-center sm:w-auto"><i class="fa-solid fa-location-dot text-base-content/70"></i></div>
                             <span data-trans="{{ experience.location }}">{{ experience.location|trans }}</span>
                         </div>
-                        <div class="flex items-center gap-1">
-                            <i class="fa-regular fa-calendar"></i>
+                        <div class="hidden sm:block w-1 h-1 rounded-full bg-base-content/30"></div>
+                        <div class="flex items-center gap-3 sm:gap-1.5">
+                             <div class="w-5 flex justify-center sm:w-auto"><i class="fa-regular fa-calendar text-base-content/70"></i></div>
                             <span data-trans="{{ experience.period }}">{{ experience.period|trans }}</span>
                         </div>
                     </div>
 
                     <!-- Description -->
-                    <div class="space-y-2 text-base-content/70">
-                        {% for item in experience.description %}
-                            <p data-trans="{{ item }}">{{ item|trans }}</p>
-                        {% endfor %}
+                    <div class="relative">
+                        <div class="space-y-0.5 text-base-content/70 overflow-hidden transition-all duration-300 ease-in-out border border-base-content/30 rounded-xl p-2 pl-3">
+                            {% for item in experience.description %}
+                                <div class="flex gap-2">
+                                    <i class="fa-solid fa-circle text-base-content/30 text-[6px] mt-2.5"></i>
+                                    <p data-trans="{{ item }}">{{ item|trans }}</p>
+                                </div>
+                            {% endfor %}
+                        </div>
                     </div>
 
                     {% if experience.technologies is not empty %}
@@ -71,8 +81,67 @@
                         {% endfor %}
                     </div>
                     {% endif %}
+
+                    {# <!-- Description -->
+                    <div class="relative">
+                        <!-- Toggle Button -->
+                        <button 
+                            onclick="toggleDescription('{{ loop.index }}')" 
+                            id="btn-{{ loop.index }}"
+                            class="group flex items-center gap-2 px-2 pl-3 py-1 rounded-full border border-base-300/50 bg-base-300/10 hover:bg-base-300/20 hover:border-primary/30 transition-all duration-300"
+                        >
+                            <span class="btn-text text-[10px] uppercase tracking-widest font-bold text-base-content/60 group-hover:text-base-content transition-colors" data-trans="sections.show_more">
+                                {{ 'sections.show_more'|trans }}
+                            </span>
+                            <i class="fa-solid fa-chevron-down text-[8px] text-base-content/40 group-hover:text-base-content transition-transform duration-300 group-[.active]:rotate-180"></i>
+                        </button>
+
+                        <div id="desc-{{ loop.index }}" class="experience-description space-y-0.5 text-base-content/70 ml-2 overflow-hidden transition-all duration-300 ease-in-out" style="max-height: 0px;">
+                            {% for item in experience.description %}
+                                <div class="flex gap-2">
+                                    <i class="fa-solid fa-circle text-base-content/30 text-[6px] mt-2.5"></i>
+                                    <p data-trans="{{ item }}">{{ item|trans }}</p>
+                                </div>
+                            {% endfor %}
+
+                            {% if experience.technologies is not empty %}
+                            <!-- Technologies -->
+                            <div class="flex flex-wrap gap-1.5 pt-1">
+                                {% for tech in experience.technologies %}
+                                    <div class="badge badge-md px-2 py-2 bg-{{ tech.color_bg }} text-{{ tech.color_text }} hover:bg-{{ tech.color_hover }} transition-colors border-none">
+                                        {% if tech.icon is defined %}
+                                            <i class="{{ tech.icon }} mr-1"></i>
+                                        {% else %}
+                                            <img src="{{ asset('images/' ~ tech.image) }}" alt="{{ tech.name }}" class="w-3 h-3 mr-1">
+                                        {% endif %}
+                                        {{ tech.name }}
+                                    </div>
+                                {% endfor %}
+                            </div>
+                            {% endif %}
+                        </div>
+                    </div> #}
+                    
                 </div>
             </div>
         {% endfor %}
     </div>
+
+    {# <script>
+        function toggleDescription(id) {
+            const container = document.getElementById('desc-' + id);
+            const btn = document.getElementById('btn-' + id);
+            const btnText = btn.querySelector('.btn-text');
+            
+            if (container.style.maxHeight === '0px') {
+                container.style.maxHeight = container.scrollHeight + 'px';
+                btnText.textContent = "{{ 'sections.show_less'|trans }}";
+                btn.classList.add('active');
+            } else {
+                container.style.maxHeight = '0px';
+                btnText.textContent = "{{ 'sections.show_more'|trans }}";
+                btn.classList.remove('active');
+            }
+        }
+    </script> #}
 </section>

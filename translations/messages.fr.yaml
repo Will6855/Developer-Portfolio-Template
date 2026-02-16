@@ -21,6 +21,8 @@ sections:
   show_experience: 'Afficher les Expériences'
   education: 'Formations'
   show_education: 'Afficher les Formations'
+  show_more: 'Voir plus'
+  show_less: 'Voir moins'
   projects: 'Projets'
 
 about:
@@ -36,73 +38,77 @@ skills:
     devops: 'DevOps'
 
 experiences:
-  at_experience: 'chez'
   sogea3:
-    title: 'Dessinateur Projeteur (CDI)'
+    title: 'Dessinateur Projeteur'
+    contract: 'CDI'
     location: 'Gravigny, France'
     period: 'Janvier 2026 - En cours'
     description:
-      1: "↳ Référent IT & Référent Connect"
-      2: "↳ Réalisation de plan de signalisation"
-      3: "↳ Aide à l'élaboration des mémoires techniques"
-      4: "↳ etc."
+      - "Réalisation de plan"
+      - "Assistance informatique"
+      - "Aide à l'élaboration des mémoires techniques"
+      - "etc."
   sogea2:
-    title: 'Agent Administratif (Intérim)'
+    title: 'Agent Administratif'
+    contract: 'Intérim'
     location: 'Gravigny, France'
     period: 'Octobre 2025 - Décembre 2025'
     description:
-      # 1: "↳ Migration de l'application de gestion d'inventaire vers Tauri v2"
-      # 2: "↳ Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
-      # 3: "↳ Impression de DICT, assistance informatique sur site, réalisation de plans de branchement, etc."
-      1: "↳ Soutien informatique et administratif dans l'élaboration des mémoires techniques"
-      2: "↳ Formation interne suivie sur AutoCAD en vue de la réalisation de plans de signalisation"
-      3: "↳ Développement d'un script d'alerte pour Excel permettant de signaler les échéances dépassées"
+      # - "Migration de l'application de gestion d'inventaire vers Tauri v2"
+      # - "Intégration de nouvelles fonctionnalités basées sur les retours après plus de 6 mois d'utilisation sur le terrain"
+      # - "Impression de DICT, assistance informatique sur site, réalisation de plans de branchement, etc."
+      - "Soutien informatique et administratif dans l'élaboration des mémoires techniques"
+      - "Formation interne suivie sur AutoCAD en vue de la réalisation de plans de signalisation"
+      - "Développement d'un script d'alerte pour Excel permettant de signaler les échéances dépassées"
   sogea:
-    title: 'Agent Administratif (Intérim)'
+    title: 'Agent Administratif'
+    contract: 'Intérim'
     location: 'Gravigny, France'
     period: 'Mars 2025'
     description:
-      1: '↳ Développement d''une application de gestion d''inventaire (Next.js / Node.js)'
-      2: '↳ Automatisation des rapports et suivi des stocks'
-      3: '↳ Compilation Windows pour un usage local'
+      - 'Développement d''une application de gestion d''inventaire (Next.js / Node.js)'
+      - 'Automatisation des rapports et suivi des stocks'
+      - 'Compilation Windows pour un usage local'
   klimber_kids:
-    title: 'Développeur Web Full-Stack (Projet à temps partiel)'
+    title: 'Développeur Web Full-Stack'
+    contract: 'Projet à temps partiel'
     location: 'Guichainville, France'
     period: 'Juillet 2024 - Janvier 2025'
     description:
-      1: '↳ Création d’un site vitrine (PHP / Symfony)'
-      2: '↳ Sécurisation avec protection anti-spam (Honeypot)'
-      3: '↳ Système de réservation avec gestion des disponibilités'
+      - 'Création d’un site vitrine (PHP / Symfony)'
+      - 'Sécurisation avec protection anti-spam (Honeypot)'
+      - 'Système de réservation avec gestion des disponibilités'
   cs_lane:
-    title: 'Développeur Web Full-Stack (Stage)'
+    title: 'Développeur Web Full-Stack'
+    contract: 'Stage'
     location: 'Elbeuf, France'
     period: 'Janvier 2024 - Février 2024'
     description:
-      1: '↳ Développement d’applications mobiles Android (Kotlin) & iOS (Swift)'
-      2: '↳ Implémentation d’un système de rendez-vous et API REST (PHP & MySQL)'
-      3: '↳ Gestion de projet agile (SCRUMBAN)'
+      - 'Développement d’applications mobiles Android (Kotlin) & iOS (Swift)'
+      - 'Implémentation d’un système de rendez-vous et API REST (PHP & MySQL)'
+      - 'Gestion de projet agile (SCRUMBAN)'
   uimm:
-    title: 'Développeur Web Full-Stack (Stage)'
+    title: 'Développeur Web Full-Stack'
+    contract: 'Stage'
     location: 'Evreux, France'
     period: 'Mai 2023 - Juin 2023'
     description:
-      1: '↳ Développement d’une application Web pour le service informatique (Python / Flask)'
-      2: '↳ Affichage dynamique des données IT via Microsoft Graph API'
+      - 'Développement d’une application Web pour le service informatique (Python / Flask)'
+      - 'Affichage dynamique des données IT via Microsoft Graph API'
 
 education:
-  at_education: 'à'
   bts:
-    degree: 'BTS SIO (Services Informatiques aux Organisations)'
+    degree: 'BTS SIO - Services Informatiques aux Organisations'
     location: 'Rouen, France'
     period: '2022 - 2024'
     description:
-      1: '↳ Option SLAM - Solutions Logicielles et Applications Métiers'
+      - 'Option SLAM - Solutions Logicielles et Applications Métiers'
   bac:
     degree: 'Baccalauréat Général'
     location: 'Evreux, France'
     period: '2022'
     description:
-      1: '↳ Spécialités Mathématiques et Anglais Monde Contemporain'
+      - 'Spécialités Mathématiques et Anglais Monde Contemporain'
 
 projects:
   links:
@@ -112,434 +118,282 @@ projects:
   annas-library:
     title: "La Bibliothèque d'Anna"
     description: "Serveur OPDS avec client web React permettant l'accès à la collection de livres d'Anna's Archive via des flux standardisés pour liseuses et navigation web."
-    details: |
-      <div class="space-y-4">
-        <p>
-          Un serveur OPDS (Open Publication Distribution System) moderne qui expose des millions de livres d'Anna's Archive via des flux de catalogue standardisés, compatibles avec toutes les principales applications de lecture. Inclut une interface web React élégante pour parcourir et rechercher dans la collection.
-        </p>
-
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Flux OPDS 1.0/2.0 compatibles pour intégration avec liseuses</li>
-                  <li>Interface web React moderne avec TypeScript</li>
-                  <li>Recherche avancée par titre, auteur, langue et catégorie</li>
-                  <li>Support multilingue (anglais et français)</li>
-                  <li>Flux de livres populaires par langue</li>
-                  <li>Résolution directe des liens de téléchargement</li>
-                  <li>Filtrage par catégorie et type de contenu</li>
-                  <li>Description OpenSearch pour intégration navigateur</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Application serveur fournissant l'accès aux livres via des flux OPDS standardisés.  
-                Peut être auto-hébergée sur n'importe quel serveur ou machine locale pour usage personnel.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Backend :</strong> Express.js avec Node.js</li>
-                  <li><strong>Frontend :</strong> React 19 avec TypeScript</li>
-                  <li><strong>Outil de build :</strong> Vite pour la construction client</li>
-                  <li><strong>Stylisation :</strong> Tailwind CSS</li>
-                  <li><strong>Scraping :</strong> Cheerio pour l'analyse HTML</li>
-                  <li><strong>Internationalisation :</strong> i18next</li>
-                  <li><strong>Routing :</strong> React Router pour la navigation SPA</li>
-                  <li><strong>Icônes :</strong> Lucide React</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Architecture</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Couche serveur :</strong> Express.js génère les flux XML OPDS et fournit l'API REST</li>
-                  <li><strong>Couche client :</strong> SPA React pour la navigation web avec fallback SSR</li>
-                  <li><strong>Intégration données :</strong> Scraping en temps réel d'Anna's Archive avec cache</li>
-                  <li><strong>Design API :</strong> Endpoints doubles (XML OPDS pour liseuses, JSON API pour web)</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Compatibilité liseuses</td>
-              <td class="px-4 py-2 border">
-                Fonctionne avec toutes les liseuses compatibles OPDS :
-                <ul class="list-disc list-inside space-y-1 mt-1">
-                  <li>Readest, Moon+ Reader, FBReader</li>
-                  <li>Aldiko, KOReader, ReadEra</li>
-                  <li>Calibre, Lithium, et autres</li>
-                </ul>
-                Il suffit d'ajouter l'URL du flux OPDS à votre application de lecture
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Auto-hébergé sur n'importe quel serveur compatible Node.js</li>
-                  <li>Installation en une commande : <code>npm install && npm start</code></li>
-                  <li>Client pré-construit pour la production avec Vite</li>
-                  <li>Configuration par variables d'environnement</li>
-                  <li>Aucune base de données requise - utilise Anna's Archive comme source de données</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Endpoints API</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><code>/opds</code> - Catalogue OPDS racine</li>
-                  <li><code>/opds/search</code> - Recherche de livres avec filtres</li>
-                  <li><code>/api/books</code> - API REST pour le client web</li>
-                  <li><code>/api/popular/:lang</code> - Livres tendance par langue</li>
-                  <li><code>/download/:md5</code> - Redirection de téléchargement direct</li>
-                  <li><code>/opensearch.xml</code> - Plugin de recherche navigateur</li>
-                </ul>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>
-          Le projet fait le pont entre la vaste collection d'Anna's Archive et les protocoles standardisés des liseuses,
-          fournissant à la fois une interface web élégante pour la navigation et des flux OPDS pour une intégration transparente
-          avec les appareils de lecture. Une solution complète pour accéder aux livres numériques via des technologies web modernes.
-        </p>
-      </div>
+    details:
+      intro: "Un serveur OPDS (Open Publication Distribution System) moderne qui expose des millions de livres d'Anna's Archive via des flux de catalogue standardisés, compatibles avec toutes les principales applications de lecture. Inclut une interface web React élégante pour parcourir et rechercher dans la collection."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Flux OPDS 1.0/2.0 compatibles pour intégration avec liseuses"
+            - "Interface web React moderne avec TypeScript"
+            - "Recherche avancée par titre, auteur, langue et catégorie"
+            - "Support multilingue (anglais et français)"
+            - "Flux de livres populaires par langue"
+            - "Résolution directe des liens de téléchargement"
+            - "Filtrage par catégorie et type de contenu"
+            - "Description OpenSearch pour intégration navigateur"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Application serveur fournissant l'accès aux livres via des flux OPDS standardisés. Peut être auto-hébergée sur n'importe quel serveur ou machine locale pour usage personnel."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Backend"
+              value: "Express.js avec Node.js"
+            - key: "Frontend"
+              value: "React 19 avec TypeScript"
+            - key: "Outil de build"
+              value: "Vite pour la construction client"
+            - key: "Stylisation"
+              value: "Tailwind CSS"
+            - key: "Scraping"
+              value: "Cheerio pour l'analyse HTML"
+            - key: "Internationalisation"
+              value: "i18next"
+            - key: "Routing"
+              value: "React Router pour la navigation SPA"
+            - key: "Icônes"
+              value: "Lucide React"
+        
+        - title: "Architecture"
+          type: "keyvalue"
+          items:
+            - key: "Couche serveur"
+              value: "Express.js génère les flux XML OPDS et fournit l'API REST"
+            - key: "Couche client"
+              value: "SPA React pour la navigation web avec fallback SSR"
+            - key: "Intégration données"
+              value: "Scraping en temps réel d'Anna's Archive avec cache"
+            - key: "Design API"
+              value: "Endpoints doubles (XML OPDS pour liseuses, JSON API pour web)"
+        
+        - title: "Compatibilité liseuses"
+          type: "text"
+          content: "Fonctionne avec toutes les liseuses compatibles OPDS : Readest, Moon+ Reader, FBReader, Aldiko, KOReader, ReadEra, Calibre, Lithium, et autres. Il suffit d'ajouter l'URL du flux OPDS à votre application de lecture."
+        
+        - title: "Déploiement"
+          type: "list"
+          items:
+            - "Auto-hébergé sur n'importe quel serveur compatible Node.js"
+            - "Installation en une commande : npm install && npm start"
+            - "Client pré-construit pour la production avec Vite"
+            - "Configuration par variables d'environnement"
+            - "Aucune base de données requise - utilise Anna's Archive comme source de données"
+        
+        - title: "Endpoints API"
+          type: "keyvalue"
+          items:
+            - key: "/opds"
+              value: "Catalogue OPDS racine"
+            - key: "/opds/search"
+              value: "Recherche de livres avec filtres"
+            - key: "/api/books"
+              value: "API REST pour le client web"
+            - key: "/api/popular/:lang"
+              value: "Livres tendance par langue"
+            - key: "/download/:md5"
+              value: "Redirection de téléchargement direct"
+            - key: "/opensearch.xml"
+              value: "Plugin de recherche navigateur"
+      
+      conclusion: "Le projet fait le pont entre la vaste collection d'Anna's Archive et les protocoles standardisés des liseuses, fournissant à la fois une interface web élégante pour la navigation et des flux OPDS pour une intégration transparente avec les appareils de lecture. Une solution complète pour accéder aux livres numériques via des technologies web modernes."
       
   inventory-management:
     title: 'Gestion d''Inventaire'
     description: "Application web compilée en un exécutable pour Windows, faite avec Next.js, Node.js et SQLite (puis migrée sur Tauri v2), incluant des fonctionnalités de génération de rapports, etc."
-    details: |
-      <div class="space-y-4">
-        <p>
-          Application de gestion d’inventaire conçue pour <strong>SOGEA Environnement (Évreux)</strong>, installée localement sur le poste du magasinier. Le déploiement réseau ayant été écarté, elle fonctionne en autonomie, sans connexion Internet ni serveur distant.
-        </p>
-
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Ajout, modification, suppression d’articles</li>
-                  <li>Catégorisation des produits</li>
-                  <li>Définition de seuils d’alerte</li>
-                  <li>Historique des mouvements (entrées, sorties, régularisations)</li>
-                  <li>Recherches par nom, référence, catégorie</li>
-                  <li>Export PDF des rapports d’inventaire, des disponibilités et des factures — prêt à l’impression</li>
-                  <li>Listes déroulantes pour champs prédéfinis (sites, chefs, villes…)</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Déploiement uniquement local (poste magasinier). Pas de serveur interne ni de multi-utilisateur.
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Frontend / Backend :</strong> Next.js avec TypeScript</li>
-                  <li><strong>Base de données :</strong> SQLite (fichier local)</li>
-                  <li><strong>Version initiale :</strong> empaquetée avec Electron Builder (~680 Mo)</li>
-                  <li><strong>Version actuelle :</strong> migrée vers <strong>Tauri v2</strong> (~20 Mo)</li>
-                  <li><strong>Interface :</strong> WebView native avec lancement instantané (plus besoin de serveur Node local)</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Améliorations clés</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Suppression du serveur local Node.js → démarrage immédiat</li>
-                  <li>Réduction de la taille de l’application : ~20 Mo (contre ~680 Mo sous Electron)</li>
-                  <li>Exécution plus sécurisée : tout reste en local sur le poste</li>
-                  <li>Consommation mémoire et CPU fortement réduite</li>
-                </ul>
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Compatibilité</td>
-              <td class="px-4 py-2 border">
-                Windows 10/11. Application autonome (aucun service en arrière-plan requis).
-              </td>
-            </tr>
-
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                Installation en un clic via <code>setup.exe</code> généré avec Tauri. Tout est embarqué (application, base SQLite, interface).
-              </td>
-            </tr>
-          </tbody>
-        </table>
-
-        <p>
-          Le projet a évolué pour offrir une gestion simple, rapide et totalement autonome, tout en réduisant drastiquement la taille, les dépendances et le temps de démarrage. Une solution parfaitement adaptée à un environnement isolé.
-        </p>
-      </div>
+    details:
+      intro: "Application de gestion d'inventaire conçue pour SOGEA Environnement (Évreux), installée localement sur le poste du magasinier. Le déploiement réseau ayant été écarté, elle fonctionne en autonomie, sans connexion Internet ni serveur distant."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Ajout, modification, suppression d'articles"
+            - "Catégorisation des produits"
+            - "Définition de seuils d'alerte"
+            - "Historique des mouvements (entrées, sorties, régularisations)"
+            - "Recherches par nom, référence, catégorie"
+            - "Export PDF des rapports d'inventaire, des disponibilités et des factures — prêt à l'impression"
+            - "Listes déroulantes pour champs prédéfinis (sites, chefs, villes…)"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Déploiement uniquement local (poste magasinier). Pas de serveur interne ni de multi-utilisateur."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Frontend / Backend"
+              value: "Next.js avec TypeScript"
+            - key: "Base de données"
+              value: "SQLite (fichier local)"
+            - key: "Version initiale"
+              value: "empaquetée avec Electron Builder (~680 Mo)"
+            - key: "Version actuelle"
+              value: "migrée vers Tauri v2 (~20 Mo)"
+            - key: "Interface"
+              value: "WebView native avec lancement instantané (plus besoin de serveur Node local)"
+        
+        - title: "Améliorations clés"
+          type: "list"
+          items:
+            - "Suppression du serveur local Node.js → démarrage immédiat"
+            - "Réduction de la taille de l'application : ~20 Mo (contre ~680 Mo sous Electron)"
+            - "Exécution plus sécurisée : tout reste en local sur le poste"
+            - "Consommation mémoire et CPU fortement réduite"
+        
+        - title: "Compatibilité"
+          type: "text"
+          content: "Windows 10/11. Application autonome (aucun service en arrière-plan requis)."
+        
+        - title: "Déploiement"
+          type: "text"
+          content: "Installation en un clic via setup.exe généré avec Tauri. Tout est embarqué (application, base SQLite, interface)."
+      
+      conclusion: "Le projet a évolué pour offrir une gestion simple, rapide et totalement autonome, tout en réduisant drastiquement la taille, les dépendances et le temps de démarrage. Une solution parfaitement adaptée à un environnement isolé."
 
   klimber_kids:
     title: 'Klimber-Kids'
     description: 'Plateforme web vitrine pour un fabricant de modules d''escalade, mettant en valeur leur gamme de produits et services avec une interface moderne et intuitive.'
-    details: |
-      <div class="space-y-4">
-        <p>
-          Site vitrine développé pour <strong>Klimber-Kids</strong>, fabricant de modules d’escalade, afin de présenter leur gamme et faciliter la prise de contact.
-        </p>
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Catalogue produits avec galeries d’images</li>
-                  <li>Formulaire de contact et demande de devis</li>
-                  <li>Pages de présentation des services et réalisations</li>
-                  <li>Optimisation SEO et chargement rapide</li>
-                  <li>Interface moderne et responsive</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Projet réalisé en collaboration avec le client pour valoriser leur savoir-faire et générer des prospects.
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Backend :</strong> Symfony 7 (PHP 8.2)</li>
-                  <li><strong>Frontend :</strong> Twig, Bootstrap</li>
-                  <li><strong>Hébergement :</strong> OVH mutualisé</li>
-                  <li><strong>Sécurité :</strong> Honeypot anti-spam</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                Déploiement sur hébergement mutualisé OVH, configuration DNS et SSL.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Le site permet à Klimber-Kids de présenter efficacement ses produits et d’augmenter sa visibilité en ligne.
-        </p>
-      </div>
+    details:
+      intro: "Site vitrine développé pour Klimber-Kids, fabricant de modules d'escalade, afin de présenter leur gamme et faciliter la prise de contact."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Catalogue produits avec galeries d'images"
+            - "Formulaire de contact et demande de devis"
+            - "Pages de présentation des services et réalisations"
+            - "Optimisation SEO et chargement rapide"
+            - "Interface moderne et responsive"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Projet réalisé en collaboration avec le client pour valoriser leur savoir-faire et générer des prospects."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Backend"
+              value: "Symfony 7 (PHP 8.2)"
+            - key: "Frontend"
+              value: "Twig, Bootstrap"
+            - key: "Hébergement"
+              value: "OVH mutualisé"
+            - key: "Sécurité"
+              value: "Honeypot anti-spam"
+        
+        - title: "Déploiement"
+          type: "text"
+          content: "Déploiement sur hébergement mutualisé OVH, configuration DNS et SSL."
+      
+      conclusion: "Le site permet à Klimber-Kids de présenter efficacement ses produits et d'augmenter sa visibilité en ligne."
 
   dashboard-si:
     title: 'Tableau De Bord SI'
     description: 'Tableau de bord pour DSI intégrant l''API Microsoft Graph, offrant une gestion centralisée et un monitoring en temps réel des ressources informatiques.'
-    details: |
-      <div class="space-y-4">
-        <p>
-          Application de tableau de bord développée pour le service informatique de l’UIMM, permettant de centraliser la gestion et la visualisation des ressources IT.
-        </p>
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Connexion à Microsoft Graph API</li>
-                  <li>Affichage dynamique des utilisateurs, groupes, appareils</li>
-                  <li>Tableaux de bord personnalisés</li>
-                  <li>Statistiques et graphiques en temps réel</li>
-                  <li>Authentification sécurisée</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Projet réalisé lors d’un stage à l’UIMM pour améliorer la gestion IT.
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Backend :</strong> Python (Flask)</li>
-                  <li><strong>Frontend :</strong> HTML, Bootstrap, Chart.js</li>
-                  <li><strong>API :</strong> Microsoft Graph</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                Déploiement sur serveur interne UIMM, accès restreint au service informatique.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Ce tableau de bord a permis d’automatiser la collecte et la visualisation des données IT, facilitant la prise de décision.
-        </p>
-      </div>
+    details:
+      intro: "Application de tableau de bord développée pour le service informatique de l'UIMM, permettant de centraliser la gestion et la visualisation des ressources IT."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Connexion à Microsoft Graph API"
+            - "Affichage dynamique des utilisateurs, groupes, appareils"
+            - "Tableaux de bord personnalisés"
+            - "Statistiques et graphiques en temps réel"
+            - "Authentification sécurisée"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Projet réalisé lors d'un stage à l'UIMM pour améliorer la gestion IT."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Backend"
+              value: "Python (Flask)"
+            - key: "Frontend"
+              value: "HTML, Bootstrap, Chart.js"
+            - key: "API"
+              value: "Microsoft Graph"
+        
+        - title: "Déploiement"
+          type: "text"
+          content: "Déploiement sur serveur interne UIMM, accès restreint au service informatique."
+      
+      conclusion: "Ce tableau de bord a permis d'automatiser la collecte et la visualisation des données IT, facilitant la prise de décision."
 
   email-sender:
     title: 'Expéditeur d''Emails'
     description: 'Application Next.js sophistiquée pour la gestion d''emails professionnels, incluant des fonctionnalités de campagnes marketing, gestion de configurations SMTP et prévisualisation en temps réel.'
-    details: |
-      <div class="space-y-4">
-        <p>
-          Outil de gestion d’emails professionnels, pensé pour les campagnes marketing et la gestion multi-comptes SMTP.
-        </p>
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Gestion multi-comptes SMTP</li>
-                  <li>Prévisualisation en temps réel</li>
-                  <li>Programmation de campagnes</li>
-                  <li>Statistiques et analytics</li>
-                  <li>Import/export de contacts (CSV, Excel)</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Développé pour faciliter la gestion d’envois d’emails professionnels et automatiser les campagnes.
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Frontend :</strong> Next.js</li>
-                  <li><strong>Backend :</strong> Node.js</li>
-                  <li><strong>Base de données :</strong> SQLite</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                Application packagée pour usage interne, installation locale sur poste utilisateur.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          L’application permet un gain de temps considérable pour la gestion des campagnes et la centralisation des contacts.
-        </p>
-      </div>
+    details:
+      intro: "Outil de gestion d'emails professionnels, pensé pour les campagnes marketing et la gestion multi-comptes SMTP."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Gestion multi-comptes SMTP"
+            - "Prévisualisation en temps réel"
+            - "Programmation de campagnes"
+            - "Statistiques et analytics"
+            - "Import/export de contacts (CSV, Excel)"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Développé pour faciliter la gestion d'envois d'emails professionnels et automatiser les campagnes."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Frontend"
+              value: "Next.js"
+            - key: "Backend"
+              value: "Node.js"
+            - key: "Base de données"
+              value: "SQLite"
+        
+        - title: "Déploiement"
+          type: "text"
+          content: "Application packagée pour usage interne, installation locale sur poste utilisateur."
+      
+      conclusion: "L'application permet un gain de temps considérable pour la gestion des campagnes et la centralisation des contacts."
 
   play-with-your-friends:
     title: 'Play With Your Friends'
     description: 'Une application web ludique et interactive pour jouer avec vos amis, offrant une plateforme unique et interactive pour l''interaction sociale.'
-    details: |
-      <div class="space-y-4">
-        <p>
-          Plateforme web de jeux multijoueurs pensée pour favoriser l’interaction sociale et le divertissement entre amis.
-        </p>
-        <table class="table-auto w-full text-left border border-gray-300">
-          <thead class="bg-gray-100 text-gray-700">
-            <tr>
-              <th class="px-4 py-2 border">Catégorie</th>
-              <th class="px-4 py-2 border">Détails</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Fonctionnalités</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li>Jeux multijoueurs en temps réel</li>
-                  <li>Salons de discussion intégrés</li>
-                  <li>Profils utilisateurs et gestion d’amis</li>
-                  <li>Notifications instantanées</li>
-                  <li>Interface mobile-friendly</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Contexte</td>
-              <td class="px-4 py-2 border">
-                Projet personnel visant à créer un espace ludique et convivial pour jouer à distance.
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Technologies</td>
-              <td class="px-4 py-2 border">
-                <ul class="list-disc list-inside space-y-1">
-                  <li><strong>Frontend :</strong> Next.js, Tailwind CSS</li>
-                  <li><strong>Backend :</strong> Node.js, WebSocket</li>
-                  <li><strong>Base de données :</strong> MongoDB</li>
-                </ul>
-              </td>
-            </tr>
-            <tr>
-              <td class="px-4 py-2 border font-semibold">Déploiement</td>
-              <td class="px-4 py-2 border">
-                Hébergement cloud, accès via navigateur web sur mobile et desktop.
-              </td>
-            </tr>
-          </tbody>
-        </table>
-        <p>
-          Cette application vise à offrir une expérience de jeu fluide et sociale, accessible à tous.
-        </p>
-      </div>
+    details:
+      intro: "Plateforme web de jeux multijoueurs pensée pour favoriser l'interaction sociale et le divertissement entre amis."
+      sections:
+        - title: "Fonctionnalités"
+          type: "list"
+          items:
+            - "Jeux multijoueurs en temps réel"
+            - "Salons de discussion intégrés"
+            - "Profils utilisateurs et gestion d'amis"
+            - "Notifications instantanées"
+            - "Interface mobile-friendly"
+        
+        - title: "Contexte"
+          type: "text"
+          content: "Projet personnel visant à créer un espace ludique et convivial pour jouer à distance."
+        
+        - title: "Technologies"
+          type: "keyvalue"
+          items:
+            - key: "Frontend"
+              value: "Next.js, Tailwind CSS"
+            - key: "Backend"
+              value: "Node.js, WebSocket"
+            - key: "Base de données"
+              value: "MongoDB"
+        
+        - title: "Déploiement"
+          type: "text"
+          content: "Hébergement cloud, accès via navigateur web sur mobile et desktop."
+      
+      conclusion: "Cette application vise à offrir une expérience de jeu fluide et sociale, accessible à tous."
       
 contact_form:
   title: 'Me Contacter'

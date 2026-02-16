@@ -10,7 +10,7 @@
                 <span class="language-flag language-flag-{{ lang.code }} text-lg" style="display: {% if app.request.locale == lang.code %}inline{% else %}none{% endif %}">{{ lang.flag }}</span>
             {% endfor %}
         </summary>
-        <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32">
+        <ul class="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-32 border border-base-content/10 space-y-2">
             {% for lang in languages %}
                 <li>
                     <button data-locale="{{ lang.code }}" class="flex items-center gap-2 {% if app.request.locale == lang.code %}active{% endif %}">
