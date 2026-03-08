@@ -198,7 +198,7 @@
         <div class="w-full lg:w-3/5 lg:ml-auto p-6 lg:p-12 mt-6 lg:mt-0">
             <!-- About Section -->
             <section id="about" class="max-w-3xl mx-auto lg:mx-0">
-                <h2 class="text-3xl lg:text-4xl font-bold mb-6 lg:mb-8" data-trans="sections.about">{{ 'sections.about'|trans }}</h2>
+                <h2 class="text-3xl lg:text-4xl font-bold mb-4 lg:mb-6" data-trans="sections.about">{{ 'sections.about'|trans }}</h2>
                 <div class="space-y-6 text-base-content/80 text-lg text-justify">
                     <p data-trans="about.paragraph1" data-trans-params='{ "%age%": {{age}} }' data-trans-raw>{{ 'about.paragraph1'|trans({'%age%': age})|raw }}</p>
                     <p data-trans="about.paragraph2" data-trans-raw>{{ 'about.paragraph2'|trans|raw }}</p>
@@ -209,7 +209,7 @@
             {% include 'components/_skills.html.twig' %}
 
             <!-- Experience/Education Toggle -->
-            <div class="max-w-3xl mb-1 mt-12 sm:mt-16 mx-auto sm:mx-0 flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
+            <div class="max-w-3xl mb-6 lg:mb-8 mt-12 sm:mt-16 mx-auto sm:mx-0 flex flex-col sm:flex-row items-start sm:items-center space-y-2 sm:space-y-0 sm:space-x-4">
                 <h2 id="section-title" class="text-3xl lg:text-4xl font-bold transition-opacity duration-500 relative overflow-hidden">
                     <span id="section-title-experience" class="inline-block transition-all duration-300" data-trans="sections.experience">{{ 'sections.experience'|trans }}</span>
                     <span id="section-title-education" class="inline-block transition-all duration-300 hidden" data-trans="sections.education">{{ 'sections.education'|trans }}</span>
