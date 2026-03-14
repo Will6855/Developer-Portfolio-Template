@@ -1,18 +1,18 @@
 meta:
-  title: 'Guillaume PIARD | Portfolio'
-  description: 'Portfolio of Guillaume PIARD, software developer. Discover my innovative projects, creative approach, and how I can help you turn your ideas into unique digital solutions.'
-  keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, developer, developer rouen, developer evreux, evreux, rouen'
-  
+  title: 'Your Name | Portfolio'
+  description: 'Portfolio''s description'
+  keywords: 'keywords'
+
 sidebar:
-  job_title: 'Full-Stack Web Developer'
-  location: 'Evreux, France 🇫🇷'
-  tagline: 'Crafting Intuitive and High-Performance Applications'
-  resume: 'View Full Resume'
-  contact_button: 'Get in Touch'
-  open_to_job: 'Open to new challenges'
-  open_to_job_description: 'Currently employed, open to sharing and exchanging ideas'
-  # open_to_job_description: 'Currently seeking full-time positions'
-  lets_connect: 'Let''s Connect'
+  job_title: 'Your Job Title'
+  location: 'Your Location'
+  tagline: 'Your Tagline'
+  resume: 'View Resume'
+  contact_button: 'Contact Me'
+  open_to_job: 'Looking for new challenges'
+  open_to_job_description: 'Currently employed, available to share and exchange'
+  # open_to_job_description: 'Actively seeking professional opportunities'
+  lets_connect: 'Get in Touch'
 
 sections:
   about: 'About Me'
@@ -24,10 +24,10 @@ sections:
   show_more: 'Show more'
   show_less: 'Show less'
   projects: 'Projects'
-  
+
 about:
-  paragraph1: '%age%-year-old IT technician, specialized in <span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">web application development</span>. I have experience in designing, deploying, and maintaining solutions tailored to user needs.'
-  paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive, and curious</span>, I focus on delivering reliable and efficient solutions.'
+  paragraph1: '%age% years old developer.'
+  paragraph2: '<span class="w-fit bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Organized, autonomous, responsive and curious</span>, I focus on reliable and efficient solutions.'
 
 skills:
   categories:
@@ -38,423 +38,124 @@ skills:
     devops: 'DevOps'
 
 experiences:
-  sogea3:
-    title: 'Design Drafter'
-    contract: 'Permanent'
-    location: 'Gravigny, France'
-    period: 'January 2026 - Present'
+  company:
+    title: 'Job Title'
+    contract: 'Contract'
+    location: 'Location'
+    period: 'Period'
     description:
-      - "Technical drafting"
-      - "IT assistance"
-      - "Technical report preparation support"
-      - "etc."
-  sogea2:
-    title: 'Administrative Assistant'
-    contract: 'Interim'
-    location: 'Gravigny, France'
-    period: 'October 2025 - December 2025'
-    description:
-      # - "Migration of the inventory management application to Tauri v2"
-      # - "Integration of new features based on feedback after more than 6 months of daily use in the field"
-      # - "Printing of DICTs, on-site IT support, preparation of connection plans, ect."
-      - "IT and administrative support in the preparation of technical reports"
-      - "Internal training completed on AutoCAD for the creation of signage plans"
-      - "Development of an Excel alert script to notify overdue deadlines"
-  sogea:
-    title: 'Administrative Assistant'
-    contract: 'Interim'
-    location: 'Gravigny, France'
-    period: 'March 2025'
-    description:
-      - 'Development of an inventory management application (Next.js / Node.js)'
-      - 'Automation of reports and stock tracking'
-      - 'Windows compilation for local usage'
-  klimber_kids:
-    title: 'Full-Stack Web Developer'
-    contract: 'Part-time Project'
-    location: 'Guichainville, France'
-    period: 'July 2024 - January 2025'
-    description:
-      - 'Creation of a showcase website (PHP / Symfony)'
-      - 'Security implementation with anti-spam protection (Honeypot)'
-      - 'Reservation system with availability management'
-  cs_lane:
-    title: 'Full-Stack Web Developer'
-    contract: 'Internship'
-    location: 'Elbeuf, France'
-    period: 'January 2024 - February 2024'
-    description:
-      - 'Development of Android (Kotlin) & iOS (Swift) mobile applications'
-      - 'Implementation of an appointment system and REST API (PHP & MySQL)'
-      - 'Agile project management (SCRUMBAN)'
-  uimm:
-    title: 'Full-Stack Web Developer'
-    contract: 'Internship'
-    location: 'Evreux, France'
-    period: 'May 2023 - June 2023'
-    description:
-      - 'Development of a Web application for the IT department (Python / Flask)'
-      - 'Dynamic display of IT data via Microsoft Graph API'
-
+      - "Paragraph 1"
+      - "Paragraph 2"
+      - "Paragraph 3"
+  
 education:
-  bts:
-    degree: 'BTS SIO - Organisational IT Services'
-    location: 'Rouen, France'
-    period: '2022 - 2024'
+  school:
+    degree: 'Degree'
+    location: 'Location'
+    period: 'Period'
     description:
-      - 'SLAM Option (Software Solutions & Business Applications)'
-  bac:
-    degree: 'General Baccalaureate'
-    location: 'Evreux, France'
-    period: '2022'
-    description:
-      - 'Specialty in Mathematics and Contemporary English World'
+      - 'Paragraph 1'
 
 projects:
   links:
-    view_code: 'View Code'
+    view_code: 'Source Code'
     visit_website: 'Visit Website'
-    live_demo: 'Demo'
-  annas-library:
-    title: "Anna's Library"
-    description: "OPDS server with React web client providing access to Anna's Archive book collection through standardized feeds for e-readers and web browsing."
+    live_demo: 'Live Demo'
+  project:
+    title: "Project Title"
+    description: "Project Description"
     details:
-      intro: "A modern OPDS (Open Publication Distribution System) server that exposes millions of books from Anna's Archive through standardized catalog feeds, compatible with all major e-reader applications. Includes a beautiful React web interface for browsing and searching the collection."
+      intro: "{{ project.intro }}"
       sections:
-        - title: "Features"
+        - title: "{{ section.features.title }}"
           type: "list"
-          items:
-            - "OPDS 1.0/2.0 compliant feeds for e-reader integration"
-            - "Modern React web interface with TypeScript"
-            - "Advanced search by title, author, language, and category"
-            - "Multi-language support (English and French)"
-            - "Popular books feed by language"
-            - "Direct download link resolution"
-            - "Category and content type filtering"
-            - "OpenSearch description for browser integration"
+          items: "{{ section.features.items }}"
         
-        - title: "Context"
+        - title: "{{ section.context.title }}"
           type: "text"
-          content: "Server-based application providing book access through standardized OPDS feeds. Can be self-hosted on any server or local machine for personal use."
+          content: "{{ section.context.content }}"
         
-        - title: "Technologies"
+        - title: "{{ section.technologies.title }}"
           type: "keyvalue"
-          items:
-            - key: "Backend"
-              value: "Express.js with Node.js"
-            - key: "Frontend"
-              value: "React 19 with TypeScript"
-            - key: "Build Tool"
-              value: "Vite for client build"
-            - key: "Styling"
-              value: "Tailwind CSS"
-            - key: "Scraping"
-              value: "Cheerio for HTML parsing"
-            - key: "Internationalization"
-              value: "i18next"
-            - key: "Routing"
-              value: "React Router for SPA navigation"
-            - key: "Icons"
-              value: "Lucide React"
+          items: "{{ section.technologies.items }}"
         
-        - title: "Architecture"
+        - title: "{{ section.architecture.title }}"
           type: "keyvalue"
-          items:
-            - key: "Server Layer"
-              value: "Express.js generates OPDS XML feeds and provides REST API"
-            - key: "Client Layer"
-              value: "React SPA for web browsing with server-side rendering fallback"
-            - key: "Data Integration"
-              value: "Real-time scraping of Anna's Archive with caching"
-            - key: "API Design"
-              value: "Dual endpoints (OPDS XML for e-readers, JSON API for web)"
+          items: "{{ section.architecture.items }}"
         
-        - title: "E-reader Compatibility"
+        - title: "{{ section.compatibility.title }}"
           type: "text"
-          content: "Works with all OPDS-compatible readers including: Readest, Moon+ Reader, FBReader, Aldiko, KOReader, ReadEra, Calibre, Lithium, and others. Simply add the OPDS feed URL to your e-reader app."
+          content: "{{ section.compatibility.content }}"
         
-        - title: "Deployment"
+        - title: "{{ section.deployment.title }}"
           type: "list"
-          items:
-            - "Self-hosted on any Node.js compatible server"
-            - "Single command setup: npm install && npm start"
-            - "Client pre-built for production with Vite"
-            - "Environment variable configuration for customization"
-            - "No database required - uses Anna's Archive as data source"
+          items: "{{ section.deployment.items }}"
         
-        - title: "API Endpoints"
+        - title: "{{ section.endpoints.title }}"
           type: "keyvalue"
-          items:
-            - key: "/opds"
-              value: "Root OPDS catalog"
-            - key: "/opds/search"
-              value: "Search books with filters"
-            - key: "/api/books"
-              value: "REST API for web client"
-            - key: "/api/popular/:lang"
-              value: "Trending books by language"
-            - key: "/download/:md5"
-              value: "Direct download redirection"
-            - key: "/opensearch.xml"
-              value: "Browser search plugin"
+          items: "{{ section.endpoints.items }}"
       
-      conclusion: "The project bridges the gap between Anna's Archive's vast collection and standardized e-reader protocols, providing both a beautiful web interface for browsing and OPDS feeds for seamless integration with reading devices. A complete solution for accessing digital books through modern web technologies."
+      conclusion: "{{ project.conclusion }}"
       
-  inventory-management:
-    title: 'Inventory Management'
-    description: "Web application compiled into a Windows executable, built with Next.js, Node.js, and SQLite (later migrated to Tauri v2), featuring reporting and PDF generation capabilities, among others."
-    details:
-      intro: "Inventory management application developed for SOGEA Environnement (Évreux), installed locally on the warehouse computer. As network deployment was not an option, the app operates autonomously — without Internet access or any remote server."
-      sections:
-        - title: "Features"
-          type: "list"
-          items:
-            - "Add, edit, and delete items"
-            - "Product categorization"
-            - "Alert threshold configuration"
-            - "Movement history (entries, exits, adjustments)"
-            - "Search by name, reference, or category"
-            - "PDF export of inventory reports, availability, and invoices — print-ready"
-            - "Dropdown menus for predefined fields (sites, managers, cities, etc.)"
-            - "Stock valuation using AVCO, FIFO and LIFO methods"
-        
-        - title: "Context"
-          type: "text"
-          content: "Local-only deployment (warehouse workstation). No internal server or multi-user access."
-        
-        - title: "Technologies"
-          type: "keyvalue"
-          items:
-            - key: "Frontend / Backend"
-              value: "Next.js with TypeScript"
-            - key: "Database"
-              value: "SQLite (local file)"
-            - key: "Initial version"
-              value: "packaged with Electron Builder (~680 MB)"
-            - key: "Current version"
-              value: "migrated to Tauri v2 (~20 MB)"
-            - key: "Interface"
-              value: "Native WebView with instant startup (no local Node server required)"
-        
-        - title: "Key Improvements"
-          type: "list"
-          items:
-            - "Removed local Node.js server → instant launch"
-            - "Reduced application size: ~20 MB (down from ~680 MB with Electron)"
-            - "Increased security: everything runs locally on the workstation"
-            - "Significantly lower memory and CPU usage"
-        
-        - title: "Compatibility"
-          type: "text"
-          content: "Windows 10/11. Fully standalone application (no background services required)."
-        
-        - title: "Deployment"
-          type: "text"
-          content: "One-click installation via setup.exe generated with Tauri. Everything is bundled (application, SQLite database, interface)."
-      
-      conclusion: "The project evolved to deliver a simple, fast, and fully autonomous inventory solution — drastically reducing size, dependencies, and startup time. A lightweight and reliable tool perfectly suited for isolated environments."
-
-  klimber_kids:
-    title: 'Klimber-Kids'
-    description: 'A showcase website for a climbing module manufacturer, highlighting their product range and services with a modern and intuitive interface.'
-    details:
-      intro: "Showcase website developed for Klimber-Kids, a climbing module manufacturer, to present their range and facilitate contact."
-      sections:
-        - title: "Features"
-          type: "list"
-          items:
-            - "Product catalog with image galleries"
-            - "Contact and quote request forms"
-            - "Service and project presentation pages"
-            - "SEO optimization and fast loading"
-            - "Modern, responsive interface"
-        
-        - title: "Context"
-          type: "text"
-          content: "Project carried out in collaboration with the client to showcase their expertise and generate leads."
-        
-        - title: "Technologies"
-          type: "keyvalue"
-          items:
-            - key: "Backend"
-              value: "Symfony 7 (PHP 8.2)"
-            - key: "Frontend"
-              value: "Twig, Bootstrap"
-            - key: "Hosting"
-              value: "OVH shared hosting"
-            - key: "Security"
-              value: "Honeypot anti-spam"
-        
-        - title: "Deployment"
-          type: "text"
-          content: "Deployed on OVH shared hosting, DNS and SSL configured."
-      
-      conclusion: "The site allows Klimber-Kids to effectively present their products and increase their online visibility."
-
-  dashboard-si:
-    title: 'IT Dashboard'
-    description: 'An IT Department dashboard integrating Microsoft Graph API, providing centralized management and real-time monitoring of IT resources.'
-    details:
-      intro: "Dashboard app developed for the UIMM IT department, centralizing management and visualization of IT resources."
-      sections:
-        - title: "Features"
-          type: "list"
-          items:
-            - "Connects to Microsoft Graph API"
-            - "Dynamic display of users, groups, devices"
-            - "Custom dashboards"
-            - "Real-time stats and charts"
-            - "Secure authentication"
-        
-        - title: "Context"
-          type: "text"
-          content: "Project completed during an internship at UIMM to improve IT management."
-        
-        - title: "Technologies"
-          type: "keyvalue"
-          items:
-            - key: "Backend"
-              value: "Python (Flask)"
-            - key: "Frontend"
-              value: "HTML, Bootstrap, Chart.js"
-            - key: "API"
-              value: "Microsoft Graph"
-        
-        - title: "Deployment"
-          type: "text"
-          content: "Deployed on UIMM internal server, access restricted to IT staff."
-      
-      conclusion: "This dashboard automated IT data collection and visualization, making decision-making easier."
-
-  email-sender:
-    title: 'Email Sender'
-    description: 'A sophisticated Next.js application for professional email management, featuring marketing campaign capabilities, SMTP configuration management, and real-time email preview.'
-    details:
-      intro: "Professional email management tool, designed for marketing campaigns and multi-account SMTP management."
-      sections:
-        - title: "Features"
-          type: "list"
-          items:
-            - "Multi-account SMTP management"
-            - "Real-time preview"
-            - "Campaign scheduling"
-            - "Stats and analytics"
-            - "Contact import/export (CSV, Excel)"
-        
-        - title: "Context"
-          type: "text"
-          content: "Developed to make professional email sending and campaign automation easier."
-        
-        - title: "Technologies"
-          type: "keyvalue"
-          items:
-            - key: "Frontend"
-              value: "Next.js"
-            - key: "Backend"
-              value: "Node.js"
-            - key: "Database"
-              value: "SQLite"
-        
-        - title: "Deployment"
-          type: "text"
-          content: "Packaged app for internal use, local installation on user workstation."
-      
-      conclusion: "The app saves time for campaign management and contact centralization."
-
-  play-with-your-friends:
-    title: 'Play With Your Friends'
-    description: 'A fun and engaging web application for playing with your friends, offering a unique and interactive platform for social interaction.'
-    details:
-      intro: "Multiplayer web gaming platform designed to foster social interaction and fun with friends."
-      sections:
-        - title: "Features"
-          type: "list"
-          items:
-            - "Real-time multiplayer games"
-            - "Integrated chat rooms"
-            - "User profiles and friend management"
-            - "Instant notifications"
-            - "Mobile-friendly interface"
-        
-        - title: "Context"
-          type: "text"
-          content: "Project carried out with <a target='_blank' href='https://thomas-boisson.fr' class='underline'>Thomas BOISSON</a>: creating a fun and friendly space for playing remotely."
-        
-        - title: "Technologies"
-          type: "keyvalue"
-          items:
-            - key: "Frontend"
-              value: "Next.js, Tailwind CSS"
-            - key: "Backend"
-              value: "Node.js, WebSocket"
-            - key: "Database"
-              value: "MongoDB"
-        
-        - title: "Deployment"
-          type: "text"
-          content: "Cloud hosting, accessible via web browser on mobile and desktop."
-      
-      conclusion: "This app aims to provide a smooth, social gaming experience accessible to all."
-
 contact_form:
-  title: 'Get in Touch'
+  title: 'Contact Me'
   name: 'Name'
   name_placeholder: 'Your name'
   email: 'Email'
   email_placeholder: 'Your email'
   message: 'Message'
   message_placeholder: 'Your message'
-  send: 'Send Message'
+  send: 'Send'
   cancel: 'Cancel'
   privacy_consent: "I agree that my data will be processed in accordance with the <a href='%privacy_url%' class='link link-primary' target='_blank'>privacy policy</a>."
   success_message: 'Your message has been sent successfully'
-  error_message: 'An error occurred while sending your message'
+  error_message: 'An error occurred while sending the message'
 
 legal_notice:
   editor:
-    title: 'Website Editor'
-    edited_by: 'This website is edited by Guillaume PIARD'
-    contact: 'Contact : gpiard27@gmail.com'
+    title: 'Site Editor'
+    edited_by: 'This site is published by Your Name'
+    contact: 'Contact: your-name@gmail.com'
   hosting:
     title: 'Hosting'
-    hosted_by: 'This website is hosted by'
+    hosted_by: 'This site is hosted by'
     company_name: 'OVH'
-    company_info: 'SAS with a capital of 10 174 560 €'
+    company_info: 'SAS with capital of €10,174,560'
     rcs: 'RCS Lille Métropole 424 761 419 00045'
     ape_code: 'APE Code: 2620Z'
-    vat: 'VAT Number: FR 22 424 761 419'
-    address: 'Head Office: 2 rue Kellermann - 59100 Roubaix – France'
-    phone: 'Phone: 1007'
+    vat: 'VAT: FR 22 424 761 419'
+    address: 'Head office: 2 rue Kellermann - 59100 Roubaix – France'
+    phone: 'Tel: 1007'
   intellectual_property:
     title: 'Intellectual Property'
-    content: 'This entire website is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations.'
+    content: "This entire site is subject to French and international legislation on copyright and intellectual property. All reproduction rights are reserved, including for downloadable documents and iconographic and photographic representations."
   links:
-    title: 'Hyperlinks'
-    content: 'The website may contain hyperlinks to other sites. I am not responsible for the content of these external sites.'
+    title: 'Hypertext Links'
+    content: "The site may contain hypertext links to other sites. I am not responsible for the content of these external sites."
 
 privacy_policy:
   data_collection:
     title: 'Data Collection'
-    description: 'Personal data collected on this site is limited to the information you voluntarily provide through the contact form:'
+    description: 'The personal data collected on this site is limited to the information you voluntarily provide via the contact form:'
     fields:
       name: 'Name'
       email: 'Email address'
       message: 'Message'
   data_usage:
     title: 'Data Usage'
-    description: 'The information you provide is used solely to respond to your messages and is never shared with third parties.'
+    description: 'The information you send us is used solely to respond to your messages and is not transmitted to third parties.'
   data_retention:
     title: 'Data Retention'
-    description: 'Personal data is retained for the duration necessary to manage our relationship with you.'
+    description: 'Personal data is kept for the duration necessary to manage the relationship with you.'
   your_rights:
     title: 'Your Rights'
-    description: 'In accordance with the French "Data Protection Act" of January 6, 1978, as amended, and European Regulation No. 2016/679/EU of April 27, 2016, you have the right to access, rectify, port, and delete your data.'
+    description: 'In accordance with the French Data Protection Act of January 6, 1978 amended and the European Regulation No. 2016/679/EU of April 27, 2016, you have the right to access, rectify, port and erase your data.'
   cookies:
     title: 'Cookies'
-    description: 'This site does not use tracking or advertising cookies. Only cookies necessary for the website''s functionality may be used.'
+    description: 'This site does not use tracking or advertising cookies. Only cookies necessary for the operation of the site may be used.'
   contact:
     title: 'Contact'
-    description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: gpiard27@gmail.com'
+    description: 'For any questions regarding this privacy policy or to exercise your rights, you can contact me at: your-name@gmail.com'
 
 footer:
   legal_notice: 'Legal Notice'
@@ -466,9 +167,9 @@ common:
 
 contact_email:
   admin_subject: 'New message from %email%'
-  user_subject: 'Message Received'
+  user_subject: 'Message received'
   name_label: 'Name'
   email_label: 'Email'
   message_label: 'Message'
   thank_you_message: 'Thank you for your message and interest, I will get back to you as soon as possible.'
-  regards: 'Best regards'
+  regards: 'Regards'

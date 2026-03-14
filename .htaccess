@@ -6,8 +6,8 @@ RewriteCond %{HTTPS} off
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
 
 # Redirect www to non-www
-RewriteCond %{HTTP_HOST} ^www\.guillaume-piard\.fr$ [NC]
-RewriteRule ^(.*)$ https://guillaume-piard.fr/$1 [R=301,L]
+RewriteCond %{HTTP_HOST} ^www\.your-website\.dev$ [NC]
+RewriteRule ^(.*)$ https://your-website.dev/$1 [R=301,L]
 
 # Forward all requests to the public directory
 RewriteCond %{REQUEST_FILENAME} !-f

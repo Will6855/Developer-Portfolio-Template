@@ -13,4 +13,4 @@ Allow: /privacy-policy
 
 Allow: /sitemap.xml
 
-Sitemap: https://guillaume-piard.fr/sitemap.xml
+Sitemap: https://your-website.dev/sitemap.xml
