@@ -4,7 +4,7 @@ meta:
   keywords: 'portfolio, bts sio, sio, guillaume piard, piard, portfolio piard, portfolio guillaume piard, dev, développeur, développeur rouen, développeur évreux, evreux, rouen'
   
 sidebar:
-  job_title: 'Développeur Web Full-Stack'
+  job_title: '<span class="line-through">Développeur Web Full-Stack</span> Dessinateur Projeteur'
   location: 'Evreux, France 🇫🇷'
   tagline: 'Conception d''Applications Intuitives et Performantes'
   resume: 'Consulter mon CV'
@@ -216,6 +216,7 @@ projects:
             - "Recherches par nom, référence, catégorie"
             - "Export PDF des rapports d'inventaire, des disponibilités et des factures — prêt à l'impression"
             - "Listes déroulantes pour champs prédéfinis (sites, chefs, villes…)"
+            - "Valorisation des stocks selon les méthodes AVCO, FIFO et LIFO"
         
         - title: "Contexte"
           type: "text"
@@ -377,7 +378,7 @@ projects:
         
         - title: "Contexte"
           type: "text"
-          content: "Projet personnel visant à créer un espace ludique et convivial pour jouer à distance."
+          content: "Projet réalisé avec <a target='_blank' href='https://thomas-boisson.fr' class='underline'>Thomas BOISSON</a> : création d'un espace ludique et convivial pour jouer à distance."
         
         - title: "Technologies"
           type: "keyvalue"

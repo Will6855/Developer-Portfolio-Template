@@ -216,6 +216,7 @@ projects:
             - "Search by name, reference, or category"
             - "PDF export of inventory reports, availability, and invoices — print-ready"
             - "Dropdown menus for predefined fields (sites, managers, cities, etc.)"
+            - "Stock valuation using AVCO, FIFO and LIFO methods"
         
         - title: "Context"
           type: "text"
@@ -377,7 +378,7 @@ projects:
         
         - title: "Context"
           type: "text"
-          content: "Personal project aiming to create a fun and friendly space for remote play."
+          content: "Project carried out with <a target='_blank' href='https://thomas-boisson.fr' class='underline'>Thomas BOISSON</a>: creating a fun and friendly space for playing remotely."
         
         - title: "Technologies"
           type: "keyvalue"

@@ -200,8 +200,8 @@
                                                 {% endfor %}
                                             </ul>
                                         {% elseif section.type == 'text' %}
-                                            <p class="text-sm md:text-base leading-relaxed text-base-content/80 text-justify" data-trans="{{ section.content }}">
-                                                {{ section.content|trans }}
+                                            <p class="text-sm md:text-base leading-relaxed text-base-content/80 text-justify" data-trans="{{ section.content }}" data-trans-raw>
+                                                {{ section.content|trans|raw }}
                                             </p>
                                         {% elseif section.type == 'keyvalue' %}
                                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
